@@ -20,9 +20,9 @@ class BlogPostTemplate extends React.Component {
           <h1>
             {post.frontmatter.title}
           </h1>
-          <time>
-            {post.frontmatter.date}
-          </time>
+          <em>
+            Written on <time>{post.frontmatter.date}</time>
+          </em>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
         <hr />
