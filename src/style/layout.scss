@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap');
+
+$primary: #111;
+$accent: mediumslateblue;
+$light-background: oldlace;
+
+body {
+  font: 17px 'Helvetica Neue', 'Helvetica', sans-serif;
+  letter-spacing: .2px;
+  margin: 0;
+  padding: 20px;
+  color: $primary;
+}
+
+main {
+  padding-left: 240px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid $accent;
+  transition: color .3s ease-out;
+
+  &:hover,
+  &:focus {
+    color: darken($accent, 20%);
+  }
+}
+
+pre,
+code {
+  font: 15px 'Oxygen Mono';
+  background: $light-background;
+}
+
+.site {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.sidebar {
+  position: sticky;
+  float: left;
+  margin-top: 0;
+  top: 40px;
+  left: -240px;
+
+  a {
+    border: none;
+  }
+
+  .site-title {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      line-height: 1.8;
+    }
+  }
+}

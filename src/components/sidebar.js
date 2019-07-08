@@ -1,28 +1,27 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { rhythm } from '../utils/typography';
-
 export default function Sidebar() {
+  const links = [
+    {href: '/about', label: 'About'},
+    {href: '/now', label: 'Now'},
+  ];
   return (
-    <div
-      style={{
-        position: 'sticky',
-        float: 'left',
-        marginTop: 0,
-        top: rhythm(1.5),
-        left: '-240px',
-      }}
-    >
-      <Link
-        style={{
-          textDecoration: 'none',
-          color: 'inherit',
-        }}
-        to="/"
-      >
-        Down the rabbithole
-      </Link>
+    <div className="sidebar">
+      <h1 className="site-title">
+        <Link to="/">
+          Down the rabbithole
+        </Link>
+      </h1>
+      <ul className="nav-list">
+        {links.map(({href, label}) => (
+          <li key={href}>
+            <Link key={href} to={href}>{label}</Link>
+          </li>
+        ))}
+      </ul>
+      <h2>Get in touch</h2>
+      ekov@pm.me
     </div>
   );
 }
