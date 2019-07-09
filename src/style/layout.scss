@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap');
 
 $primary: #111;
 $accent: #111;
 $light-background: oldlace;
+$sidebar-size: 280px;
+$site-width: 1100px;
 
 body {
   font: 17px 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -14,7 +18,8 @@ body {
 }
 
 main {
-  padding-left: 240px;
+  padding-top: 65px;
+  padding-left: $sidebar-size;
 }
 
 em {
@@ -37,7 +42,7 @@ pre,
 code {
   font: 15px 'Oxygen Mono';
   background: $light-background;
-  line-height: 1.6;
+  line-height: 1.48;
 }
 
 pre {
@@ -49,7 +54,8 @@ code {
 }
 
 .site {
-  max-width: 1200px;
+  max-width: $site-width;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -67,18 +73,18 @@ code {
 }
 
 .sidebar {
+  text-align: right;
   position: sticky;
   float: left;
-  top: 40px;
-  left: -240px;
+  top: 20%;
+  left: -$sidebar-size;
 
   a {
     border: none;
   }
 
   .site-title {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 18px;
     margin: -2px 0 20px;
   }
 
@@ -93,11 +99,12 @@ code {
 }
 
 article {
-  max-width: 800px;
+  max-width: 760px;
 
   h1 {
+    margin-top: 6px;
     font-size: 60px;
-    font-weight: 400;
     line-height: 1.2;
+    font-family: 'Playfair Display';
   }
 }
