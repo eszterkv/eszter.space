@@ -7,7 +7,7 @@ excerpt: "People hate to wait. More than that, they don’t wait, if your websit
 
 People hate to wait. More than that, they don’t wait, if your website doesn’t show anything nice or useful in a few seconds, they just close it. There’s plenty other websites out there that load _a little bit_ faster. So before all the images are sharp, animations smooth, fonts reflecting the most recent trends, there’s one important thing to do: make sure it is real fast. Every millisecond counts.
 
-### Why is my website slow?
+## Why is my website slow?
 Before we can speed up anything, we have to understand how websites are loaded in the browser.
 1. `document` is requested (this is usually your `index.html` file)
 2. any resources requested by given `document` are loaded in order of appearance, unless otherwise specified.
@@ -32,27 +32,27 @@ The first notable thing is that the lower we go, the more time resources spend i
 
 This should no longer be an issue with the release of `HTTP/2`, but whether that’s supported depends on both the client and the server. Most browsers support `HTTP/2` [^1], but less than one third of the websites use it [^2], so queueing is something we should worry about, for now.
 
-### How to solve queueing?
+## How to solve queueing?
 Well, we don’t really have to _solve_ it, just handle it strategically.
 
-#### Decrease the number of assets requested
+### Decrease the number of assets requested
 This will reduce the number of assets that each request has to wait for, thus the request can start earlier.
 - bundle `js` files and stylesheets
 - import dependencies through js before bundling, rather than loading scripts from the `html`
 - use sprites for smaller assets (icons etc.), especially if there’s many of them
 - consider loading small SVGs inline, instead of using them as the source of an `img`.
 
-#### Decrease asset sizes
+### Decrease asset sizes
 - minify `js` and `css`
 - use minified versions of vendor scripts, if you have to include them in the `html` rather than importing and bundling together with your javascript. These are the ones ending in `.min.js`.
 - `gzip` HTML
 - make sure images are a suitable format (simple shapes could be inline SVGs, but more complex stuff is more efficient in PNG, JPG or similar
 - ask the designer for optimised images :)
 
-#### Use a CDN (content delivery network)
+### Use a CDN (content delivery network)
 This means static content can be served from not one, but many, geographically distributed locations. The distance the request and response have to travel is smaller, therefore content is loaded faster.
 
-#### Time requests strategically
+### Time requests strategically
 In React, I’m using a custom `Image` component that has a `delay` property, which, using a simple `setTimeout`, only loads after that delay has passed.
 Here’s the simplified version:
 ```jsx
@@ -96,8 +96,7 @@ You might say lazy loading images belongs here too, but that's more of a visual 
 If you only do one thing to improve site performance, decrease the number of requests, that’s a real bottleneck. Asset size in 2018 is not the biggest issue.
 
 ---
-#### References
+### References
 
 [^1]: [HTTP/2 support on caniuse.com](https://caniuse.com/#feat=http2)
 [^2]: [Usage Statistics of HTTP/2 for Websites, August 2018](https://w3techs.com/technologies/details/ce-http2/all/all)
-

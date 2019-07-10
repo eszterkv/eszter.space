@@ -7,15 +7,15 @@ excerpt_separator: <!-- more -->
 
 One of my first tasks as a developer was to migrate endless tests from Twist to [Cucumber](https://docs.cucumber.io). Since then, I have written and refactored countless more, but I never had to set up Cucumber testing from zero. Until now.<!-- more --> It was really not complicated, but it took me a while to get everything going. This is what I’ve come up with.
 
-### Prerequisites
+## Prerequisites
 [Bundler](http://bundler.io/) — the Ruby equivalent of npm. Just `gem install bundler`.
 phantomjs — get it from [homebrew](https://brew.sh): `brew install phantomjs`
 
-### What to test?
+## What to test?
 I’m prioritising main user stories — Can they log in and out? Can they navigate the page? Do they see the right content? Are more items loaded after they scroll a table? Can they submit forms and create items (e.g. messages, events)? Do the actions they perform have the right effect? Can they view and download invoices? …and so forth. I have an excel sheet for them — this way, even non-coders can add (request) test cases; and it’s a good way to track progress.
 One thing is for sure though: whenever something breaks, if it wasn’t tested before, I write a test for it.
 
-### Setup
+## Setup
 I will demo what I did for testing a simple sign in on our client-facing dashboard. I chose Selenium webdriver, because that’s what I’m used to, but [Poltergeist](https://github.com/teampoltergeist/poltergeist) looks very promising as well. I might try it out and compare experiences.
 
 Our directory structure will look something like this:
@@ -94,7 +94,7 @@ end
 World(Capybara)
 ```
 
-### Ready for our first feature test?
+## Ready for our first feature test?
 Features are written in [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin), an easy-to-read templating language that goes well with Cucumber.
 ```gherkin
 # features/sign.feature

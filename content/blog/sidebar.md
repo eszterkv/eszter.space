@@ -9,10 +9,10 @@ I love [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_B
 
 **So how do we keep a sidebar in place?**
 
-### HTML structure
+## HTML structure
 Our very simple website will contain a sidebar and a `<main>` part. These will be wrapped in a common parent, which has `display: flex` property. Something like this (fill `main` with lots of paragraphs —  try [Space Ipsum](http://spaceipsum.com) or [Fillerama](http://fillerama.io)).
 
-##### HTML
+#### HTML
 ```html
 <div class="wrapper">
   <nav class="sidebar">Links...</nav>
@@ -20,7 +20,7 @@ Our very simple website will contain a sidebar and a `<main>` part. These will b
 </div>
 ```
 
-##### CSS
+#### CSS
 ```css
 .wrapper {
   display: flex;
@@ -28,7 +28,7 @@ Our very simple website will contain a sidebar and a `<main>` part. These will b
 ```
 Blocks have an `overflow` property. They also have `width` and `height`, and with these properties, we can easily tame that sidebar.
 
-### Fixing the sidebar
+## Fixing the sidebar
 First, our sidebar should not be taller than the screen. But how tall is the screen? It’s exactly `100vh`. Now that we are at it, let’s fix `box-sizing` for _every element_ too, in case there are any paddings or borders[^1].
 
 ```css
@@ -41,7 +41,7 @@ First, our sidebar should not be taller than the screen. But how tall is the scr
 }
 ```
 
-### Scrolling the content
+## Scrolling the content
 At this point, our sidebar will be as tall as the screen — but our page height is defined by the length of its content. In other words, `.wrapper` will be as tall as `main`, and if we have lots of paragraphs, we will scroll past the sidebar quickly.
 Overflow to the rescue! Let’s make this `main` no taller than the screen, and scroll if it has more content:
 ```css

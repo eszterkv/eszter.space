@@ -7,38 +7,38 @@ excerpt: "ProtonMail is a secure email provider with a bonus: custom CSS!"
 
 [ProtonMail](https://protonmail.com) is a secure email provider for anyone concerned with Google reading their emails. It's e2e encrypted, which means that there's no way, not even for ProtonMail themselves, to read your emails. The bonus point is that it supports custom css.
 
-### This is how ProtonMail looks like for me:
+## This is how ProtonMail looks like for me:
 
-![inbox]({{site.baseurl}}/assets/images/inbox.png)
+![inbox](./inbox.png)
 
-![settings]({{site.baseurl}}/assets/images/settings.png)
+![settings](./settings.png)
 
-### How?
+## How?
 Just go to Settings → Appearance → Custom theme, and add your very own css.
 
 It's pretty straightforward: you check the css in the inspector, and change what you want to change. Without getting into it too much, this is what I did:
 
-##### Let's start with the basics:
+### Let's start with the basics:
 ```css
 /* body font */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 /* main font colour */
 #pm_main, #pm_main.rows {
-    color: #222;
+  color: #222;
 }
 ```
 
-##### And set a base colour to our theme:
+### And set a base colour to our theme:
 ```css
 #pm_composer .composer header,
 #pm_composer .composer footer .pm_button,
 #pm_composer .composer footer .pm_button:hover,
 #pm_composer .composer footer .pm_button.primary {
-    background: white;
-    color: #224040;
+  background: white;
+  color: #224040;
 }
 
 .headerDesktop-container,
@@ -47,38 +47,38 @@ body {
 .searchForm-action-button-toggle:hover,
 .headerDesktop-logo,
 body section.sidebar {
-    background: #224040;
+  background: #224040;
 }
 
 .pm_buttons,
 .pm_buttons a {
-    color: #224040;
+  color: #224040;
 }
 ```
 
-##### Shrink the conversation panel, lighten the colours, and add some more space after icons:
+### Shrink the conversation panel, lighten the colours, and add some more space after icons:
 ```css
 body #conversation-list-rows .conversation {
-    height: 30px;
-    line-height: 30px;
-    border-bottom: 1px solid #d4d4d6;
-    background: white;
-    font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #d4d4d6;
+  background: white;
+  font-size: 13px;
 }
 
 body #conversation-list-rows .conversation.read {
-    background: #f2f3f4;
+  background: #f2f3f4;
 }
 
 body #conversation-list-rows .conversation .subject h4 .fa-mail-forward,
 body #conversation-list-rows .conversation .subject h4 .fa-mail-reply,
 body #conversation-list-rows .conversation .subject h4 .fa-mail-reply-all,
 body #conversation-list-rows .conversation .subject h4 .folderConversations-container .fa {
-    margin-right: 4px;
+  margin-right: 4px;
 }
 ```
 
-##### Change that accent from purple to gold:
+### Change that accent from purple to gold:
 ```css
 body #conversation-list-rows .conversation .fa-star {
   color: gold !important;
@@ -91,29 +91,29 @@ body #conversation-list-rows .conversation .fa-star {
 
 /* radios & checkboxes */
 .customCheckbox-input:checked+.customCheckbox-mask {
-    background-color: gold;
-    border: 1px solid gold;
+  background-color: gold;
+  border: 1px solid gold;
 }
 
 .customRadio-input:checked+.customRadio-mask {
-    box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 10px gold;
-    border-color: gold;
+  box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 10px gold;
+  border-color: gold;
 }
 
 /* active nav highlight on top */
 .navigation > li.active,
 .navigation > li:hover {
-    border-color: gold;
+  border-color: gold;
 }
 
 /* selected conversations */
 .conversation.marked::before {
-    background: gold;
-    width: 5px;
+  background: gold;
+  width: 5px;
 }
 ```
 
-##### Let's make links and buttons teal:
+### Let's make links and buttons teal:
 ```css
 p a,
 #pm_settings .pm_tabs li a.pm_button,
@@ -158,8 +158,8 @@ body .cg-notify-message.notification-success,
 .pm_button.primary,
 .pm_button.primary:active,
 .pm_dropdown .navigationUser-logout {
-    background-color: teal !important;
-    color: white !important;
+  background-color: teal !important;
+  color: white !important;
 }
 
 .pm_modal .modal-dialog {
@@ -171,48 +171,48 @@ body .cg-notify-message.notification-success,
 }
 ```
 
-##### Adjusting button sizes...
+### Adjusting button sizes...
 ```css
 .sidebar-btn-compose,
 .sidebar-btn-compose:active {
-    color: #fff !important;
-    background: transparent !important;
-    border: 1px solid rgba(255,255,255,.8) !important;
-    height: 30px;
-    min-height: 30px;
-    line-height: 30px;
+  color: #fff !important;
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,.8) !important;
+  height: 30px;
+  min-height: 30px;
+  line-height: 30px;
 }
 
 .sidebar-btn-compose:hover {
-    color: #fff !important;
-    background: rgba(255,255,255,.1) !important;
-    border: 1px solid white !important;
-    box-shadow: inset 0 400px 400px rgba(0,0,0,0.1);
+  color: #fff !important;
+  background: rgba(255,255,255,.1) !important;
+  border: 1px solid white !important;
+  box-shadow: inset 0 400px 400px rgba(0,0,0,0.1);
 }
 
 .pm_button.primary,
 .pm_button.primary:active,
 .pm_dropdown .navigationUser-logout {
-    border: none;
-    line-height: 30px;
-    height: 30px;
+  border: none;
+  line-height: 30px;
+  height: 30px;
 }
 
 .pm_button.primary:hover,
 .pm_button.primary:focus {
-    background: #046161;
+  background: #046161;
 }
 
 .pm_dropdown .navigationUser-logout:hover {
-    background-color: #046161 !important;
-    display: flex;
-    justify-content: center;
-    line-height: 30px;
-    height: 30px;
+  background-color: #046161 !important;
+  display: flex;
+  justify-content: center;
+  line-height: 30px;
+  height: 30px;
 }
 ```
 
-##### I'd like my info panels to be very, very light gray, like this:
+### I'd like my info panels to be very, very light gray, like this:
 ```css
 .alert.alert-info,
 #pm_settings .pm_tabs {
@@ -220,7 +220,7 @@ body .cg-notify-message.notification-success,
 }
 ```
 
-##### ...and finally, some things should just be plain white.
+### ...and finally, some things should just be plain white.
 ```css
 body section.sidebar ul.menu li a .fa-repeat,
 body section.sidebar ul.menu li a i.fa:hover,
@@ -228,8 +228,8 @@ body section.sidebar ul.menu li a:hover i.fa,
 body section.sidebar div.labels ul li a:hover,
 body section.sidebar ul.menu li.active a i.fa,
 body section.sidebar ul.menu li.active a i.fa:hover {
-    color: white !important;
-    opacity: 1;
+  color: white !important;
+  opacity: 1;
 }
 
 body section.sidebar ul.menu li a i.fa,
@@ -238,17 +238,17 @@ body section.sidebar div.labels ul li a,
 body section.sidebar div.footer div.link a,
 body section.sidebar a.version,
 body section.sidebar div.footer div.storage strong {
-    color: white;
-    opacity: 0.5;
+  color: white;
+  opacity: 0.5;
 }
 
 [class*="searchForm-action-button-"],
 .navigation-link:hover {
-    color: white;
+  color: white;
 }
 
 .search-form-fieldset {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 ```
 
