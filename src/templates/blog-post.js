@@ -17,13 +17,15 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article>
-          <h1>
-            {post.frontmatter.title}
-          </h1>
-          <em>
+          <div className="article-title">
+            <h1>
+              {post.frontmatter.title}
+            </h1>
+          </div>
+          <div className="timestamp">
             Written on <time>{post.frontmatter.date}</time>
-          </em>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+          <div className="article-content" dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
         <hr />
 
