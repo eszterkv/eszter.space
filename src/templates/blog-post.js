@@ -27,7 +27,6 @@ class BlogPostTemplate extends React.Component {
           </div>
           <div className="article-content" dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
-        <hr />
 
         <ul
           style={{

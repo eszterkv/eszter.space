@@ -76,7 +76,7 @@ code {
 
 .article-list-title {
   margin-bottom: 0;
-  font-size: 18px;
+  font: 700 20px $titlefont;
 
   a {
     border: none;
@@ -119,6 +119,8 @@ article {
   max-width: 760px;
 
   .article-content {
+    padding-bottom: 4em;
+
     > p:first-of-type:first-letter {
       font-size: 3.4em;
       float: left;
@@ -137,6 +139,13 @@ article {
   }
 }
 
+hr {
+  margin: 2.2em 0 2em;
+  border: 0;
+  height: 1px;
+  background: #999;
+}
+
 main h1 {
   margin-top: 6px;
   font-size: 60px;
@@ -152,5 +161,15 @@ main h1 {
   h1 {
     max-width: 760px;
     margin-bottom: 30px;
+  }
+}
+
+.footnotes {
+  hr {
+    display: none;
+  }
+
+  p {
+    display: inline;
   }
 }
