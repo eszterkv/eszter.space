@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 
 export default function Sidebar() {
   const links = [
-    {href: '/', label: 'Articles'},
-    {href: '/about', label: 'About'},
-    {href: '/now', label: 'Now'},
+    {href: '/', label: '📄 Articles'},
+    {href: '/hi', label: '👋🏻 About'},
+    {href: '/now', label: '⏱ Now'},
   ];
   return (
     <div className="sidebar">
