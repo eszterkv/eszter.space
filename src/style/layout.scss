@@ -61,6 +61,7 @@ pre {
 
 code {
   padding: 3px 4px;
+  white-space: pre-wrap;
 }
 
 .site {
@@ -137,6 +138,10 @@ article {
       margin-top: 2em;
     }
   }
+
+  img {
+    max-width: 100%;
+  }
 }
 
 hr {
@@ -165,6 +170,13 @@ main h1 {
 }
 
 .footnotes {
+  font-size: 90%;
+
+  li {
+    margin-bottom: .5em;
+    color: #777;
+  }
+
   hr {
     display: none;
   }
