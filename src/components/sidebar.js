@@ -22,7 +22,7 @@ export default function Sidebar() {
         ))}
       </ul>
       <h2>Get in touch</h2>
-      ekov@pm.me
+      <a className="email" href="mailto:ekov@pm.me">ekov@pm.me</a>
     </div>
   );
 }

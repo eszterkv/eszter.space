@@ -5,6 +5,7 @@ $primary: #111;
 $accent: #111;
 $light-accent: mistyrose;
 $light-background: oldlace;
+$sidebar-size-s: 220px;
 $sidebar-size: 280px;
 $site-width: 1100px;
 $titlefont: 'Playfair Display';
@@ -21,7 +22,14 @@ body {
 
 main {
   padding-top: 65px;
-  padding-left: $sidebar-size;
+
+  @media (min-width: 720px) {
+    padding-left: $sidebar-size-s;
+  }
+
+  @media (min-width: 900px) {
+    padding-left: $sidebar-size;
+  }
 }
 
 em {
@@ -89,19 +97,52 @@ code {
 }
 
 .sidebar {
-  text-align: right;
-  position: sticky;
   float: left;
   top: 20%;
   left: -$sidebar-size;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  font-weight: 400;
+  color: #999;
+
+  @media (min-width: 720px) {
+    position: sticky;
+    text-align: right;
+  }
 
   a {
     border: none;
   }
 
   .site-title {
-    font-size: 18px;
-    margin: -2px 0 20px;
+    font-size: 14px;
+    margin: -2px 0 10px;
+  }
+
+  h2,
+  .email {
+    display: none;
+
+    @media (min-width: 720px) {
+      display: block;
+    }
+  }
+
+  .nav-list,
+  .nav-list li {
+    display: inline;
+    margin-right: 1em;
+
+    @media (min-width: 720px) {
+      display: block;
+      margin-right: 0;
+    }
+  }
+
+  h2 {
+    font-size: 13px;
+    margin-top: 2em;
   }
 
   .nav-list {
@@ -111,6 +152,10 @@ code {
     li {
       line-height: 1.8;
     }
+  }
+
+  .email {
+    text-transform: lowercase;
   }
 }
 
@@ -153,15 +198,22 @@ hr {
 
 main h1 {
   margin-top: 6px;
-  font-size: 60px;
+  font-size: 40px;
   line-height: 1.2;
   font-family: $titlefont;
+
+  @media (min-width: 900px) {
+    font-size: 60px;
+  }
 }
 
 .article-title {
   border-bottom: 5px solid $primary;
-  width: 100vw;
   margin-bottom: 20px;
+
+  @media (min-width: 1100px) {
+    width: 100vw;
+  }
 
   h1 {
     max-width: 760px;
