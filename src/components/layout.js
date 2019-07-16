@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 import Sidebar from './sidebar';
 import '../style/layout.scss';
+import '../style/highlight.scss';
 
 class Layout extends React.Component {
   render() {

@@ -56,22 +56,6 @@ a {
   }
 }
 
-pre,
-code {
-  font: 15px 'Oxygen Mono';
-  background: $light-background;
-  line-height: 1.48;
-}
-
-pre {
-  padding: 14px;
-}
-
-code {
-  padding: 3px 4px;
-  white-space: pre-wrap;
-}
-
 .site {
   min-height: calc(100vh - 110px);
   max-width: $site-width;
