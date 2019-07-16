@@ -22,7 +22,7 @@ The basic syntax is putting `%c` (letʼs say C for CSS) before the string, so th
 console.log('%cKittens everywhere!', 'color: pink');
 ```
 Which results in something like this:  
-<img src="./console1.png" style="width: auto;" />
+![](./console1.png)
 
 Of course, we can specity some more styles, but the text will always behave like an `inline` element (so it canʼt have height etc.)
 ```js
@@ -32,7 +32,7 @@ console.log(
 );
 ```
 Looking like this:  
-<img src="./console3.png" style="width: auto;" />
+![](./console3.png)
 
 ## Multiple styles
 
@@ -48,7 +48,7 @@ console.log(
 );
 ```
 Looking like this, the empty styles printed in black:  
-<img src="./console2.png" style="width: auto;" />
+![](./console2.png)
 
 ## Going wild: images
 
@@ -60,7 +60,7 @@ console.log(
 );
 ```
 There, a cat in the console.  
-<img src="./console4.png" style="width: auto;" />
+![](./console4.png)
 
 ## Going really, really wild (maybe don't do this in production)
 

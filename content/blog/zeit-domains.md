@@ -9,7 +9,7 @@ A few days ago I decided I deserved a treat, and bought myself a domain on [Zeit
 
 Looking back, the process is fairly easy — Zeit even takes care of SSL with [Let’s Encrypt](https://letsencrypt.org). I did need some help setting it up though, huge thanks to [Sam](https://samu.space) for helping out!
 
-### Hereʼs how itʼs done:
+## Hereʼs how itʼs done:
 
 1. register with zeit.co and add a payment method
 2. install now.sh by `npm i -g now`

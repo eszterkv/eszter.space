@@ -10,6 +10,7 @@ Underline is no good, and `border-bottom` will not do here either, as its `width
 
 <style type="text/css">
   .example.animated-link {
+    border: none;
     background: none;
     text-decoration:none;
     font-weight: 600;
