@@ -44,7 +44,7 @@ describe('Not Found page', () => {
 
 Letʼs imagine `Layout` does a lot more than in our example. If we run the 404 Not Found test right now, it will fail miserably, because thereʼs a lot more going on in `Layout` than just putting things in a `div`. But thatʼs all we need from it in our test, so letʼs do that!
 
-### Mocking the wrapper component
+## Mocking the wrapper component
 Not much to change in our original test, we just have to mock `Layout` so it only returns a `div` with the `children` passed inside. This can be easily achieved like so:
 ```js
 jest.mock('./path/to/layout', () => props => <div {...props} />);

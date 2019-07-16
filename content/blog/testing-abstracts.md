@@ -7,7 +7,7 @@ excerpt: "In unit testing with Jest and Enzyme, a shallow render is a good way t
 
 In unit testing with Jest and Enzyme, a shallow render is a good way to test whether a component works like it should. But with abstract classes[^1] that don’t have a `render()` method (like one I’m trying to test right now), this fails. So how can we test abstracts?
 
-### A simple abstract class
+## A simple abstract class
 
 Our abstract may look something like this calculator. For the sake of simplicity, it can only do one operation (but that, it can do very well!)
 
@@ -45,7 +45,7 @@ class Calculator extends AbstractCalculator {
 }
 ```
 
-### The fun part: testing!
+## The fun part: testing!
 
 Normally, a test for a React class using Jest and Enzyme would look something like this:
 

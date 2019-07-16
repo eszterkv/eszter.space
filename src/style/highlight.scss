@@ -9,6 +9,7 @@ $fn-class: #cc6325;
 pre,
 code {
   font: 15px 'Oxygen Mono';
+  letter-spacing: 0;
   background: $light-background;
   line-height: 1.48;
   -moz-tab-size: 2;
@@ -17,7 +18,11 @@ code {
 }
 
 pre {
-  padding: 14px;
+  padding: 10px;
+
+  code {
+    padding: 0;
+  }
 }
 
 code {

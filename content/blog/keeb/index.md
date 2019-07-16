@@ -6,27 +6,27 @@ date:   2019-02-02 10:10:00 +0200
 
 So, a while ago, the household got a mechanical keyboard. I tried it out, and immediately knew I needed a proper keeb. Fast forward a few months, and I’m building my own, actually soldering parts together.
 
-### How it all started
+## How it all started
 After I tried the mech board at home, I fell in love with the feeling and got myself a lovely Vortex Race 3 for the office. It looks, um, like a mechanical keyboard, so it gets comments ranging from “OMG your keyboard is so cool”, to “oh I used to have an old keyboard like that at home”, so yes, it gets noticed.
 
 It’s also lovely to type on, super quiet compared to what I had expected (Cherry MX brown switches are absolutely office-compatible). It has built-in mac & linux support, colemak and dvorak layouts, plus three fully programmable layers, too, so I can map my own key combinations (arrows on the home row etc.)
 
 Fast forward a few more months, having spent a week working from bed on a macbook due to a bad cold, I got repetitive strain injury (mostly due to bad posture and hand positioning). So partly due to that, partly because why stop at one keyboard, I started looking into split keyboards.
 
-### Why a split keyboard?
+## Why a split keyboard?
 Well, if you put down your hands in front of you, you will notice they sit in an angle rather than parallel to each other. Also, if you lay your hands flat on a keyboard, you will notice that your fingers don’t all rest in the exact same vertical position. This brings us to my chosen keyboard, the keeb.io Iris, which looks something like this:
 
 ![Layout of an Iris split keyboard, consisting of two halves](https://cdn-images-1.medium.com/max/1600/0*BS_98xX0tVQa8fuo.png)
 
-### Keyboard anatomy 101
+## Keyboard anatomy 101
 Most mechanical keyboards consist of a PCB (or two, if it’s a split like the Iris — PCB stands for printed circuit board), a case to protect it, key switches, most of the times a plate to hold the switches in place, and keycaps to cover the switches and make typing comfortable.
 
 They also feature a microcontroller, such as an Arduino-compatible Pro Micro, which make it possible for the board to register key presses and send them to the computer, and enables full custom programmability (not just Vortex Race-like, but really, really full.) There’s a lot more bits and bobs that are needed for the build; we’ll get to that.
 
 Split boards have a master and a slave side; the master is connected to the computer, and the two boards are connected with a TRRS jack cable. However, a pro micro is needed on the slave side as well, to enable the two sides to communicate.
 
-<br />
 ## Preparations
+
 ### Getting parts
 I stupidly waited until my go-to EU supplier CandyKeys ran out of Iris kits, so I had to order directly from Keeb.io in the US. Dealing with customs clearance, shipping costs, documentation and paying a high VAT[^1] is not much fun, but whatever. Order from within your customs borders, whenever you can.
 
@@ -52,8 +52,8 @@ In addition, it’s good to have:
 - Flux (to make solder stick better)
 - Solder sucker or wick (for corrections — actual desoldering is best done with a proper desoldering iron)
 
-<br />
 ## The build
+
 It would be exaggerating to say this was the first time I held a soldering iron, but I was definitely not confident. I got a crash course from someone more experienced[^4], desoldered and soldered 4-5 diodes on an old circuit board that had no use, and was good to go. I mosty followed the excellent and detailed [build guide on keeb.io](https://docs.keeb.io/iris-build-guide/). This is how it’s done, and my experience with it.
 
 One really important thing to note is that the two halves have to be symmetrical, so I had to solder on the other side of the other half. Otherwise, I'd end up with two left or two right halves.
@@ -76,7 +76,7 @@ Only the header pins for now. We have to make sure they are vertical, as in as c
 
 ### 5. Soldering the switches
 
-![Left half with a few switches soldered on]({{site.baseUrl}}/blog/assets/images/iris_in_progress.jpg)
+![](./iris_in_progress.jpg)
 <small>Left half with a few switches soldered on</small>
 
 This is a very fun part, finally our keyboard will start to look like one! To avoid soldering a faulty switch, I test each of them with a multimeter[^6]. Now, the switches have to be popped into the top plate (easy to identify — this is the one with square holes in it), pushed together with the PCB (facing the non-soldered side) and soldered into place. Following common recommendation, I first soldered in the switches in the corners to make sure everything is tight and well aligned, and added the rest of them after.
@@ -105,19 +105,17 @@ I was very careful at this step, because the header pins are very close to each 
 
 ### 8. Putting it all together: bottom plate and keycaps
 
-![Right half with clear acrylic bottom plate, showcasing the Pro Micro and the soldering job]({{site.baseUrl}}/blog/assets/images/iris_back.jpg)
-<small>Right half with clear acrylic bottom plate, showcasing the Pro Micro and the soldering job</small>
+![](./iris_back.jpg)
+<small>Left half with clear acrylic bottom plate, showcasing the Elite-C and the soldering job</small>
 
 Now the easy and fun part, I put on the bottom plate using the standoffs and screws that came with the plates. They came with 10mm standoffs, which I found a bit too short, so I ordered some tiny nylon washers from RS Online, until the 12mm standoffs get here from AliExpress.
 
 The initial keycaps were cheap TaiHao caps, because they shipped fast (and because I had a hard time choosing the final ones). Now the keeb is sporting EnjoyPBT Black on Whites from Kbdfans.
 
-![The Iris finished, with its final keycaps (for now).]({{site.baseUrl}}/blog/assets/images/iris_finished.jpg)
+![](./iris_finished.jpg)
 <small>The Iris finished, with its final keycaps (for now).</small>
 
 Building a keyboard was a real fun day and a half, and I’m already looking forward to my next build, probably a second Iris, for the home office.
-
-<br />
 
 ---
 
