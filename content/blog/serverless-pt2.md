@@ -5,7 +5,7 @@ date:   2019-01-10 20:30:00 +0200
 excerpt: "In the second part, I will turn a simple Lamda function into an API endpoint."
 ---
 
-In the second part, I will turn a simple Lamda function into an API endpoint. If you havenʼt, now is a good time to [read Part 1]({{site.baseUrl}}/serverless-proxy-part-1) first :)
+In the second part, I will turn a simple Lamda function into an API endpoint. If you havenʼt, now is a good time to [read Part 1](/serverless) first :)
 
 ## From function to API
 
