@@ -2,7 +2,7 @@
 layout: post
 title:  "Lazy loading images"
 date:   2018-08-14 22:36:00 +0200
-excerpt: ""
+---
 In my post about loading speed, I promised to write about how I lazy load images. It is a useful technique for when you have large photos above the fold, that would take noticeable time to load. The solution is quite simple: we can make use of CSS’s `blur` filter, with the help of `opacity`. The basic sequence is:
 1. load page with a tiny, blurred version of the image, and on top of it, a transparent, empty placeholder for the full size image
 2. create an `Image` element with the full size `src` using JavaScript

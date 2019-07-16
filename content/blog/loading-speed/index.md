@@ -14,7 +14,7 @@ Before we can speed up anything, we have to understand how websites are loaded i
 
 To better understand this process, open the dev toolbar’s network tab in Chrome (or your preferred browser), navigate to any website (github.com is a good example), and examine what happens there. The key part is the waterfall (those colourful bars on the right side). When you hover them, you can see every detail of each resource, and a [link to Google’s explanation](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#timing-explanation) of what this all means.
 
-![screenshot of network tab waterfall of resources in detail]({{site.baseUrl}}/blog/assets/images/waterfall_detail.png)
+![screenshot of the network tab waterfall of resources in detail](./waterfall_detail.png)
 
 A simplified explanation of what happens here: the first resource is **queued** at 0, which is when the first `GET` request is sent. It doesn’t spend much time in the queue or stalled, as this is the first request. It has to find the IP address to the resource (via a proxy if there is one). Once it gets to the server, the server prepares the response — this is the **waiting** stage. And finally, the response **content is downloaded**.
 
@@ -24,7 +24,7 @@ Once the client has access to that content, it can start requesting all the reso
 
 Let’s have a look at the bigger picture:
 
-![screenshot of network tab's waterfall of resources]({{site.baseUrl}}/blog/assets/images/waterfall.png)
+![screenshot of the network tab's waterfall of resources](./waterfall.png)
 
 The bars corresponding to these resources have mostly four visible parts: white means they are queueing, grey means they are stalled, green means the response is being prepared by the server, and blue corresponds to the time it takes for the resource to be fully downloaded from the server.
 
