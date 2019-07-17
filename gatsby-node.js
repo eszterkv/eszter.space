@@ -19,6 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                script
               }
             }
           }
@@ -29,8 +30,6 @@ exports.createPages = ({ graphql, actions }) => {
     if (result.errors)
       throw result.errors;
 
-
-    // Create blog posts pages.
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach((post, index) => {
@@ -44,6 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
+          scriptUrl: post.node.frontmatter.script,
         },
       });
     });

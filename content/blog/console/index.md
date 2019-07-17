@@ -72,7 +72,7 @@ Thatʼs all for today, remember to check your console for error messages[^3] (mo
 console.error = function() {};
 console.info(
   '%c                             ',
-  'font-size: 150px; background: url(https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif) left/contain no-repeat'
+  'font-size: 150px; background: url(./excellent.gif) left/contain no-repeat'
 );
 </script>
 

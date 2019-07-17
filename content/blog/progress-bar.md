@@ -3,6 +3,7 @@ layout: post
 title:  "Building a reading progress bar"
 date:   2018-09-21 19:10:00 +0200
 category: css
+script: progressbar.js
 excerpt: "For this post, I will do what I did with Typing animation with JavaScript: start from zero and experiment my way through the problem, to show it’s not that hard to build impressive animations. A reading progress bar this time."
 ---
 
@@ -75,18 +76,6 @@ This is the actual code I am using for this page. Feel free to replicate and mod
     background: linear-gradient(to right, #ecd2fe, #feaaaa);
   }
 </style>
-
-<script>
-  window.onload = () => {
-    const post = document.getElementsByTagName('article')[0];
-    const progressBar = document.getElementById('progress-bar');
-    const distance = (post.clientHeight + post.offsetTop) - window.innerHeight;
-    window.addEventListener('scroll', () => {
-      const progress = window.scrollY / distance * 100;
-      progressBar.style.width = `${progress}%`;
-    });
-  }
-</script>
 
 ---
 #### References
