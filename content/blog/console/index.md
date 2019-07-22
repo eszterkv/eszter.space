@@ -2,6 +2,7 @@
 layout: post
 title:  "console.log('colours!')"
 date:   2018-10-09 18:22:00 +0200
+script: console.js
 ---
 
 Ever seen those styled `console.log`s when opening the dev console on some random website? Cool, right? Calls to `console.log` (and `.warn`, `.info` etc.) can be styled with inline CSS, but itʼs not really well documented, so letʼs experiment with it a little.
@@ -64,21 +65,14 @@ There, a cat in the console.
 
 ## Going really, really wild (maybe don't do this in production)
 
-Open the console to see if it works with gifs.
+Open the console to see if it works with gifs.[^3]
 
-Thatʼs all for today, remember to check your console for error messages[^3] (most importantly in production), and say hi to fellow developers.
-
-<script type="text/javascript">
-console.error = function() {};
-console.info(
-  '%c                             ',
-  'font-size: 150px; background: url(./excellent.gif) left/contain no-repeat'
-);
-</script>
+Thatʼs all for today, remember to check your console for error messages[^4] (most importantly in production), and say hi to fellow developers.
 
 ---
 
 #### References
 [^1]: By the way, google "text adventure" and check the console for a full-blown easter egg game, complete with console styling.
 [^2]: [Formatting specifiers — Console standard on WHATWG](https://console.spec.whatwg.org/#formatting-specifiers)
-[^3]: Ah, another hack: `console.error = function() {};` suppresses all error messages.
+[^3]: Not in Firefox.
+[^4]: Ah, another hack: `console.error = function() {};` suppresses all error messages.
