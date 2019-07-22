@@ -43,7 +43,6 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
-          scriptUrl: post.node.frontmatter.script,
         },
       });
     });
