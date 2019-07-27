@@ -1,11 +1,12 @@
 $light-background: #f6f6f6;
-$string-colour: #813772;
+$string-colour: #065;
 $keyword-color: #111;
-$bool-nr-symbol: #315e64;
-$important: #882601;
-$variable: #56735d;
-$operator: #56735d;
-$fn-class: #062f4f;
+$bool-nr-symbol: #111;
+$important: slategrey;
+$variable: #2f4550;
+$operator: #111;
+$fn-class: #a70;
+$punctuation: #111;
 
 pre,
 code {
@@ -40,7 +41,7 @@ code {
   }
 
   &.punctuation {
-    color: #999;
+    color: $punctuation;
   }
 
   &.property,

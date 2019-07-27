@@ -13,7 +13,10 @@ export default function About({location}) {
       <p>
         I’m Eszter, a front-end engineer based in London, UK. Sometimes I write about CSS, loading speed, being a developer, or whatever comes to my mind.
       </p>
-      <img src={profilepic} style={{marginTop: '16px', maxWidth: '300px'}} />
+      <img
+        src={profilepic}
+        style={{marginTop: '16px', maxWidth: '400px', maxHeight: '40vh'}}
+      />
     </Layout>
   );
 }
