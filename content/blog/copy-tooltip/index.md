@@ -24,7 +24,7 @@ You can try `document.execCommand('otters')` of course (I have), it will simply 
 
 ## Let’s write some code!
 
-As mentioned, `execCommand` needs an editable element. Let’s try with an `input`.
+As mentioned, `execCommand` needs an editable element. This is because only editable elements can be selected programmatically. Let’s try with an `input`.
 
 ```html
 <input

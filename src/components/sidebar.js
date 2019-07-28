@@ -34,15 +34,19 @@ export default function Sidebar() {
         ))}
       </ul>
       <h2>Get in touch</h2>
-      <input
-        readOnly
-        id="email"
-        type="text"
-        value="ekov@pm.me"
+      <span
         className="email"
         onMouseOver={() => setShowTooltip(true)}
         onMouseOut={() => {setCopied(false); setShowTooltip(false)}}
         onClick={copyToClipboard}
+      >
+        ekov@pm.me
+      </span>
+      <input
+        className="hidden"
+        id="email"
+        type="text"
+        value="ekov@pm.me"
       />
       <TransitionGroup>
         {showTooltip && (

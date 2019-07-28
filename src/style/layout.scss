@@ -175,6 +175,13 @@ a {
 
 $title-offset: 40px;
 
+.hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+}
+
 article {
   max-width: 760px;
 
@@ -183,7 +190,7 @@ article {
 
     > p:first-of-type:first-letter {
       font-size: 3.4em;
-      float: left;
+      line-height: 1;
       position: relative;
       padding-top: 6px;
       margin-right: 3px;
