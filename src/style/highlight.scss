@@ -21,7 +21,12 @@ code {
 
 pre {
   padding: 10px;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  @media (min-width: 900px) {
+    overflow-x: hidden;
+  }
 
   code {
     padding: 0;
