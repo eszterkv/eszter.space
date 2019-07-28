@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 export default function Sidebar() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -34,7 +35,7 @@ export default function Sidebar() {
       </ul>
       <h2>Get in touch</h2>
       <input
-        readonly
+        readOnly
         id="email"
         type="text"
         value="ekov@pm.me"
@@ -43,11 +44,15 @@ export default function Sidebar() {
         onMouseOut={() => {setCopied(false); setShowTooltip(false)}}
         onClick={copyToClipboard}
       />
-      {showTooltip && (
-        <div className="tooltip">
-          {copied ? 'Copied 🚀' : 'Click to copy'}
-        </div>
+      <TransitionGroup>
+        {showTooltip && (
+          <CSSTransition key="tooltip" classNames="transition" timeout={300}>
+            <div className="tooltip">
+              {copied ? 'Copied 🚀' : 'Click to copy'}
+            </div>
+          </CSSTransition>
         )}
+      </TransitionGroup>
     </div>
   );
 }
