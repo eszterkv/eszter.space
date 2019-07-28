@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
 
 $primary: #111;
-$accent: #667;
+$accent: #99a;
 $sidebar-size-s: 220px;
 $sidebar-size: 280px;
 $site-width: 1100px;
@@ -71,6 +71,7 @@ a {
 
   a {
     border: none;
+    color: inherit;
   }
 
   + * {
@@ -82,13 +83,14 @@ a {
   float: left;
   top: 20%;
   left: -$sidebar-size;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: .8px;
   font-weight: 400;
   color: #999;
 
   @media (min-width: 720px) {
     position: sticky;
+    font-size: 13px;
     text-align: right;
   }
 
@@ -221,4 +223,20 @@ main h1 {
 
 .gatsby-resp-image-wrapper {
   margin-left: 0 !important;
+}
+
+.post-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: inherit;
+  }
 }

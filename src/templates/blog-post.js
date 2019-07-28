@@ -40,15 +40,7 @@ export default function BlogPostTemplate({data, pageContext, location}) {
         <div className="article-content" dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
 
-      <ul
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-          listStyle: 'none',
-          padding: 0,
-        }}
-      >
+      <ul className="post-footer-links">
         <li>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">
