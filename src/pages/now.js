@@ -3,9 +3,9 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-export default function Now({location}) {
+export default function Now() {
   return (
-    <Layout location={location} title="About me">
+    <Layout>
       <SEO title="Now: what Iʼm up to" />
       <h1>Now</h1>
       <p className="timestamp">
