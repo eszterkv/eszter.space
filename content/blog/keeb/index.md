@@ -4,7 +4,7 @@ title:  "Building a mechanical keyboard"
 date:   2019-02-02 10:10:00 +0200
 ---
 
-So, a while ago, the household got a mechanical keyboard. I tried it out, and immediately knew I needed a proper keeb. Fast forward a few months, and I’m building my own, actually soldering parts together.
+A while ago, the household got a mechanical keyboard. I tried it out, and immediately knew I needed a proper keeb. Fast forward a few months, and I’m building my own, actually soldering parts together.
 
 ## How it all started
 After I tried the mech board at home, I fell in love with the feeling and got myself a lovely Vortex Race 3 for the office. It looks, um, like a mechanical keyboard, so it gets comments ranging from “OMG your keyboard is so cool”, to “oh I used to have an old keyboard like that at home”, so yes, it gets noticed.
