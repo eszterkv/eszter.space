@@ -16,7 +16,7 @@ It’s also a nice touch when you have something long to copy, and it’s not re
 
 `document` has much more to offer than `appendChild` and `getElementById`, just look at this looooong list, fresh from the console:
 
-![](./document-api.gif)
+![ ](./document-api.gif)
 
 Some of them are familiar, but this time we’ll use one that’s a bit more obscure: [`document.execCommand`](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand). It can manipulate editable elements (such as `input` and anything with the attribute `contentEditable`). `execCommand` takes at least one argument: the name of the command we’d like the browser to execute.
 
