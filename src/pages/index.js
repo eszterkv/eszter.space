@@ -1,41 +1,40 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
+export default function Index({data}) {
+  const { posts } = data.allMarkdownRemark;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <div key={node.fields.slug} className="article-list-item">
-              <h2 className="article-list-title">
-                <Link to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h2>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          );
-        })}
-      </Layout>
-    );
-  }
+  return (
+    <Layout>
+      <SEO title="All posts" />
+      {posts.map(({ node }) => {
+        const title = node.frontmatter.title || node.fields.slug;
+        return (
+          <div key={node.fields.slug} className="article-list-item">
+            <h2 className="article-list-title">
+              <Link to={node.fields.slug}>
+                {title}
+              </Link>
+            </h2>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: node.frontmatter.description || node.excerpt,
+              }}
+            />
+          </div>
+        );
+      })}
+    </Layout>
+  );
 }
 
-export default BlogIndex;
+Index.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export const pageQuery = graphql`
   query {
@@ -45,7 +44,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
+      posts: edges {
         node {
           excerpt
           fields {
