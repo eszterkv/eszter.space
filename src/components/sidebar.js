@@ -47,6 +47,7 @@ export default function Sidebar() {
         id="email"
         type="text"
         value="ekov@pm.me"
+        readOnly
       />
       <TransitionGroup>
         {showTooltip && (

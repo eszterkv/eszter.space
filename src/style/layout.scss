@@ -16,6 +16,7 @@ body {
   padding: 20px 20px 90px;
   color: $primary;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 main {
@@ -191,9 +192,14 @@ article {
     > p:first-of-type:first-letter {
       font-size: 3.4em;
       line-height: 1;
+      float: left;
       position: relative;
-      padding-top: 6px;
+      margin-top: -4px;
       margin-right: 3px;
+
+      @-moz-document url-prefix() {
+        margin-top: 6px;
+      }
     }
 
     h2,
