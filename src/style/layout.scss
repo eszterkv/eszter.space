@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
 
 $primary: #111;
-$accent: #99a;
+$accent: darkorange;
 $sidebar-size-s: 220px;
 $sidebar-size: 280px;
 $site-width: 1100px;
@@ -20,6 +20,7 @@ body {
 
 main {
   padding-top: 65px;
+  overflow: visible;
 
   @media (min-width: 720px) {
     padding-left: $sidebar-size-s;
@@ -44,14 +45,8 @@ em {
 
 a {
   text-decoration: none;
-  color: $accent;
+  color: inherit;
   border-bottom: 1px solid $primary;
-  transition: color .3s ease-out;
-
-  &:hover,
-  &:focus {
-    color: $primary;
-  }
 }
 
 .site {
@@ -86,11 +81,9 @@ a {
   font-size: 14px;
   letter-spacing: .8px;
   font-weight: 400;
-  color: #999;
 
   @media (min-width: 720px) {
     position: sticky;
-    font-size: 13px;
     text-align: right;
   }
 
@@ -98,8 +91,18 @@ a {
     border: none;
   }
 
+  .nav-list a {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color .3s ease;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $primary;
+    }
+  }
+
   .site-title {
-    font-size: 14px;
+    font-size: 15px;
     margin: -2px 0 10px;
   }
 
@@ -110,6 +113,34 @@ a {
     @media (min-width: 720px) {
       display: block;
     }
+  }
+
+  .email {
+    font-size: 14px;
+    color: inherit;
+    border: none;
+    text-align: right;
+    transition: color .2s ease;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+
+  .tooltip {
+    border: 1px dotted #111;
+    position: relative;
+    top: -4em;
+    padding: 1px 4px;
+    box-shadow: 0 0 5px 1px #eee;
+    background: #fffff0;
+    display: inline-block;
+    color: $primary;
+    font-size: 12px;
+    text-align: center;
+    min-width: 85px;
   }
 
   .nav-list,
@@ -124,7 +155,7 @@ a {
   }
 
   h2 {
-    font-size: 13px;
+    font-size: 14px;
     margin-top: 2em;
   }
 
@@ -170,6 +201,52 @@ article {
   img {
     max-width: 100%;
   }
+
+  a {
+    &:not(.footnote-ref):not(.footnote-backref) {
+      border-bottom-color: transparent;
+      transition: border-bottom-color .3s ease;
+      position: relative;
+      padding-right: 8px;
+      margin-right: 2px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: -2px;
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        border: 1px solid $accent;
+        background: white;
+        transition: background .3s ease;
+      }
+
+      &:hover,
+      &:focus {
+        border-bottom-color: $primary;
+
+        &::after {
+          background: $accent;
+        }
+      }
+    }
+
+    &.footnote-ref,
+    &.footnote-backref {
+      margin-left: 2px;
+      border: none;
+      color: $accent;
+      transition: color .3s ease;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+  }
 }
 
 hr {
@@ -209,7 +286,6 @@ main h1 {
 
   li {
     margin-bottom: .5em;
-    color: #777;
   }
 
   hr {
@@ -238,5 +314,30 @@ main h1 {
 
   a {
     color: inherit;
+  }
+}
+
+.blotter {
+  display: none;
+
+  @media (min-width: 900px) {
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    background: white;
+    width: 200%;
+    animation: fade-background .6s linear;
+    top: -2px;
+  }
+}
+
+@keyframes fade-background {
+  from {
+    background: transparent;
+  }
+
+  to {
+    background: white;
   }
 }

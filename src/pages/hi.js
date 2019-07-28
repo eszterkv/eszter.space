@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 
 export default function About({location}) {
   const profilepic = require('../../content/assets/IMG_4131.jpg');
-  const intro = 'I’m Eszter, a front-end engineer based in London, UK. Sometimes I write about CSS, loading speed, being a developer, or whatever comes to my mind.';
+  const intro = 'I’m Eszter, a front-end engineer based in London, UK.';
 
   return (
     <Layout location={location} title="About me">

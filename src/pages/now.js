@@ -1,13 +1,76 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { SplitColorChannelText } from 'react-text-fun';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 export default function Now() {
+  const [blotterLoaded, setBlotterLoaded] = useState(false);
+  const [blotterPos, setBlotterPos] = useState({x: 0, y: 0});
+  const [rgbOffset, setRgbOffset] = useState(0);
+
+  useEffect(() => {
+    if (!blotterLoaded)
+      checkBlotterLoaded();
+  }, []);
+
+  useEffect(() => {
+    if (blotterLoaded)
+      window.addEventListener('mousemove', e => animateText(e));
+
+    return window.removeEventListener('mousemove', e => animateText(e));
+  }, [blotterLoaded]);
+
+  function checkBlotterLoaded() {
+    if (typeof window.Blotter !== 'undefined')
+      setBlotterLoaded(true);
+    else
+      window.setTimeout(checkBlotterLoaded, 100);
+  }
+
+  function animateText(e) {
+    const {clientX, clientY} = e;
+    let {x, y} = blotterPos;
+    if (!x || !y) {
+      const blotterEl = document.querySelector('.blotter');
+      if (blotterEl) {
+        const rect = blotterEl.getBoundingClientRect();
+        ({x, y} = rect);
+        setBlotterPos({x, y});
+      }
+    }
+
+    if (x && y) {
+      const offset = calculateOffset({x, y, clientX, clientY});
+      setRgbOffset(offset);
+    }
+  }
+
+  function calculateOffset({x, y, clientX, clientY}) {
+    const dist = Math.abs(x - clientX) + Math.abs(y - clientY) / 2;
+    return Math.min(0.046, dist * .0001);
+  }
+
   return (
     <Layout>
       <SEO title="Now: what Iʼm up to" />
-      <h1>Now</h1>
+      <h1 style={{position: 'relative'}}>
+        Now
+        {blotterLoaded && (
+          <div className="blotter">
+            <SplitColorChannelText
+              text="Now"
+              fill="#111"
+              fontFamily="Playfair Display"
+              fontWeight={700}
+              fontSize={60}
+              rgbOffset={rgbOffset}
+              addBlur={true}
+              addNoise={true}
+            />
+          </div>
+        )}
+      </h1>
       <p className="timestamp">
         Last updated: 10 July, 2019
       </p>
