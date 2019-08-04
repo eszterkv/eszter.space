@@ -220,15 +220,14 @@ article {
       border-bottom-color: transparent;
       transition: border-bottom-color .3s ease;
       position: relative;
-      padding-right: 8px;
-      margin-right: 2px;
+      padding-right: 3px;
 
       &::after {
         content: '';
-        position: absolute;
-        top: 1px;
-        right: -2px;
-        display: block;
+        position: relative;
+        top: -.5em;
+        left: 3px;
+        display: inline-block;
         width: 5px;
         height: 5px;
         border-radius: 50%;
