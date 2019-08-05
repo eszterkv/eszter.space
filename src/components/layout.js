@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Sidebar from './sidebar';
-import '../style/layout.scss';
+import { SiteWrapper } from './styled';
+import '../style/globals.scss';
 import '../style/highlight.scss';
 
 export default function Layout({children}) {
@@ -21,10 +22,10 @@ export default function Layout({children}) {
   }
 
   return (
-    <div className="site">
+    <SiteWrapper>
       <Sidebar />
       <main>{children}</main>
-    </div>
+    </SiteWrapper>
   );
 }
 

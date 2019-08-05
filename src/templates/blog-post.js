@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { Article, ArticleBody, ArticleTitle, FooterNav, Timestamp } from '../components/styled';
 
 export default function BlogPostTemplate({data, pageContext, location}) {
   const post = data.markdownRemark;
@@ -28,19 +29,15 @@ export default function BlogPostTemplate({data, pageContext, location}) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
-        <div className="article-title">
-          <h1>
-            {post.frontmatter.title}
-          </h1>
-        </div>
-        <div className="timestamp">
-          Written on <time>{post.frontmatter.date}</time>
-        </div>
-        <div className="article-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-      </article>
+      <Article>
+        <ArticleTitle>
+          {post.frontmatter.title}
+        </ArticleTitle>
+        <Timestamp date={post.frontmatter.date} />
+        <ArticleBody dangerouslySetInnerHTML={{ __html: post.html }} />
+      </Article>
 
-      <ul className="post-footer-links">
+      <FooterNav>
         <li>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">
@@ -55,7 +52,7 @@ export default function BlogPostTemplate({data, pageContext, location}) {
             </Link>
           )}
         </li>
-      </ul>
+      </FooterNav>
     </Layout>
   );
 }
