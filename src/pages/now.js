@@ -100,7 +100,7 @@ const Blotter = styled.div`
   display: none;
 
   @media (min-width: 900px) {
-    display: inline-block;
+    display: ${props => props.theme.background === 'white' ? 'inline-block' : 'none'};
     position: absolute;
     top: -1px;
     left: 0;

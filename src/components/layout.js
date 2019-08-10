@@ -14,7 +14,10 @@ export default function Layout({children}) {
   useEffect(insertScripts, []);
   useEffect(() => {
     updateBodyBg();
-    localStorage.setItem('espc_lights_off', lightsOff);
+    if (lightsOff)
+      localStorage.setItem('espc_lights_off', 1);
+    else
+      localStorage.removeItem('espc_lights_off');
   }, [lightsOff]);
 
   function insertScripts() {
