@@ -11,7 +11,7 @@ export default function Layout({children}) {
   /* fallback localStorage for Netlify build */
   const localStorage = typeof localStorage !== 'undefined'
     ? localStorage
-    : {getItem: () => {}, setItem: () => {}};
+    : {getItem: () => {}, setItem: () => {}, removeItem: () => {}};
 
   const [lightsOff, setLightsOff] = useState(
     localStorage.getItem('espc_lights_off') || false
