@@ -15,10 +15,11 @@ const SiteWrapper = styled.div`
   line-height: 1.55;
 
   main {
-    padding-top: 65px;
+    padding-top: 25px;
     overflow: visible;
 
     @media (min-width: 720px) {
+      margin-top: 65px;
       padding-left: ${sidebarSizes.small}px;
     }
 
