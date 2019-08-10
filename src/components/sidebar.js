@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { SiteTitle, Tooltip, TooltipTrigger } from './styled';
 import { colors, sidebarSizes } from './styled/variables';
 
-export default function Sidebar() {
+export default function Sidebar({lightsOff, setLightsOff}) {
   const [showTooltip, setShowTooltip] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -44,21 +45,18 @@ export default function Sidebar() {
       >
         ekov@pm.me
       </TooltipTrigger>
-      <input
-        id="email"
-        type="text"
-        value="ekov@pm.me"
-        readOnly
-      />
+      <input id="email" type="text" value="ekov@pm.me" readOnly />
       <TG>
         {showTooltip && (
           <CSSTransition key="tooltip" classNames="transition" timeout={300}>
-            <Tooltip>
-              {copied ? 'Copied 🚀' : 'Click to copy'}
-            </Tooltip>
+            <Tooltip>{copied ? 'Copied 🚀' : 'Click to copy'}</Tooltip>
           </CSSTransition>
         )}
       </TG>
+      <ThemeToggle onClick={() => setLightsOff(!lightsOff)}>
+        <span>Turn lights {lightsOff ? 'on ' : 'off '}</span>
+        <span id="bulb">💡</span>
+      </ThemeToggle>
     </Sb>
   );
 }
@@ -116,3 +114,39 @@ const NavList = styled.ul`
     }
   }
 `;
+
+const ThemeToggle = styled.button`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  border: none;
+  background: none;
+  color: ${props => props.theme.primary};
+  font-size: 12px;
+  letter-spacing: .2px;
+  cursor: pointer;
+
+  @media (min-width: 720px) {
+    top: calc(100% + 30px);
+    right: -1em;
+  }
+
+  span:not(#bulb) {
+    opacity: .5;
+    transition: opacity .3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    span:not(#bulb) {
+      opacity: .84;
+      transition: opacity .3s ease;
+    }
+  }
+`;
+
+Sidebar.propTypes = {
+  lightsOff: PropTypes.bool.isRequired,
+  setLightsOff: PropTypes.func.isRequired,
+};

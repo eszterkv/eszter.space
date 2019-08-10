@@ -67,8 +67,8 @@ export default function Now() {
               fontWeight={700}
               fontSize={60}
               rgbOffset={rgbOffset}
-              addBlur={true}
-              addNoise={true}
+              addBlur
+              addNoise
             />
           </Blotter>
         )}

@@ -37,11 +37,8 @@ const imgQuery = graphql`
     profilePic: file(relativePath: { eq: "e.jpg" }) {
       childImageSharp {
         fixed(
-          width: 199,
-          duotone: {
-            highlight: "#fdf1e5",
-            shadow: "#111111"
-          }
+          width: 198,
+          grayscale: true
         ) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }

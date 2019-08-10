@@ -26,13 +26,13 @@ export const Article = styled.article`
         height: 5px;
         border-radius: 50%;
         border: 1px solid ${colors.accent};
-        background: white;
+        background: ${props => props.theme.background};
         transition: background .3s ease;
       }
 
       &:hover,
       &:focus {
-        border-bottom-color: ${colors.primary};
+        border-bottom-color: ${props => props.theme.primary};
 
         &::after {
           background: ${colors.accent};
@@ -49,7 +49,7 @@ export const Article = styled.article`
 
       &:hover,
       &:focus {
-        color: ${colors.primary};
+        color: ${props => props.theme.primary};
       }
     }
   }
@@ -116,7 +116,7 @@ export const ArticleBody = styled.div`
 `;
 
 const StyledArticleTitle = styled.div`
-  border-bottom: 5px solid ${colors.primary};
+  border-bottom: 5px solid ${props => props.theme.primary};
   margin-bottom: 20px;
 
   @media (min-width: 1100px) {

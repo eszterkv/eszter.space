@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors, sidebarSizes } from './variables';
 
-const baseFont = `17px 'Helvetica Neue', 'Helvetica', sans-serif`;
+const baseFont = '17px \'Helvetica Neue\', \'Helvetica\', sans-serif';
 const siteWidth = 1100;
 
 const SiteWrapper = styled.div`
@@ -9,7 +9,7 @@ const SiteWrapper = styled.div`
   max-width: ${siteWidth}px;
   margin: 0 auto;
   padding: 0;
-  color: ${colors.primary};
+  color: ${props => props.theme.primary};
   font: ${baseFont};
   letter-spacing: .2px;
   line-height: 1.55;
@@ -32,5 +32,11 @@ const SiteWrapper = styled.div`
     font-family: 'Georgia', serif;
   }
 `;
+
+SiteWrapper.defaultProps = {
+  theme: {
+    primary: colors.primary,
+  },
+};
 
 export default SiteWrapper;

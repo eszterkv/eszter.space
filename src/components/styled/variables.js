@@ -3,6 +3,10 @@ import { css } from 'styled-components';
 export const colors = {
   primary: '#111',
   accent: 'darkorange',
+  grey: '#eee',
+  invertedGrey: '#445',
+  invertedBg: '#222728',
+  invertedPrimary: '#f0f0f0',
 };
 
 export const fonts = {

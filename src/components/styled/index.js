@@ -8,6 +8,19 @@ import {
 import SiteWrapper from './site-wrapper';
 import { SiteTitle, Title } from './text';
 import { Tooltip, TooltipTrigger } from './tooltip';
+import { colors } from './variables';
+
+const lightTheme = {
+  primary: colors.primary,
+  background: 'white',
+  grey: colors.grey,
+};
+
+const darkTheme = {
+  primary: colors.invertedPrimary,
+  background: colors.invertedBg,
+  grey: colors.invertedGrey,
+};
 
 export {
   Article,
@@ -20,4 +33,6 @@ export {
   Title,
   Tooltip,
   TooltipTrigger,
-}
+  lightTheme,
+  darkTheme
+};
