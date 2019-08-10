@@ -15,3 +15,51 @@ a {
   color: inherit;
   border-bottom: 1px solid $primary;
 }
+
+$primary: #111;
+$accent: darkorange;
+$sidebar-size-s: 220px;
+$sidebar-size: 280px;
+$site-width: 1100px;
+$titlefont: 'Playfair Display';
+
+.article-list-item {
+  margin-bottom: 30px;
+}
+
+.article-list-title {
+  margin-bottom: 0;
+  font: 700 20px $titlefont;
+
+  a {
+    border: none;
+    color: inherit;
+  }
+
+  + * {
+    margin-top: .33em;
+  }
+}
+$title-offset: 40px;
+
+.transition-enter {
+  opacity: 0;
+}
+
+.transition-enter-active {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.transition-exit {
+  opacity: 1;
+}
+
+.transition-exit-active {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+del {
+  opacity: .8;
+}

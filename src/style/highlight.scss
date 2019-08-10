@@ -17,6 +17,7 @@ code {
   -moz-tab-size: 2;
     -o-tab-size: 2;
        tab-size: 2;
+  scrollbar-width: none;
 }
 
 pre {
@@ -35,7 +36,6 @@ pre {
 
 code {
   padding: 3px 4px;
-  white-space: pre-wrap;
 }
 
 .token {

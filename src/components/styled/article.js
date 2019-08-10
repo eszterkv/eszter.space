@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, fonts } from './variables';
+import { colors, fonts, titleStyle } from './variables';
 
 export const Article = styled.article`
   max-width: 760px;
@@ -25,7 +25,7 @@ export const Article = styled.article`
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        border: 1px solid $accent;
+        border: 1px solid ${colors.accent};
         background: white;
         transition: background .3s ease;
       }
@@ -82,6 +82,29 @@ export const ArticleBody = styled.div`
   .gatsby-resp-image-wrapper {
     margin-left: 0 !important;
   }
+
+  hr {
+    margin: 2.2em 0 2em;
+    border: 0;
+    height: 1px;
+    background: #999;
+  }
+
+  .footnotes {
+    font-size: 90%;
+
+    li {
+      margin-bottom: .5em;
+    }
+
+    hr {
+      display: none;
+    }
+
+    p {
+      display: inline;
+    }
+  }
 `;
 
 const StyledArticleTitle = styled.div`
@@ -93,15 +116,7 @@ const StyledArticleTitle = styled.div`
   }
 
   h1 {
-    max-width: 760px;
-    margin: 6px 0 30px;
-    font-size: 40px;
-    line-height: 1.2;
-    font-family: ${fonts.title};
-
-    @media (min-width: 900px) {
-      font-size: 60px;
-    }
+    ${titleStyle}
   }
 `;
 

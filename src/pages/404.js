@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { Title } from '../components/styled';
 
 export default function NotFoundPage({data, location}) {
   const siteTitle = data.site.siteMetadata.title;
@@ -12,7 +13,7 @@ export default function NotFoundPage({data, location}) {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="404: Not found" />
-      <h1>Not found</h1>
+      <Title>Not found</Title>
       <p>But here are two rabbits.</p>
       <img src={img} style={{maxHeight: '44vh'}} />
     </Layout>

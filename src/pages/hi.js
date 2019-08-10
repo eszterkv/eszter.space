@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { Title } from '../components/styled';
 
 export default function About({location}) {
   const profilepic = require('../../content/assets/IMG_4131.jpg');
@@ -11,7 +12,7 @@ export default function About({location}) {
   return (
     <Layout location={location} title="About me">
       <SEO title="Iʼm a frontend engineer." />
-      <h1>Hi,</h1>
+      <Title>Hi,</Title>
       <p>
         {intro}
       </p>

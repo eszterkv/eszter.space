@@ -6,7 +6,7 @@ import {
   Timestamp
 } from './article';
 import SiteWrapper from './site-wrapper';
-import { SiteTitle } from './text';
+import { SiteTitle, Title } from './text';
 import { Tooltip, TooltipTrigger } from './tooltip';
 
 export {
@@ -17,6 +17,7 @@ export {
   SiteTitle,
   SiteWrapper,
   Timestamp,
+  Title,
   Tooltip,
   TooltipTrigger,
 }

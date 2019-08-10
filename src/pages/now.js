@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
 import { SplitColorChannelText } from 'react-text-fun';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { Title } from '../components/styled';
 
 export default function Now() {
   const [blotterLoaded, setBlotterLoaded] = useState(false);
@@ -32,7 +34,7 @@ export default function Now() {
     const {clientX, clientY} = e;
     let {x, y} = blotterPos;
     if (!x || !y) {
-      const blotterEl = document.querySelector('.blotter');
+      const blotterEl = document.getElementById('blotter');
       if (blotterEl) {
         const rect = blotterEl.getBoundingClientRect();
         ({x, y} = rect);
@@ -54,10 +56,10 @@ export default function Now() {
   return (
     <Layout>
       <SEO title="Now: what Iʼm up to" />
-      <h1 style={{position: 'relative'}}>
+      <Title style={{position: 'relative'}}>
         Now
         {blotterLoaded && (
-          <div className="blotter">
+          <Blotter id="blotter">
             <SplitColorChannelText
               text="Now"
               fill="#111"
@@ -68,9 +70,9 @@ export default function Now() {
               addBlur={true}
               addNoise={true}
             />
-          </div>
+          </Blotter>
         )}
-      </h1>
+      </Title>
       <p className="timestamp">
         Last updated: 10 July, 2019
       </p>
@@ -85,3 +87,28 @@ export default function Now() {
     </Layout>
   );
 }
+
+const fadeIn = keyframes`
+  from {
+    background: transparent;
+  }
+
+  to {
+    background: white;
+  }
+`;
+
+const Blotter = styled.div`
+  display: none;
+
+  @media (min-width: 900px) {
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    background: white;
+    width: 200%;
+    animation: ${fadeIn} .6s linear;
+    top: -2px;
+  }
+`;
