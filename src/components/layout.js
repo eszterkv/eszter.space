@@ -8,6 +8,11 @@ import '../style/globals.scss';
 import '../style/highlight.scss';
 
 export default function Layout({children}) {
+  /* fallback localStorage for Netlify build */
+  const localStorage = typeof localStorage !== 'undefined'
+    ? localStorage
+    : {getItem: () => {}, setItem: () => {}};
+
   const [lightsOff, setLightsOff] = useState(
     localStorage.getItem('espc_lights_off') || false
   );
