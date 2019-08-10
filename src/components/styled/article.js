@@ -83,6 +83,14 @@ export const ArticleBody = styled.div`
     margin-left: 0 !important;
   }
 
+  .gatsby-resp-image-link {
+    border: none;
+
+    &::after {
+      display: none !important;
+    }
+  }
+
   hr {
     margin: 2.2em 0 2em;
     border: 0;
@@ -134,9 +142,9 @@ const StyledTimestamp = styled.div`
   margin-bottom: 2em;
 `;
 
-export const Timestamp = ({date, ...rest}) => (
+export const Timestamp = ({date, prefix, ...rest}) => (
   <StyledTimestamp {...rest}>
-    Written on <time>{date}</time>
+    {prefix || 'Written on'} <time>{date}</time>
   </StyledTimestamp>
 );
 

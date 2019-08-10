@@ -43,7 +43,13 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaultQuality: 100,
+        stripMetadata: true,
+      },
+    },
     'gatsby-plugin-feed',
     {
       resolve: 'gatsby-plugin-manifest',
