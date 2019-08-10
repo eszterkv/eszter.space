@@ -12,11 +12,14 @@ pre,
 code {
   font: 15px 'Oxygen Mono';
   letter-spacing: 0;
+  color: $keyword-color;
   background: $light-background;
+  border-radius: 2px;
   line-height: 1.48;
   -moz-tab-size: 2;
     -o-tab-size: 2;
        tab-size: 2;
+  scrollbar-width: none;
 }
 
 pre {
@@ -35,7 +38,6 @@ pre {
 
 code {
   padding: 3px 4px;
-  white-space: pre-wrap;
 }
 
 .token {

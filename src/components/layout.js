@@ -1,30 +1,54 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { ThemeProvider } from 'styled-components';
 
 import Sidebar from './sidebar';
-import '../style/layout.scss';
+import { SiteWrapper, lightTheme, darkTheme } from './styled';
+import '../style/globals.scss';
 import '../style/highlight.scss';
 
 export default function Layout({children}) {
+  /* fallback localStorage for Netlify build */
+  const localStorage = typeof localStorage !== 'undefined'
+    ? localStorage
+    : {getItem: () => {}, setItem: () => {}, removeItem: () => {}};
+
+  const [lightsOff, setLightsOff] = useState(
+    localStorage.getItem('espc_lights_off') || false
+  );
   useEffect(insertScripts, []);
+  useEffect(() => {
+    updateBodyBg();
+    if (lightsOff)
+      localStorage.setItem('espc_lights_off', 1);
+    else
+      localStorage.removeItem('espc_lights_off');
+  }, [lightsOff]);
 
   function insertScripts() {
     const scripts = [
       '/scripts/blotter.min.js',
     ];
 
-    scripts.forEach(scriptSrc =>  {
+    scripts.forEach(scriptSrc => {
       const script = document.createElement('script');
       script.src = scriptSrc;
       document.body.appendChild(script);
     });
   }
 
+  function updateBodyBg() {
+    const theme = lightsOff ? darkTheme : lightTheme;
+    document.getElementsByTagName('body')[0].style.background = theme.background;
+  }
+
   return (
-    <div className="site">
-      <Sidebar />
-      <main>{children}</main>
-    </div>
+    <ThemeProvider theme={lightsOff ? darkTheme : lightTheme}>
+      <SiteWrapper>
+        <Sidebar setLightsOff={setLightsOff} lightsOff={lightsOff} />
+        <main>{children}</main>
+      </SiteWrapper>
+    </ThemeProvider>
   );
 }
 

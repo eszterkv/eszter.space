@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
 import { SplitColorChannelText } from 'react-text-fun';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { Article, Timestamp, Title } from '../components/styled';
 
 export default function Now() {
   const [blotterLoaded, setBlotterLoaded] = useState(false);
@@ -32,7 +34,7 @@ export default function Now() {
     const {clientX, clientY} = e;
     let {x, y} = blotterPos;
     if (!x || !y) {
-      const blotterEl = document.querySelector('.blotter');
+      const blotterEl = document.getElementById('blotter');
       if (blotterEl) {
         const rect = blotterEl.getBoundingClientRect();
         ({x, y} = rect);
@@ -54,10 +56,10 @@ export default function Now() {
   return (
     <Layout>
       <SEO title="Now: what Iʼm up to" />
-      <h1 style={{position: 'relative'}}>
+      <Title style={{position: 'relative'}}>
         Now
         {blotterLoaded && (
-          <div className="blotter">
+          <Blotter id="blotter">
             <SplitColorChannelText
               text="Now"
               fill="#111"
@@ -65,23 +67,46 @@ export default function Now() {
               fontWeight={700}
               fontSize={60}
               rgbOffset={rgbOffset}
-              addBlur={true}
-              addNoise={true}
+              addBlur
+              addNoise
             />
-          </div>
+          </Blotter>
         )}
-      </h1>
-      <p className="timestamp">
-        Last updated: 10 July, 2019
-      </p>
-      <article>
+      </Title>
+      <Timestamp prefix="Last updated:" date="10 July, 2019" />
+      <Article>
         <p>
           <strong>In life</strong> I rediscovered the joy of preparing and eating simple and delicious food. Plus, Iʼve been watching lots of <a href="https://www.imdb.com/title/tt0098878/" target="_blank" rel="noopener noreferrer">Northern Exposure</a>.
         </p>
         <p>
           <strong>At work</strong> Iʼve been busy with Gatsby and Graphql. Iʼm also <a href="https://careers.fidel.uk/jobs/242473-front-end-engineer" target="_blank" rel="noopener noreferrer">looking for a frontend dev</a> (London/Lisbon, full time) to help me build <a href="https://fidel.uk" target="_blank" rel="noopener noreferrer">Fidel</a>ʼs tools for developers.
         </p>
-      </article>
+      </Article>
     </Layout>
   );
 }
+
+const fadeIn = keyframes`
+  from {
+    background: transparent;
+  }
+
+  to {
+    background: white;
+  }
+`;
+
+const Blotter = styled.div`
+  display: none;
+
+  @media (min-width: 900px) {
+    display: ${props => props.theme.background === 'white' ? 'inline-block' : 'none'};
+    position: absolute;
+    top: -1px;
+    left: 0;
+    background: white;
+    width: 200%;
+    animation: ${fadeIn} .6s linear;
+    top: -2px;
+  }
+`;

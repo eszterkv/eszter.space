@@ -1,24 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { Title } from '../components/styled';
 
 export default function About({location}) {
-  const profilepic = require('../../content/assets/IMG_4131.jpg');
-  const intro = 'I’m Eszter, a front-end engineer based in London, UK.';
+  const {profilePic} = useStaticQuery(imgQuery);
+  const intro = 'I’m Eszter, a frontend engineer based in London, UK.';
 
   return (
     <Layout location={location} title="About me">
       <SEO title="Iʼm a frontend engineer." />
-      <h1>Hi,</h1>
+      <Title>Hi,</Title>
       <p>
         {intro}
       </p>
-      <img
-        src={profilepic}
-        style={{marginTop: '16px', maxWidth: '400px', maxHeight: '40vh'}}
-      />
+      <Pic fixed={profilePic.childImageSharp.fixed} />
     </Layout>
   );
 }
@@ -26,3 +27,22 @@ export default function About({location}) {
 About.propTypes = {
   location: PropTypes.object.isRequired,
 };
+
+const Pic = styled(Img)`
+  margin-top: 1em;
+`;
+
+const imgQuery = graphql`
+  query {
+    profilePic: file(relativePath: { eq: "e.jpg" }) {
+      childImageSharp {
+        fixed(
+          width: 198,
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }
+      }
+    }
+  }
+`;
