@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
@@ -14,18 +15,18 @@ export default function Index({data}) {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
-          <div key={node.fields.slug} className="article-list-item">
-            <h2 className="article-list-title">
+          <ArticleListItem key={node.fields.slug}>
+            <ArticleListItemTitle>
               <Link to={node.fields.slug}>
                 {title}
               </Link>
-            </h2>
+            </ArticleListItemTitle>
             <p
               dangerouslySetInnerHTML={{
                 __html: node.frontmatter.description || node.excerpt,
               }}
             />
-          </div>
+          </ArticleListItem>
         );
       })}
     </Layout>
@@ -35,6 +36,25 @@ export default function Index({data}) {
 Index.propTypes = {
   data: PropTypes.object.isRequired,
 };
+
+const ArticleListItem = styled.div`
+  margin-bottom: 30px;
+`;
+
+const ArticleListItemTitle = styled.h2`
+  margin-bottom: 0;
+  font-size: 20px;
+
+  a {
+    border: none;
+    color: inherit;
+  }
+
+  + * {
+    margin-top: .33em;
+  }
+
+`;
 
 export const pageQuery = graphql`
   query {
