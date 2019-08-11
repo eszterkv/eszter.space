@@ -20,7 +20,6 @@ export default function Layout({children}) {
   }, []);
 
   useEffect(() => {
-    updateBodyBg();
     if (lightsOff)
       localStorage.setItem('espc_lights_off', 1);
     else
@@ -37,11 +36,6 @@ export default function Layout({children}) {
       script.src = scriptSrc;
       document.body.appendChild(script);
     });
-  }
-
-  function updateBodyBg() {
-    const theme = lightsOff ? darkTheme : lightTheme;
-    document.getElementsByTagName('body')[0].style.background = theme.background;
   }
 
   return (
