@@ -22,7 +22,7 @@ const SiteWrapper = styled.div`
     overflow: visible;
 
     @media (min-width: 720px) {
-      padding-top: 95px;
+      padding-top: 90px;
       padding-left: ${sidebarSizes.small}px;
     }
 
