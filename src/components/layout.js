@@ -11,7 +11,7 @@ export default function Layout({children}) {
   const [lightsOff, setLightsOff] = useState(areLightsOff());
 
   function areLightsOff() {
-    return typeof localStorage !== 'undefined' && localStorage.getItem('espc_lights_off');
+    return !!(typeof localStorage !== 'undefined' && localStorage.getItem('espc_lights_off'));
   }
 
   useEffect(() => {
