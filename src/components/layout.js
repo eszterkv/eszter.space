@@ -8,12 +8,15 @@ import '../style/globals.scss';
 import '../style/highlight.scss';
 
 export default function Layout({children}) {
-  const [lightsOff, setLightsOff] = useState(false);
+  const [lightsOff, setLightsOff] = useState(areLightsOff());
+
+  function areLightsOff() {
+    return typeof localStorage !== 'undefined' && localStorage.getItem('espc_lights_off');
+  }
 
   useEffect(() => {
     insertScripts();
-    const off = typeof localStorage !== 'undefined' && localStorage.getItem('espc_lights_off');
-    setLightsOff(off);
+    setLightsOff(areLightsOff());
   }, []);
 
   useEffect(() => {
