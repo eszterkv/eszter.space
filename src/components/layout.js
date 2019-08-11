@@ -8,17 +8,18 @@ import '../style/globals.scss';
 import '../style/highlight.scss';
 
 export default function Layout({children}) {
-  /* fallback localStorage for Netlify build */
-  const localStorage = typeof localStorage !== 'undefined'
-    ? localStorage
-    : {getItem: () => {}, setItem: () => {}, removeItem: () => {}};
+  const [lightsOff, setLightsOff] = useState(areLightsOff());
 
-  const [lightsOff, setLightsOff] = useState(
-    localStorage.getItem('espc_lights_off') || false
-  );
-  useEffect(insertScripts, []);
+  function areLightsOff() {
+    return !!(typeof localStorage !== 'undefined' && localStorage.getItem('espc_lights_off'));
+  }
+
   useEffect(() => {
-    updateBodyBg();
+    insertScripts();
+    setLightsOff(areLightsOff());
+  }, []);
+
+  useEffect(() => {
     if (lightsOff)
       localStorage.setItem('espc_lights_off', 1);
     else
@@ -35,11 +36,6 @@ export default function Layout({children}) {
       script.src = scriptSrc;
       document.body.appendChild(script);
     });
-  }
-
-  function updateBodyBg() {
-    const theme = lightsOff ? darkTheme : lightTheme;
-    document.getElementsByTagName('body')[0].style.background = theme.background;
   }
 
   return (
