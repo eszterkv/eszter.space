@@ -8,15 +8,14 @@ import '../style/globals.scss';
 import '../style/highlight.scss';
 
 export default function Layout({children}) {
-  /* fallback localStorage for Netlify build */
-  const localStorage = typeof localStorage !== 'undefined'
-    ? localStorage
-    : {getItem: () => {}, setItem: () => {}, removeItem: () => {}};
+  const [lightsOff, setLightsOff] = useState(false);
 
-  const [lightsOff, setLightsOff] = useState(
-    localStorage.getItem('espc_lights_off') || false
-  );
-  useEffect(insertScripts, []);
+  useEffect(() => {
+    insertScripts();
+    const off = typeof localStorage !== 'undefined' && localStorage.getItem('espc_lights_off');
+    setLightsOff(off);
+  }, []);
+
   useEffect(() => {
     updateBodyBg();
     if (lightsOff)
