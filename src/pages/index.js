@@ -48,6 +48,7 @@ const ArticleListItemTitle = styled.h2`
   a {
     border: none;
     color: inherit;
+    text-decoration: none;
   }
 
   + * {

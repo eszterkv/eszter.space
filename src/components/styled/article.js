@@ -10,8 +10,10 @@ export const Article = styled.article`
   }
 
   a {
-    &:not(.footnote-ref):not(.footnote-backref) {
-      border-bottom-color: transparent;
+    &:not(.footnote-ref):not(.footnote-backref):not(.example) {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
       transition: border-bottom-color .3s ease;
       position: relative;
       padding-right: 3px;
@@ -33,6 +35,7 @@ export const Article = styled.article`
       &:hover,
       &:focus {
         border-bottom-color: ${props => props.theme.primary};
+        transition: border-bottom-color .3s ease;
 
         &::after {
           background: ${colors.accent};
@@ -77,6 +80,16 @@ export const ArticleBody = styled.div`
   h5,
   h6 {
     margin-top: 2em;
+  }
+
+  li {
+    > p {
+      margin: 0;
+    }
+
+    ul {
+      margin-bottom: .5em;
+    }
   }
 
   .gatsby-resp-image-wrapper {
@@ -160,6 +173,8 @@ export const FooterNav = styled.ul`
   }
 
   a {
+    text-decoration: none;
     color: inherit;
+    border-bottom: 1px solid ${props => props.theme.primary};
   }
 `;

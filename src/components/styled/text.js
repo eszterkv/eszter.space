@@ -6,7 +6,9 @@ export const SiteTitle = styled.h1`
   margin: -2px 0 10px;
 
   a {
+    color: inherit;
     border: none;
+    text-decoration: none;
   }
 `;
 

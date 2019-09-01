@@ -10,12 +10,6 @@ body {
   overflow-y: scroll;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  border-bottom: 1px solid $primary;
-}
-
 .transition-enter {
   opacity: 0;
 }

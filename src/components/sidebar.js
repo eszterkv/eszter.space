@@ -105,12 +105,14 @@ const NavList = styled.ul`
   }
 
   a {
+    color: inherit;
+    text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color .3s ease;
 
     &:hover,
     &:focus {
-      border-bottom: 1px solid ${colors.primary};
+      border-bottom: 1px solid ${props => props.theme.primary};
     }
   }
 `;
