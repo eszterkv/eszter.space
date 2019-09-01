@@ -10,25 +10,28 @@ Underline is no good, and `border-bottom` will not do here either, as its `width
 
 <style type="text/css">
   .example.animated-link {
-    border: none;
+    border: none !important;
     background: none;
     text-decoration:none;
     font-weight: 600;
     position: relative;
     cursor: pointer;
   }
-  .example.animated-link:hover {background: none; color: inherit;}
+
+  .example.animated-link:hover {
+    background: none;
+    color: inherit;
+  }
 
   .example.animated-link::after {
     content: '';
     height: 3px;
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 0;
     background: #28f;
     transition: width .3s ease;
-    z-index: -1;
   }
 
   .example.animated-link:hover::after {
@@ -38,18 +41,6 @@ Underline is no good, and `border-bottom` will not do here either, as its `width
 
   .example.animated-link.example-pink::after {
     background: hotpink;
-  }
-
-  .example.animated-link.example-marker::after {
-    background: #ff8;
-    height: 1.2em;
-    bottom: 2px;
-    left: -4px;
-    z-index: -1;
-  }
-
-  .example.animated-link.example-marker:hover::after {
-    width: calc(100% + 8px);  
   }
 </style>
 
@@ -101,7 +92,7 @@ On hover, we just have to set the width to `100%` (meaning 100% of the `<a>` ele
 The result:
 <a href="https://example.com" class="example animated-link example-pink">Example link</a>
 
-Thatʼs it, the animated link! The possibilities are endless, it can have a nice highlight effect, <a style="white-space: nowrap" class="example animated-link example-marker">like this one here</a>, or can be a gradient, change stroke width or colour etc. — just keep it low-key and donʼt do these all at once :) Have fun!
+Thatʼs it, the animated link! The possibilities are endless, it can have a nice highlight effect, or can be a gradient, change stroke width or colour etc. — just keep it low-key and donʼt do these all at once :) Have fun!
 
 ---
 #### References

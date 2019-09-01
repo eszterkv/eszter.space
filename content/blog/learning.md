@@ -37,7 +37,7 @@ Mostly whatever you are interested in, but here are some topics, most are front-
 - **How HTTP works**
 - **Git**
 - **Unix command line**
-- **Python or Ruby**
+- **Some Python or Ruby**
   - [Resources for Learning Python](https://samu.space/Resources-for-learning-Python/)
 
 There are lots of online courses as well, including Codecademy, Udacity, Coursera, edX… and smaller coding challenges, like CodeWars, which is more algorithm-focused.
