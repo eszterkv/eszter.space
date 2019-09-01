@@ -44,9 +44,13 @@ const ArticleListItemTitle = styled.h2`
   font-size: 20px;
 
   a {
-    border: none;
+    border: none !important;
     color: inherit;
     text-decoration: none;
+
+    &::after {
+      display: none !important;
+    }
   }
 
   + * {

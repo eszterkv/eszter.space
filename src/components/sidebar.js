@@ -12,7 +12,7 @@ export default function Sidebar({lightsOff, setLightsOff}) {
 
   const links = [
     {href: '/', label: 'Articles'},
-    {href: '/kb', label: 'Cheat sheets'},
+    {href: '/cheatsheets', label: 'Cheat sheets'},
     {href: '/hi', label: 'About'},
     {href: '/now', label: 'Now'},
   ];

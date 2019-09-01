@@ -18,16 +18,16 @@ const SiteWrapper = styled.div`
   }
 
   main {
-    padding-top: 25px;
+    margin-top: 25px;
     overflow: visible;
 
     @media (min-width: 720px) {
-      padding-top: 90px;
-      padding-left: ${sidebarSizes.small}px;
+      margin-top: 90px;
+      margin-left: ${sidebarSizes.small}px;
     }
 
     @media (min-width: 900px) {
-      padding-left: ${sidebarSizes.default}px;
+      margin-left: ${sidebarSizes.default}px;
     }
   }
 

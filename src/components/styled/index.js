@@ -1,14 +1,14 @@
 import {
-  Article,
   ArticleBody,
   ArticleTitle,
   FooterNav,
   Timestamp
 } from './article';
-import SiteWrapper from './site-wrapper';
+import { Main } from './main';
 import { SiteTitle, Title } from './text';
 import { Tooltip, TooltipTrigger } from './tooltip';
 import { colors } from './variables';
+import SiteWrapper from './site-wrapper';
 
 const lightTheme = {
   primary: colors.primary,
@@ -23,10 +23,10 @@ const darkTheme = {
 };
 
 export {
-  Article,
   ArticleBody,
   ArticleTitle,
   FooterNav,
+  Main,
   SiteTitle,
   SiteWrapper,
   Timestamp,

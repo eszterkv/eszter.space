@@ -24,18 +24,18 @@ export default function BlogPostTemplate({data, pageContext, location}) {
   }, []);
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
-      <Article>
+    <Layout
+      location={location}
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+    >
+      <article>
         <ArticleTitle>
           {post.frontmatter.title}
         </ArticleTitle>
         <Timestamp date={post.frontmatter.date} />
         <ArticleBody dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Article>
+      </article>
 
       <FooterNav>
         <li>

@@ -1,62 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, fonts, titleStyle } from './variables';
-
-export const Article = styled.article`
-  max-width: 760px;
-
-  img {
-    max-width: 100%;
-  }
-
-  a {
-    &:not(.footnote-ref):not(.footnote-backref):not(.example) {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-bottom-color .3s ease;
-      position: relative;
-      padding-right: 3px;
-
-      &::after {
-        content: '';
-        position: relative;
-        top: -.5em;
-        left: 3px;
-        display: inline-block;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        border: 1px solid ${colors.accent};
-        background: ${props => props.theme.background};
-        transition: background .3s ease;
-      }
-
-      &:hover,
-      &:focus {
-        border-bottom-color: ${props => props.theme.primary};
-        transition: border-bottom-color .3s ease;
-
-        &::after {
-          background: ${colors.accent};
-        }
-      }
-    }
-
-    &.footnote-ref,
-    &.footnote-backref {
-      margin-left: 2px;
-      border: none;
-      color: ${colors.accent};
-      transition: color .3s ease;
-
-      &:hover,
-      &:focus {
-        color: ${props => props.theme.primary};
-      }
-    }
-  }
-`;
+import { fonts, titleStyle } from './variables';
 
 export const ArticleBody = styled.div`
   padding-bottom: 4em;
@@ -175,6 +119,10 @@ export const FooterNav = styled.ul`
   a {
     text-decoration: none;
     color: inherit;
-    border-bottom: 1px solid ${props => props.theme.primary};
+    border-bottom: 1px solid ${props => props.theme.primary} !important;
+
+    &::after {
+      display: none !important;
+    }
   }
 `;
