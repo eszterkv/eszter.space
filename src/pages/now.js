@@ -54,8 +54,7 @@ export default function Now() {
   }
 
   return (
-    <Layout>
-      <SEO title="Now: what Iʼm up to" />
+    <Layout title="Now: what Iʼm up to">
       <Title style={{position: 'relative'}}>
         Now
         {blotterLoaded && (

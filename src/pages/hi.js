@@ -1,20 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
 import { Title } from '../components/styled';
 
-export default function About({location}) {
+export default function About() {
   const {profilePic} = useStaticQuery(imgQuery);
   const intro = 'I’m Eszter, a frontend engineer based in London, UK.';
 
   return (
-    <Layout location={location} title="About me">
-      <SEO title="Iʼm a frontend engineer." />
+    <Layout title="About me">
       <Title>Hi,</Title>
       <p>
         {intro}
@@ -23,10 +20,6 @@ export default function About({location}) {
     </Layout>
   );
 }
-
-About.propTypes = {
-  location: PropTypes.object.isRequired,
-};
 
 const Pic = styled(Img)`
   margin-top: 1em;

@@ -4,14 +4,12 @@ import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
 
 export default function Index({data}) {
   const { posts } = data.allMarkdownRemark;
 
   return (
     <Layout>
-      <SEO title="All posts" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
