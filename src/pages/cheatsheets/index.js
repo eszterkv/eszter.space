@@ -22,6 +22,7 @@ export default function Cheatsheets() {
       <Title>Cheat sheets & stuff</Title>
       <LinkList>
         <Link to="/cli">Command line</Link> Bash and various CLI tools
+        <Link to="/js">JavaScript</Link> (As in, I don’t know JS.)
         <Link to="/typography">Typography</Link> All the right spaces, hyphens and quotation marks
         <Link to="https://gist.github.com/c0derabbit">Gists</Link> Longer snippets of useful (and some not so useful) code
       </LinkList>
