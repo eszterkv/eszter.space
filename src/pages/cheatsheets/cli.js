@@ -30,11 +30,17 @@ export default function Typography() {
         <dd><code>aws cloudfront create-invalidation --distribution-id myDistributionId --paths '/*'</code></dd>
       </dl>
 
-      <h2>Image manipulation with Imagemagick</h2>
-      <small>You’ll need <a href="https://imagemagick.org/script/download.php" rel="noopener noreferrer" target="_blank">imagemagick</a>.</small>
+      <h2>Image manipulation</h2>
+      <small>
+        Tools: <a href="https://imagemagick.org/script/download.php" rel="noopener noreferrer" target="_blank">
+          imagemagick
+        </a> and ffmpeg (<code>brew install ffmpeg</code>).
+      </small>
       <dl>
         <dt>Create a favicon</dt>
         <dd><code>magick input.png -resize 32x32 favicon.ico</code></dd>
+        <dt>Extract first frame of a video to image</dt>
+        <dd><code>ffmpeg -i input.mp4 -vframes 1 output.png</code></dd>
       </dl>
 
       <h2>Fun stuff</h2>
