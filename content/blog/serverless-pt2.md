@@ -48,19 +48,19 @@ If I do a `curl` now, it will get the weather for me.
 Now a weather forecast is more useful if it can tell the weather for any location in the world, not just one it is hard coded to. In practice, this will mean for now that the client can pass coordinates for which it wants to get a weather forecast. Something like this:
 ```js
 module.exports.getWeather = (event, context, callback) => {
-  const {lat, lon, units} = event.queryStringParameters;
-  const headers = {'Access-Control-Allow-Origin': '*'};
+  const { lat, lon, units } = event.queryStringParameters;
+  const headers = { 'Access-Control-Allow-Origin': '*' };
   const baseUrl = 'https://api.darksky.net/forecast/';
   const queryParams = !!units ? `?units=${units}` : '';
 
   request.get(
-    {url: `${apiUrl}${process.env.DARKSKY_API_KEY}/${lat},${lon}${queryParams}`},
+    { url: `${apiUrl}${process.env.DARKSKY_API_KEY}/${lat},${lon}${queryParams}` },
     (err, res, body) => {
       if (err) {
-        const response = {statusCode: 404, headers, body: err};
+        const response = { statusCode: 404, headers, body: err };
         callback(null, response);
       } else {
-        const response = {statusCode: res.statusCode, headers, body};
+        const response = { statusCode: res.statusCode, headers, body };
         callback(null, response);
       }
     }

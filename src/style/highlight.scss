@@ -1,19 +1,7 @@
-$light-background: #f6f6f6;
-$string-colour: #065;
-$keyword-color: #111;
-$bool-nr-symbol: #111;
-$important: slategrey;
-$variable: #2f4550;
-$operator: #111;
-$fn-class: #a70;
-$punctuation: #111;
-
 pre,
 code {
   font: 15px 'Oxygen Mono';
   letter-spacing: 0;
-  color: $keyword-color;
-  background: $light-background;
   border-radius: 2px;
   line-height: 1.48;
   -moz-tab-size: 2;
@@ -41,59 +29,6 @@ code {
 }
 
 .token {
-  &.comment,
-  &.prolog,
-  &.doctype,
-  &.cdata {
-    color: slategray;
-  }
-
-  &.punctuation {
-    color: $punctuation;
-  }
-
-  &.property,
-  &.tag,
-  &.boolean,
-  &.number,
-  &.constant,
-  &.symbol,
-  &.deleted {
-    color: $bool-nr-symbol;
-  }
-
-  &.selector,
-  &.attr-name,
-  &.string,
-  &.char,
-  &.builtin,
-  &.inserted {
-    color: $string-colour;
-  }
-
-  &.operator,
-  &.entity,
-  &.url {
-    color: $operator;
-  }
-
-  &.atrule,
-  &.attr-value,
-  &.keyword {
-    color: $keyword-color;
-  }
-
-  &.function,
-  &.class-name {
-    color: $fn-class;
-  }
-
-  &.regex,
-  &.important,
-  &.variable {
-    color: $variable;
-  }
-
   &.important,
   &.bold {
     font-weight: bold;

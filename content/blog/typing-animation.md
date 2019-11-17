@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Typing animation with JavaScript"
-date:   2018-06-17 16:34:00 +0200
+date:   2018-06-16 16:34:00 +0200
 script: typing.js
 excerpt: "Let’s imagine I’d like to show a one-line introduction on my website, but can’t decide what to say about myself. So I’d like to rotate between phrases. I could grab the code from the internet, but I wonʼt do that today — coming up with my own solution is much more exciting!"
 ---
@@ -12,7 +12,7 @@ Let us begin.
 
 <style type="text/css">
   .example {
-    background: #ff7;
+    border: 1px dotted #ff7;
     padding: 6px;
     height: 30px;
     line-height: 30px;
@@ -140,10 +140,10 @@ one blink.
 ##### Here's the code:
 ```javascript
 const phrases = [
-  "I'm a web developer",
-  "I like coffee",
-  "I write about stuff I'm no expert in",
-  "But then everyone else does so I guess that's ok",
+  'I’m a web developer',
+  'I like coffee',
+  'I write about stuff I’m no expert in',
+  'But then everyone else does so I guess that’s ok',
 ];
 
 const element = document.getElementById('typing-example');

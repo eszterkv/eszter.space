@@ -68,4 +68,57 @@ export const Main = styled.main`
       }
     }
   }
+
+  pre,
+  code {
+    color: ${props => props.theme.primary};
+    background: ${props => props.theme.codeBg};
+  }
+
+  .token {
+    &.punctuation {
+      color: ${props => props.theme.primary};
+    }
+
+    &.property,
+    &.tag,
+    &.boolean,
+    &.number,
+    &.constant,
+    &.symbol,
+    &.deleted {
+      color: ${props => props.theme.codeBoolNum};
+    }
+
+    &.keyword {
+      color: ${props => props.theme.codeKeyword};
+    }
+
+    &.selector,
+    &.attr-name,
+    &.string,
+    &.char,
+    &.builtin,
+    &.inserted {
+      color: ${props => props.theme.codeString};
+    }
+
+    &.regex,
+    &.important,
+    &.variable {
+      color: ${props => props.theme.codeVar};
+    }
+
+    &.function,
+    &.class-name {
+      color: ${props => props.theme.codeFn};
+    }
+
+    &.comment,
+    &.prolog,
+    &.doctype,
+    &.cdata {
+      color: ${props => props.theme.codeComment};
+    }
+  }
 `;

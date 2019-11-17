@@ -13,19 +13,22 @@ export default function Layout({children, title, description, breadcrumbs}) {
   const [lightsOff, setLightsOff] = useState(areLightsOff());
 
   function areLightsOff() {
-    return !!(typeof localStorage !== 'undefined' && localStorage.getItem('espc_lights_off'));
+    if (typeof localStorage !== 'undefined' && localStorage.hasOwnProperty('espc_lights_off'))
+      return localStorage.getItem('espc_lights_off') === 'true';
+    else
+      return window && window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
 
   useEffect(() => {
-    insertScripts();
     setLightsOff(areLightsOff());
+    insertScripts();
   }, []);
 
   useEffect(() => {
     if (lightsOff)
-      localStorage.setItem('espc_lights_off', 1);
+      localStorage.setItem('espc_lights_off', true);
     else
-      localStorage.removeItem('espc_lights_off');
+      localStorage.setItem('espc_lights_off', false);
   }, [lightsOff]);
 
   function insertScripts() {

@@ -7,7 +7,7 @@ In many cases, particularly in [Gatsby](https://www.gatsbyjs.org/), pages are wr
 
 A `<Layout>` component might look something like this simplified specimen:
 ```jsx
-export default function Layout({children}) {
+export default function Layout({ children }) {
   return (
     <div>
       <SiteHeader />
@@ -35,7 +35,7 @@ A test for our 404 page might look like the following, using [Jest](https://jest
 ```js
 describe('Not Found page', () => {
   it('shows a friendly message', () => {
-    const {container} = render(<NotFound />);
+    const { container } = render(<NotFound />);
 
     expect(container).toHaveTextContent('Sorry, this page does not exist');
   });

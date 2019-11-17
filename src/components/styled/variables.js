@@ -5,7 +5,7 @@ export const colors = {
   accent: 'darkorange',
   grey: '#eee',
   invertedGrey: '#445',
-  invertedBg: '#222728',
+  invertedBg: '#202426',
   invertedPrimary: '#f0f0f0',
 };
 

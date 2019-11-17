@@ -29,7 +29,7 @@ sls invoke local -f hello
 ```
 
 If we’ve done everything right (not much to break so far), the output should be:
-```sh
+```json
 {
   "statusCode": 200,
   "body": "{\"message\":\"Go Serverless v1.0! Your function executed successfully!\",\"input\":\"\"}"
@@ -49,7 +49,7 @@ functions:
 
 And in `handler.js`, `module.exports.hello` should become:
 ```js
-module.exports.getWeather = (...) => {...}
+module.exports.getWeather = () => { … }
 ```
 
 Now if we try `sls local invoke -f hello`, it will fail, because there is no `hello` function. However, `sls local invoke -f getWeather` will work like charm!
@@ -65,13 +65,13 @@ module.exports.getWeather = (event, context, callback) => {
   const headers = {'Access-Control-Allow-Origin': '*'};
 
   request.get(
-    {url: `https://api.darksky.net/forecast/${process.env.DARKSKY_KEY}/44,32`},
+    { url: `https://api.darksky.net/forecast/${process.env.DARKSKY_KEY}/44,32` },
     (err, res, body) => {
       if (err) {
-        const response = {statusCode: 404, headers, body: err};
+        const response = { statusCode: 404, headers, body: err };
         callback(null, response);
       } else {
-        const response = {statusCode: res.statusCode, headers, body};
+        const response = { statusCode: res.statusCode, headers, body };
         callback(null, response);
       }
     }

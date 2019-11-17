@@ -74,6 +74,7 @@ import AbstractCalculator from 'path/to/AbstractCalculator';
 describe('AbstractCalculator', () => {
   const props = {/* some test props */};
   const calculator = new AbstractCalculator(props);
+
   it('works', () => {
     expect(calculator).toBeTruthy();  
   });
@@ -88,7 +89,9 @@ As for state changes, we will have to mock the abstract’s `setState` method, o
 it('adds correctly', () => {
   calculator.setState = jest.fn();
   calculator.state.result = 7;
+
   calculator.addOne();
+
   expect(calculator.setState).toBeCalledWith({result: 8});  
 });
 ```
