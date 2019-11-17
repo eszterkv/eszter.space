@@ -12,6 +12,7 @@ const SiteWrapper = styled.div`
   font: ${baseFont};
   letter-spacing: .2px;
   line-height: 1.55;
+  transition: background .3s ease;
 
   @media (min-width: ${siteWidth + 40}px) {
     padding: 20px calc(50vw - ${siteWidth / 2}px) 80px;
