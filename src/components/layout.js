@@ -10,7 +10,7 @@ import '../style/globals.scss';
 import '../style/highlight.scss';
 
 export default function Layout({children, title, description, breadcrumbs}) {
-  const [lightsOff, setLightsOff] = useState(areLightsOff());
+  const [lightsOff, setLightsOff] = useState();
 
   function areLightsOff() {
     if (typeof localStorage !== 'undefined' && localStorage.hasOwnProperty('espc_lights_off'))
