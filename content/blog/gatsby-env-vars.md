@@ -13,7 +13,7 @@ const apiKey = process.env.MY_API_KEY;
 // do something with key
 ```
 To achieve this, we just need a couple of things:
-1. configure environment variables locally and on Netlify[^1]2
+1. configure environment variables locally and on Netlify[^1]
 2. make those variables available to Gatsby's client side.
 
 ## Configuring environment variables
