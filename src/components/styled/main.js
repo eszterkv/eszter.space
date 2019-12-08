@@ -85,8 +85,7 @@ export const Main = styled.main`
     &.boolean,
     &.number,
     &.constant,
-    &.symbol,
-    &.deleted {
+    &.symbol {
       color: ${props => props.theme.codeBoolNum};
     }
 
@@ -110,7 +109,8 @@ export const Main = styled.main`
     }
 
     &.function,
-    &.class-name {
+    &.class-name,
+    &.deleted {
       color: ${props => props.theme.codeFn};
     }
 
