@@ -4,7 +4,7 @@ title:  Customising Ant Design theme in a create-react-app project
 date:   2019-12-08 14:00:00 +0200
 ---
 
-There comes a time in some developers’ life when they have to customize an [antd](https://ant.design) theme. It’s [kind of documented](https://ant.design/docs/react/customize-theme), but tricky… here’s a tl;dr.
+There comes a time in some developers’ life when they have to customize an [antd](https://ant.design) theme. It’s [kind of documented](https://ant.design/docs/react/customize-theme), but tricky. Here’s a tl;dr.
 
 ## But first… why antd?
 Well, it looks like a very complete UI system. Creating your own is a lot of effort, so why not use something that’s out there and working perfectly? Of course, there are other alternatives, like [Material UI](https://material-ui.com/) or [Evergreen](https://evergreen.segment.com/).
