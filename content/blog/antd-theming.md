@@ -54,6 +54,18 @@ Craco will pick up a theme from `antd.customize.less`.[^1]
  @primary-color: red;
 ```
 
+### Live style reload
+Themes will not reload real-time by default. However, this is easy to solve with **nodemon**.
+```sh
+yarn add -D nodemon
+```
+
+Update `package.json`:
+```diff
+-  "start": "craco start",
++  "start": "nodemon -w craco.config.js -w ./antd.customize.less --exec 'craco start'",
+```
+
 ## CRA Pre-2.0 (if your project is older)
 
 ```sh
