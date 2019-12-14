@@ -109,8 +109,7 @@ export const Main = styled.main`
     }
 
     &.function,
-    &.class-name,
-    &.deleted {
+    &.class-name {
       color: ${props => props.theme.codeFn};
     }
 
@@ -119,6 +118,10 @@ export const Main = styled.main`
     &.doctype,
     &.cdata {
       color: ${props => props.theme.codeComment};
+    }
+
+    &.deleted {
+      color: #c22;
     }
   }
 `;
