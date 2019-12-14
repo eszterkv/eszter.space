@@ -6,11 +6,53 @@ date:   2019-12-08 14:00:00 +0200
 
 There comes a time in some developers’ life when they have to customize an [antd](https://ant.design) theme. It’s [kind of documented](https://ant.design/docs/react/customize-theme), but tricky. Here’s a tl;dr.
 
-## But first… why antd?
+### But first… why antd?
 Well, it looks like a very complete UI system. Creating your own is a lot of effort, so why not use something that’s out there and working perfectly? Of course, there are other alternatives, like [Material UI](https://material-ui.com/) or [Evergreen](https://evergreen.segment.com/).
 
-## Show me the code!
-Ok, ok. Here goes.
+## CRA 2.0+ (most probably this is what you’ll need)
+
+```sh
+yarn add antd
+yarn add @craco/craco craco-antd babel-plugin-import less less-loader
+```
+
+In `package.json`:
+```diff
+-  "start": "react-scripts start",
+-  "build": "react-scripts build",
++  "start": "craco start",
++  "build": "craco build",
+```
+
+In `App.(j|t)sx`:
+```js
+import 'antd/dist/antd.less';
+```
+
+Create `craco.config.js` in root:
+```js
+const CracoAntDesignPlugin = require('craco-antd');
+
+module.exports = {
+  jest: {
+    configure(config) {
+      config.transformIgnorePatterns = [
+        '/node_modules/(?!antd|rc-pagination|rc-calendar|rc-tooltip)/.+\\.js$',
+      ];
+      return config;
+    },
+  },
+  plugins: [{ plugin: CracoAntDesignPlugin }],
+};
+```
+
+### Theming
+Craco will pick up a theme from `antd.customize.less`.[^1]
+```less
+ @primary-color: red;
+```
+
+## CRA Pre-2.0 (if your project is older)
 
 ```sh
 yarn add antd
@@ -51,7 +93,7 @@ module.exports = override(
 );
 ```
 
-## Advanced theming
+### Advanced theming
 Nobody in your team will look for themes in `config-overrides.js` however, so let’s extract the theme somewhere where it makes sense.
 
 Create a `theme.js` with a simple object exported:
@@ -78,4 +120,7 @@ module.exports = override(
 );
 ```
 
-See all customisable variables [here](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less).
+---
+#### Notes
+
+[^1]: See all customisable variables [here](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less).
