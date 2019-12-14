@@ -35,6 +35,8 @@ Create `craco.config.js` in root:
 ```js
 const CracoAntDesignPlugin = require('craco-antd');
 
+process.env.BROWSER = 'none'; // optional, disables auto-open every time you restart
+
 module.exports = {
   jest: {
     configure(config) {
