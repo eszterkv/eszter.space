@@ -121,6 +121,7 @@ export const Main = styled.main`
     }
 
     &.deleted {
+      color: #c22;
       background: #fee;
     }
 
