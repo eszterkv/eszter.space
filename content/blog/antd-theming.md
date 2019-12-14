@@ -9,6 +9,8 @@ There comes a time in some developers’ life when they have to customize an [an
 ### But first… why antd?
 Well, it looks like a very complete UI system. Creating your own is a lot of effort, so why not use something that’s out there and working perfectly? Of course, there are other alternatives, like [Material UI](https://material-ui.com/) or [Evergreen](https://evergreen.segment.com/).
 
+With that out of the way, let’s jump right in.
+
 ## CRA 2.0+ (most probably this is what you’ll need)
 
 ```sh
