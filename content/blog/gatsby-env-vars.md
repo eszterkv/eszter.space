@@ -17,12 +17,14 @@ To achieve this, we just need a couple of things:
 2. make those variables available to Gatsby's client side.
 
 ## Configuring environment variables
-Locally, we just `export MY_API_KEY=monkeys`. To persist, we can put this into `~/.bash_profile`.
+### Locally
+Create a file called `.env.development` with content `MY_API_KEY=monkey`. Add `.env.*` to `.gitignore`.
 
-On Netlify, go to `https://app.netlify.com/sites/{your_site}/deploys#environment`, click 'Edit variables', then 'New variable', add your key and value, and save.
+### On Netlify
+Go to `https://app.netlify.com/sites/{your_site}/deploys#environment`, click 'Edit variables', then 'New variable', add your key and value, and save.
 
 ## Done!
-That's it, Gatsby will pick these up from Netlify's build environment, so now we can access the variable in client-side code as `process.env.GATSBY_MY_API_KEY`.
+That’s it, Gatsby will pick these up from Netlify’s build environment, so now we can access the variable in client-side code as `process.env.MY_API_KEY`.
 
 ---
 #### Notes
