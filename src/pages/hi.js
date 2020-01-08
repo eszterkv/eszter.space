@@ -8,7 +8,7 @@ import { Title } from '../components/styled';
 
 export default function About() {
   const {profilePic} = useStaticQuery(imgQuery);
-  const intro = 'I’m Eszter, a frontend engineer based in London, UK.';
+  const intro = 'I’m Eszter, a frontend developer based in London, UK.';
 
   return (
     <Layout title="About me">
