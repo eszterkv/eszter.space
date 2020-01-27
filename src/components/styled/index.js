@@ -6,7 +6,6 @@ import {
 } from './article';
 import { Main } from './main';
 import { SiteTitle, Title } from './text';
-import { Tooltip, TooltipTrigger } from './tooltip';
 import { colors } from './variables';
 import SiteWrapper from './site-wrapper';
 
@@ -47,8 +46,6 @@ export {
   SiteWrapper,
   Timestamp,
   Title,
-  Tooltip,
-  TooltipTrigger,
   lightTheme,
   darkTheme
 };

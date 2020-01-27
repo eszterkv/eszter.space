@@ -77,7 +77,7 @@ export default function Now() {
         <strong>In life</strong> I rediscovered the joy of preparing and eating simple and delicious food. Plus, Iʼve been watching lots of <a href="https://www.imdb.com/title/tt0098878/" target="_blank" rel="noopener noreferrer">Northern Exposure</a>. I also nurture an ever-growing collection of unfinished projects exploring server-side rendering, Electron, HTML canvas, Chrome extensions etc.
       </p>
       <p>
-        <strong>At work</strong> Iʼve been busy with React and Gatsby. We’re hiring <a href="https://careers.fidel.uk/jobs/242473-front-end-engineer" target="_blank" rel="noopener noreferrer">frontend devs</a> in Lisbon!
+        <strong>At work</strong> Iʼve been busy with React and Gatsby. Btw, we’re hiring <a href="https://careers.fidel.uk/jobs/242473-front-end-engineer" target="_blank" rel="noopener noreferrer">frontend devs</a> in Lisbon!
       </p>
     </Layout>
   );

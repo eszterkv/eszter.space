@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { SiteTitle, Tooltip, TooltipTrigger } from './styled';
+import { SiteTitle } from './styled';
 import { colors, sidebarSizes } from './styled/variables';
 
 export default function Sidebar({lightsOff, setLightsOff}) {
@@ -11,10 +11,11 @@ export default function Sidebar({lightsOff, setLightsOff}) {
   const [copied, setCopied] = useState(false);
 
   const links = [
-    {href: '/', label: 'Articles'},
-    {href: '/cheatsheets', label: 'Cheat sheets'},
-    {href: '/hi', label: 'About'},
-    {href: '/now', label: 'Now'},
+    { href: '/', label: 'Articles' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/cheatsheets', label: 'Cheat sheets' },
+    { href: '/hi', label: 'About' },
+    { href: '/now', label: 'Now' },
   ];
 
   function copyToClipboard() {
@@ -38,15 +39,6 @@ export default function Sidebar({lightsOff, setLightsOff}) {
           </li>
         ))}
       </NavList>
-      <h2>Get in touch</h2>
-      <TooltipTrigger
-        onMouseOver={() => setShowTooltip(true)}
-        onMouseOut={() => {setCopied(false); setShowTooltip(false)}}
-        onClick={copyToClipboard}
-      >
-        ekov@pm.me
-      </TooltipTrigger>
-      <input id="email" type="text" value="ekov@pm.me" readOnly />
       <TG>
         {showTooltip && (
           <CSSTransition key="tooltip" classNames="transition" timeout={300}>

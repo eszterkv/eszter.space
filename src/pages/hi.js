@@ -8,13 +8,15 @@ import { Title } from '../components/styled';
 
 export default function About() {
   const { profilePic } = useStaticQuery(imgQuery);
-  const intro = 'I’m Eszter, a frontend developer based in London, UK.';
 
   return (
     <Layout title="About me">
       <Title>Hi,</Title>
       <p>
-        {intro}
+        I’m Eszter, a frontend developer based in London, UK.
+      </p>
+      <p>
+        Say hi at <code>ekov@pm.me</code>.
       </p>
       <Pic fixed={profilePic.childImageSharp.fixed} />
     </Layout>

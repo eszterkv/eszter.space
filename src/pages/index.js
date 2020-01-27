@@ -5,7 +5,7 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
-export default function Index({data}) {
+export default function Index({ data }) {
   const { posts } = data.allMarkdownRemark;
 
   return (

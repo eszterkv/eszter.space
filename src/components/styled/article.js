@@ -85,21 +85,20 @@ const StyledArticleTitle = styled.div`
   }
 `;
 
-export const ArticleTitle = ({children, ...rest}) => (
+export const ArticleTitle = ({ children, ...rest }) => (
   <StyledArticleTitle {...rest}>
     <h1>{children}</h1>
   </StyledArticleTitle>
 );
 
 const StyledTimestamp = styled.div`
-  font-family: ${fonts.title};
-  font-style: italic;
   opacity: .6;
-  font-weight: 300;
+  letter-spacing: .8px;
+  font-size: 15px;
   margin-bottom: 2em;
 `;
 
-export const Timestamp = ({date, prefix, ...rest}) => (
+export const Timestamp = ({ date, prefix, ...rest }) => (
   <StyledTimestamp {...rest}>
     {prefix || 'Written on'} <time>{date}</time>
   </StyledTimestamp>
