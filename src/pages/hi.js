@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import { Title } from '../components/styled';
 
 export default function About() {
-  const {profilePic} = useStaticQuery(imgQuery);
+  const { profilePic } = useStaticQuery(imgQuery);
   const intro = 'I’m Eszter, a frontend developer based in London, UK.';
 
   return (

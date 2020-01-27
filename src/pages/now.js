@@ -31,31 +31,31 @@ export default function Now() {
   }
 
   function animateText(e) {
-    const {clientX, clientY} = e;
-    let {x, y} = blotterPos;
+    const { clientX, clientY } = e;
+    let { x, y } = blotterPos;
     if (!x || !y) {
       const blotterEl = document.getElementById('blotter');
       if (blotterEl) {
         const rect = blotterEl.getBoundingClientRect();
-        ({x, y} = rect);
-        setBlotterPos({x, y});
+        ({ x, y } = rect);
+        setBlotterPos({ x, y });
       }
     }
 
     if (x && y) {
-      const offset = calculateOffset({x, y, clientX, clientY});
+      const offset = calculateOffset({ x, y, clientX, clientY });
       setRgbOffset(offset);
     }
   }
 
-  function calculateOffset({x, y, clientX, clientY}) {
+  function calculateOffset({ x, y, clientX, clientY }) {
     const dist = Math.abs(x - clientX) + Math.abs(y - clientY) / 2;
     return Math.min(0.046, dist * .0001);
   }
 
   return (
     <Layout title="Now: what Iʼm up to">
-      <Title style={{position: 'relative'}}>
+      <Title style={{ position: 'relative' }}>
         Now
         {blotterLoaded && (
           <Blotter id="blotter">
@@ -72,12 +72,12 @@ export default function Now() {
           </Blotter>
         )}
       </Title>
-      <Timestamp prefix="Last updated:" date="10 July, 2019" />
+      <Timestamp prefix="Last updated:" date="27 January, 2020 (OMG It’s the future!)" />
       <p>
-        <strong>In life</strong> I rediscovered the joy of preparing and eating simple and delicious food. Plus, Iʼve been watching lots of <a href="https://www.imdb.com/title/tt0098878/" target="_blank" rel="noopener noreferrer">Northern Exposure</a>.
+        <strong>In life</strong> I rediscovered the joy of preparing and eating simple and delicious food. Plus, Iʼve been watching lots of <a href="https://www.imdb.com/title/tt0098878/" target="_blank" rel="noopener noreferrer">Northern Exposure</a>. I also nurture an ever-growing collection of unfinished projects exploring server-side rendering, Electron, HTML canvas, Chrome extensions etc.
       </p>
       <p>
-        <strong>At work</strong> Iʼve been busy with Gatsby and Graphql. Iʼm also <a href="https://careers.fidel.uk/jobs/242473-front-end-engineer" target="_blank" rel="noopener noreferrer">looking for a frontend dev</a> (London/Lisbon, full time) to help me build <a href="https://fidel.uk" target="_blank" rel="noopener noreferrer">Fidel</a>ʼs tools for developers.
+        <strong>At work</strong> Iʼve been busy with React and Gatsby. We’re hiring <a href="https://careers.fidel.uk/jobs/242473-front-end-engineer" target="_blank" rel="noopener noreferrer">frontend devs</a> in Lisbon!
       </p>
     </Layout>
   );
