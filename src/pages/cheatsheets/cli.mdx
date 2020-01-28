@@ -1,0 +1,43 @@
+import Layout from '../../components/layout';
+
+<Layout title="CLI cheat sheet" breadcrumbs={{ path: 'cheatsheets', sub: 'cli' }}>
+
+# Command line
+
+## Bash
+What’s running on port 3000?  
+`lsof -i :3000`
+
+What’s eating my memory?  
+`top -o MEM`
+
+Create an SSH key for GitHub  
+`ssh-keygen -t rsa -C "your.email.used.on.github@example.com"`
+
+## AWS
+You’ll need [awscli](https://aws.amazon.com/cli/) for these.
+
+Deploy a static site to s3  
+`aws s3 sync ./dist s3://my-repo --delete`
+
+Invalidate CloudFront cache  
+`aws cloudfront create-invalidation --distribution-id myDistributionId --paths '/*'`
+
+## Image manipulation
+
+Tools: [imagemagick](https://imagemagick.org/script/download.php) and ffmpeg (`brew install ffmpeg`).
+
+Create a favicon  
+`magick input.png -resize 32x32 favicon.ico`
+
+Extract first frame of a video to image  
+`ffmpeg -i input.mp4 -vframes 1 output.png`
+
+## Fun stuff
+Check what time it is  
+`date`
+
+Check the weather  
+`curl wttr.in/yourLocation`
+
+</Layout>

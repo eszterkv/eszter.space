@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from './variables';
+import { colors, titleStyle } from './variables';
 
 export const Main = styled.main`
   max-width: 760px;
@@ -17,8 +17,17 @@ export const Main = styled.main`
     }
   }
 
-  h2 {
+  h1 {
+    ${titleStyle}
+  }
+
+  h2,
+  h3 {
     margin: 1.5em 0 .5em;
+  }
+
+  h3 + p {
+    margin-top: .5em;
   }
 
   a {

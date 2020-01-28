@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
 
 import Layout from '../../components/layout';
-import { Title } from '../../components/styled';
 
-function Link({children, to, ...rest}) {
+function Link({ children, to, ...rest }) {
   return (
     <li>
       {to.match(/^https?:/)
@@ -18,8 +17,8 @@ function Link({children, to, ...rest}) {
 
 export default function Cheatsheets() {
   return (
-    <Layout title="Frontend cheat sheets" breadcrumbs={{path: 'cheatsheets'}}>
-      <Title>Cheat sheets & stuff</Title>
+    <Layout title="Frontend cheat sheets" breadcrumbs={{ path: 'cheatsheets' }}>
+      <h1>Cheat sheets & stuff</h1>
       <LinkList>
         <Link to="/cli">Command line</Link> Bash and various CLI tools
         <Link to="/js">JavaScript</Link> (As in, I don’t know JS.)

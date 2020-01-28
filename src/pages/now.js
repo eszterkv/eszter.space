@@ -4,7 +4,7 @@ import { SplitColorChannelText } from 'react-text-fun';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { Article, Timestamp, Title } from '../components/styled';
+import { Article, Timestamp } from '../components/styled';
 
 export default function Now() {
   const [blotterLoaded, setBlotterLoaded] = useState(false);
@@ -55,7 +55,7 @@ export default function Now() {
 
   return (
     <Layout title="Now: what Iʼm up to">
-      <Title style={{ position: 'relative' }}>
+      <h1 style={{ position: 'relative' }}>
         Now
         {blotterLoaded && (
           <Blotter id="blotter">
@@ -71,7 +71,7 @@ export default function Now() {
             />
           </Blotter>
         )}
-      </Title>
+      </h1>
       <Timestamp prefix="Last updated:" date="27 January, 2020 (OMG It’s the future!)" />
       <p>
         <strong>In life</strong> I rediscovered the joy of preparing and eating simple and delicious food. Plus, Iʼve been watching lots of <a href="https://www.imdb.com/title/tt0098878/" target="_blank" rel="noopener noreferrer">Northern Exposure</a>. I also nurture an ever-growing collection of unfinished projects exploring server-side rendering, Electron, HTML canvas, Chrome extensions etc.
