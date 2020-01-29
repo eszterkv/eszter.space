@@ -5,7 +5,7 @@ import {
   Timestamp
 } from './article';
 import { Main } from './main';
-import { SiteTitle, Title } from './text';
+import { SiteTitle } from './text';
 import { colors } from './variables';
 import SiteWrapper from './site-wrapper';
 
@@ -45,7 +45,6 @@ export {
   SiteTitle,
   SiteWrapper,
   Timestamp,
-  Title,
   lightTheme,
   darkTheme
 };

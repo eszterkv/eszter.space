@@ -4,14 +4,13 @@ import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
-import { Title } from '../components/styled';
 
 export default function About() {
   const { profilePic } = useStaticQuery(imgQuery);
 
   return (
     <Layout title="About me">
-      <Title>Hi,</Title>
+      <h1>Hi,</h1>
       <p>
         I’m Eszter, a frontend developer based in London, UK.
       </p>
