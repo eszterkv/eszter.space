@@ -141,7 +141,11 @@ const ThemeToggle = styled.button`
   }
 `;
 
+Sidebar.defaultProps = {
+  lightsOff: false,
+};
+
 Sidebar.propTypes = {
-  lightsOff: PropTypes.bool.isRequired,
   setLightsOff: PropTypes.func.isRequired,
+  lightsOff: PropTypes.bool,
 };

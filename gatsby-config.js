@@ -67,12 +67,16 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-mdx',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-fathom',
       options: {
-        trackingId: 'UA-144710022-1',
+        trackingUrl: 'stats.eszter.space',
+        siteId: 'MYEXJ',
+        whitelistHostnames: [
+          'eszter.space',
+        ],
       },
     },
-    'gatsby-plugin-mdx',
   ],
 };
