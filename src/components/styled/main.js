@@ -90,6 +90,15 @@ export const Main = styled.main`
     }
   }
 
+  h2 a {
+    background: none;
+
+    &:hover,
+    &:focus {
+      background: none !important;
+    }
+  }
+
   pre,
   code {
     color: ${props => props.theme.primary};
