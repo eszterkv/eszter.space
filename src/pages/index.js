@@ -47,6 +47,7 @@ const ArticleListItemTitle = styled.h2`
     border: none !important;
     color: inherit;
     text-decoration: none;
+    margin-left: -2px;
 
     &::after {
       display: none !important;

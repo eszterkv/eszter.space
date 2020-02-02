@@ -12,7 +12,9 @@ import SiteWrapper from './site-wrapper';
 const lightTheme = {
   primary: colors.primary,
   background: 'white',
+  lightAccent: colors.lightAccent,
   grey: colors.grey,
+  midGrey: '#999',
   codeBg: '#f6f6f6',
   codeString: '#065',
   codeImportant: 'slategrey',
@@ -26,6 +28,7 @@ const lightTheme = {
 const darkTheme = {
   primary: colors.invertedPrimary,
   background: colors.invertedBg,
+  lightAccent: colors.invertedLightAccent,
   grey: colors.invertedGrey,
   codeBg: '#303033',
   codeString: '#ff9',
