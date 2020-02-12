@@ -23,6 +23,10 @@ const lightTheme = {
   codeComment: 'slategrey',
   codeBoolNum: 'darkslategrey',
   codeKeyword: 'darkslategrey',
+  codeDel: '#c22',
+  codeDelBg: '#fee',
+  codeIns: '#065',
+  codeInsBg: '#efe',
 };
 
 const darkTheme = {
@@ -38,6 +42,10 @@ const darkTheme = {
   codeComment: '#aaa',
   codeBoolNum: '#6ba',
   codeKeyword: 'orange',
+  codeDel: '#cbb',
+  codeDelBg: '#433',
+  codeIns: '#efe',
+  codeInsBg: '#054',
 };
 
 export {
