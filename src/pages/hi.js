@@ -12,7 +12,7 @@ export default function About() {
     <Layout title="About me">
       <h1>Hi,</h1>
       <p>
-        I’m Eszter, a frontend developer based in London, UK.
+        I’m Eszter, a frontend developer based in Scotland.
       </p>
       <p>
         Say hi at <code>ekov@pm.me</code>.
