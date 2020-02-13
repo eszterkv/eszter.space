@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+import { Timestamp } from '../components/styled';
 
 export default function Index({ data }) {
   const { posts } = data.allMarkdownRemark;
@@ -14,16 +15,17 @@ export default function Index({ data }) {
         const title = node.frontmatter.title || node.fields.slug;
         return (
           <ArticleListItem key={node.fields.slug}>
-            <ArticleListItemTitle>
-              <Link to={node.fields.slug}>
+            <Link to={node.fields.slug}>
+              <Timestamp date={node.frontmatter.date} marginBottom="6px" />
+              <ArticleListItemTitle>
                 {title}
-              </Link>
-            </ArticleListItemTitle>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }}
-            />
+              </ArticleListItemTitle>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
+              />
+            </Link>
           </ArticleListItem>
         );
       })}
@@ -37,27 +39,25 @@ Index.propTypes = {
 
 const ArticleListItem = styled.div`
   margin-bottom: 30px;
-`;
-
-const ArticleListItemTitle = styled.h2`
-  margin-bottom: 0;
-  font-size: 20px;
 
   a {
     border: none !important;
     color: inherit;
     text-decoration: none;
-    margin-left: -2px;
 
     &::after {
       display: none !important;
     }
   }
+`;
+
+const ArticleListItemTitle = styled.h2`
+  margin: 0 !important;
+  font-size: 18px;
 
   + * {
     margin-top: .33em;
   }
-
 `;
 
 export const pageQuery = graphql`
@@ -75,7 +75,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "D MMM, YYYY")
             title
           }
         }

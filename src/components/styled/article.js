@@ -95,12 +95,12 @@ const StyledTimestamp = styled.div`
   opacity: .6;
   letter-spacing: .8px;
   font-size: 15px;
-  margin-bottom: 2em;
+  margin-bottom: ${props => props.marginBottom || '2em'};
 `;
 
 export const Timestamp = ({ date, prefix, ...rest }) => (
   <StyledTimestamp {...rest}>
-    {prefix || 'Written on'} <time>{date}</time>
+    {prefix} <time>{date}</time>
   </StyledTimestamp>
 );
 
