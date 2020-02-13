@@ -14,8 +14,18 @@ What’s eating my memory?
 How much free disk space do I have?  
 `df -h`
 
+How much space does directory some-dir/ occupy?  
+`du -sh some-dir`
+
 Create an SSH key for GitHub  
 `ssh-keygen -t rsa -C "your.email.used.on.github@example.com"`
+
+## SSH
+Log into a a remote machine using a key  
+`ssh user@ip -i path/to/key`
+
+Copy stuff over SSH (you have to be on the machine you are copying from, not to)  
+`scp -i path/to/ssh-key path/to/source user@ip:path/to/destination`
 
 ## AWS
 You’ll need [awscli](https://aws.amazon.com/cli/) for these.
@@ -36,11 +46,14 @@ Create a favicon
 Extract first frame of a video to image  
 `ffmpeg -i input.mp4 -vframes 1 output.png`
 
-## Fun stuff
+## Daily life stuff
 Check what time it is  
 `date`
 
 Check the weather  
 `curl wttr.in/yourLocation`
+
+Browse the internet  
+`lynx https://some.website`
 
 </Layout>
