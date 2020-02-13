@@ -151,12 +151,13 @@ export const Main = styled.main`
     }
 
     &.deleted {
-      color: #c22;
-      background: #fee;
+      color: ${props => props.theme.codeDel};
+      background: ${props => props.theme.codeDelBg};
     }
 
     &.inserted {
-      background: #efe;
+      color: ${props => props.theme.codeIns};
+      background: ${props => props.theme.codeInsBg};
     }
   }
 `;
