@@ -24,8 +24,8 @@ Both me and my partner work full time remote. Each of us has their own, separate
 
 Well, for me, it is time, energy and freedom.
 
-- __Time:__ my commute is 30 seconds now. In London, it was a not so terrible 40 minutes, but if we add that up, it’s almost an hour and a half a day!
-- __Energy:__ the emotional drain of spending time with something so utterly useless as commute, and the cognitive load of interruptions at work, plus being confined to a city where I had difficulties to really relax.
+- __Time:__ My commute is 30 seconds now. In London, it was a not so terrible 40 minutes, but if we add that up, it’s almost an hour and a half a day!
+- __Energy:__ The emotional drain of spending time with something so utterly useless as commute, the cognitive load of interruptions at work, and being confined to a city where I had difficulties to really relax used to exhaust me. Now, I have some usable brain power left after I finish my day.
 - __Freedom:__ On a low level, I am free of non-essential interruptions. On a higher level, I can live wherever, as long as I can manage to match HQ office hours.
 
 For me, these are the true benefits of working remotely.
