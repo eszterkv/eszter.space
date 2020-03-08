@@ -12,7 +12,7 @@ It’s not.
 
 ### What _is_ remote work?
 
-Remote work is, for some of us, the best way to focus and be productive. I get significantly more done. I wish I could give a 
+Remote work is, for some of us, the best way to focus and be productive. I get significantly more done. I wish I could give an actual number, say, how many [pomodoros](https://en.wikipedia.org/wiki/Pomodoro_Technique) do I finish on average, but to be completely honest, any typical day at the office I could hardly even finish one 25-minute session without being interrupted.
 
 Any kind of work is time-bound, and takes place in a _workplace_, be it on-site, home office, or co-working[^1]. Just as work should happen during regular work hours[^2], work should happen at a place that is designated for that, and only used for that.
 
