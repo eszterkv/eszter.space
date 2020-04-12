@@ -21,13 +21,14 @@ export const sidebarSizes = {
 };
 
 export const titleStyle = css`
-  max-width: 780px;
+  max-width: 720px;
   margin: 6px 0 30px;
-  font-size: 40px;
-  line-height: 1.2;
+  font-size: 30px;
+  line-height: 1.22;
+  letter-spacing: .6px;
   font-family: ${fonts.title};
 
   @media (min-width: 900px) {
-    font-size: 58px;
+    font-size: 48px;
   }
 `;
