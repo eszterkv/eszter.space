@@ -6,12 +6,23 @@ import Layout from '../../components/layout';
 
 ## Objects
 
-Renaming a const while destructuring
+Rename a const while destructuring
 ```js
-const officeDog = { name: 'Lola', age: 10, type: 'labradoodle' };
-const { name, age, type: breed } = officeDog;
+const officeDog = { name: 'Lola', age: 10, type: 'labradoodle' }
+const { name, age, type: breed } = officeDog
 
-console.log(breed); // 'labradoodle'
+console.log(breed) // 'labradoodle'
+```
+
+Destructure into a variable that already exists
+```ts
+let bar = 'yay'
+const obj = { foo: 'hello', bar: 'world' }
+
+const { foo } = obj // 'hello'
+({ bar } = obj) // 'world'
+
+/* { bar } = obj would throw a syntax error. */
 ```
 
 </Layout>
