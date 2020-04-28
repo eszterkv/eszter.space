@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "CSS tricks: respecting spacing in hash navigation"
-date:   2019-12-08 14:00:00 +0200
+date:   2020-04-28 14:00:00 +0200
 ---
 
 When implementing a hash-based navigation, it’s not trivial to control the actual starting position of headings. This could cause headings to be cut off or hidden below your floating navigation. I’ll show you two ways to fix that.
