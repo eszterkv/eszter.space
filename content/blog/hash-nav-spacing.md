@@ -14,7 +14,7 @@ But the problem is _where_ exactly it jumps to: right where content starts.
 
 Consider [this example](https://jsfiddle.net/sgwomzv8/2/). As you navigate back and forth between the two sections, the title will be hidden by the floating header. As you can see in the screenshot below, the text inside `h2#monstera` is right at the document’s top, with a lower z-index than the header’s, and it seemingly doesn’t respect the margin. Except, it does — margin is just not part of the content.[^1]
 
-![](https://raw.githubusercontent.com/c0derabbit/eszter.space/post/headings/content/assets/hidden.png)
+![](https://raw.githubusercontent.com/c0derabbit/eszter.space/master/content/assets/hidden.png)
 
 So, how could we _make_ that space part of the content?
 
