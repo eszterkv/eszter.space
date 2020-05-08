@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  "SVG animations with CSS"
-date:   2018-05-10 20:23 +0200
+title: SVG animations with CSS
+date: 2018-05-10 20:23 +0200
 excerpt_separator: <!-- more -->
 ---
-
 SVGs are lovely: they are small, scalable, and easily editable by a developer. They can also be animated using CSS, which means that while keeping their tiny size, they can do much better than a GIF.<!-- more --> Need those champagne bubbles to bubble a little faster? No problem. **Whatever the designer suggests can be done with a few lines of CSS, without <sup>significantly</sup> modifying the original asset.**
 
 ## The main ingredients: @keyframes and CSS animation
@@ -29,19 +28,22 @@ Take this beating heart as an example (it's `11.15KB`):
     to {transform: scale(1);}
   }
 </style>
+
 <div style="display: flex; flex-direction: column; align-items: center; max-width: 550px;">
-<img src="./heart.svg" class="heart svg" />
-<div style="font-size: 7.5px; opacity: .6; margin-top: 1em">Heart icon by <a href="https://www.flaticon.com/authors/kirill-kazachek" title="Kirill Kazachek">Kirill Kazachek</a> from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" data-id="_">CC 3.0 BY</a></div>
+<img src="/img/heart.svg" class="heart svg" />
+<div style="font-size: 7.5px; opacity: .6; margin-top: 1em">Heart icon by <a href="https://www.flaticon.com/authors/kirill-kazachek" title="Kirill Kazachek">Kirill Kazachek</a> from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="\_blank" data-id="\_">CC 3.0 BY</a></div>
 </div>
 
 Here's the code itself — you can check the source, I'm not cheating ;)
 
 #### HTML
+
 ```html
 <img src="heart.svg" class="heart" />
 ```
 
 #### CSS
+
 ```scss
 .heart {
   width: 120px;
@@ -57,7 +59,6 @@ Here's the code itself — you can check the source, I'm not cheating ;)
     transform: scale(1);
   }
 }
-
 ```
 
 ## That's boring. Is that all SVG can do?
@@ -69,8 +70,8 @@ Of course not.
 Consider this image:
 
 <div style="display: flex; flex-direction: column; align-items: center; max-width: 550px;">
-<img src="./rain.svg" class="svg" />
-<div style="font-size: 7.5px; opacity: .6; margin-top: 1em">Cloud icon by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" data-id="2_">CC 3.0 BY</a></div>
+<img src="/img/rain.svg" class="svg" />
+<div style="font-size: 7.5px; opacity: .6; margin-top: 1em">Cloud icon by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="\_blank" data-id="2\_">CC 3.0 BY</a></div>
 </div>
 
 Its source code has the following structure:
@@ -99,12 +100,13 @@ Its source code has the following structure:
 </svg>
 ```
 
-I would like the little rain drops to fall, and the two clouds to float.  
+I would like the little rain drops to fall, and the two clouds to float.\
 For this, we will have to slightly modify the original SVG. Namely:
-- The front cloud is made up of several shapes, let's put them in a group so that they can move together
-- The back cloud has to float, let's give it an ID as well
-- Rain drops will have to do the same thing, but timed randomly, so each of them will need an ID.
-- I will also make the back cloud a bit darker, because why not.
+
+* The front cloud is made up of several shapes, let's put them in a group so that they can move together
+* The back cloud has to float, let's give it an ID as well
+* Rain drops will have to do the same thing, but timed randomly, so each of them will need an ID.
+* I will also make the back cloud a bit darker, because why not.
 
 An illustration of these changes:
 
@@ -302,7 +304,7 @@ Now we just have to add some css animations, and we're done.
 	l13.842-38.031c1.417-3.893,5.72-5.901,9.613-4.483c3.893,1.417,5.899,5.721,4.483,9.613l-13.842,38.031
 	C312.965,504.163,310.089,506.054,307.026,506.054z"/>
 </svg>
-<div style="font-size: 7.5px; opacity: .6; margin-top: 1em">Cloud icon by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" data-id="2_">CC 3.0 BY</a></div>
+<div style="font-size: 7.5px; opacity: .6; margin-top: 1em">Cloud icon by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="\_blank" data-id="2\_">CC 3.0 BY</a></div>
 &nbsp;
 </div>
 
