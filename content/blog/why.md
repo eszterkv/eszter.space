@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Why"
-date:   2017-09-29 10:53:00 +0200
+title: Why
+date: 2017-09-29T08:53:00.000Z
 excerpt: ""
 slug: why
 ---
