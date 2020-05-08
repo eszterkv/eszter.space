@@ -1,24 +1,25 @@
 ---
 layout: post
-title:  "Creating a custom ProtonMail theme"
-date:   2017-11-22 16:59 +0200
+title: Creating a custom ProtonMail theme
+date: 2017-11-22 16:59 +0200
 excerpt: "ProtonMail is a secure email provider with a bonus: custom CSS!"
 ---
-
 [ProtonMail](https://protonmail.com) is a secure email provider for anyone concerned with Google reading their emails. It's e2e encrypted, which means that there's no way, not even for ProtonMail themselves, to read your emails. The bonus point is that it supports custom css.
 
 ## This is how ProtonMail looks like for me:
 
-![inbox](./inbox.png)
+![inbox](/img/inbox.png)
 
-![settings](./settings.png)
+![settings](/img/settings.png)
 
 ## How?
+
 Just go to Settings → Appearance → Custom theme, and add your very own css.
 
 It's pretty straightforward: you check the css in the inspector, and change what you want to change. Without getting into it too much, this is what I did:
 
 ### Let's start with the basics:
+
 ```css
 /* body font */
 body {
@@ -32,6 +33,7 @@ body {
 ```
 
 ### And set a base colour to our theme:
+
 ```css
 #pm_composer .composer header,
 #pm_composer .composer footer .pm_button,
@@ -57,6 +59,7 @@ body section.sidebar {
 ```
 
 ### Shrink the conversation panel, lighten the colours, and add some more space after icons:
+
 ```css
 body #conversation-list-rows .conversation {
   height: 30px;
@@ -79,6 +82,7 @@ body #conversation-list-rows .conversation .subject h4 .folderConversations-cont
 ```
 
 ### Change that accent from purple to gold:
+
 ```css
 body #conversation-list-rows .conversation .fa-star {
   color: gold !important;
@@ -114,6 +118,7 @@ body #conversation-list-rows .conversation .fa-star {
 ```
 
 ### Let's make links and buttons teal:
+
 ```css
 p a,
 #pm_settings .pm_tabs li a.pm_button,
@@ -172,6 +177,7 @@ body .cg-notify-message.notification-success,
 ```
 
 ### Adjusting button sizes...
+
 ```css
 .sidebar-btn-compose,
 .sidebar-btn-compose:active {
@@ -213,6 +219,7 @@ body .cg-notify-message.notification-success,
 ```
 
 ### I'd like my info panels to be very, very light gray, like this:
+
 ```css
 .alert.alert-info,
 #pm_settings .pm_tabs {
@@ -221,6 +228,7 @@ body .cg-notify-message.notification-success,
 ```
 
 ### ...and finally, some things should just be plain white.
+
 ```css
 body section.sidebar ul.menu li a .fa-repeat,
 body section.sidebar ul.menu li a i.fa:hover,
