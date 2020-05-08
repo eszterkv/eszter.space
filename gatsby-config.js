@@ -68,6 +68,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-mdx',
+    'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-plugin-fathom',
       options: {
