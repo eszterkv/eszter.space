@@ -15,7 +15,7 @@ Here’s a list of all my assumptions (and, in some cases, doubts). I noted down
 
 I will use [pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) and expect to be done with my 2x4 sets of pomodoros way before 5pm, as opposed to 5.30 or 6pm these days.
 
-#### Reality: Haha. Well, not really.
+#### Reality: 😕 Haha. Well, not really.
 
 The majority interruptions don’t come in the form of someone walking up to my desk and asking something. Instead, they tend to come in *something hijacking my attention*, regardless the channel. As for pomodoro, I gave it a try but I struggle to keep up with it. I really should, because it helps a lot in focusing.
 
@@ -25,7 +25,7 @@ Also, I’m not finishing work earlier. But not later either, so it’s ok.
 
 To fight this, I will make an effort to get out — sometimes go to a café for my morning espresso, join a country walking club, go to the library, go to the same baker…
 
-#### Reality: ?
+#### Reality: 🤔 ?
 
 Oh, of course I do, but it’s a question mark because the past couple months haven’t exactly gone according to plan.
 
@@ -39,7 +39,7 @@ Yet… I’ll have to report back on this later.
 
 As in, I will move a lot more. A couple push-ups before work, the occasional swim, the frequent jog, and much more walking, as I will live in a much quieter place.
 
-#### Reality: a bit better physical, and much better mental health.
+#### Reality: 😊 A bit better physical, and much better mental health.
 
 Sometimes, I go for a long walk on my lunch break, or hop on my bicycle right after work. Or I can go for a jog in the morning. Or a walk. Air quality is much better here too, and being a quiet small town, there’s less noise and light pollution, so I sleep much better.
 
@@ -53,7 +53,7 @@ The problem with big city life for me is that there is a limit to what I can com
 
 That, I hope, will change.
 
-#### Reality: Pub Wednesdays!
+#### Reality: 😊 Pub Wednesdays!
 
 Absolutely yes, and I’m always looking for our “Pub Wednesdays” (which sometimes fall on Tuesdays because I just can’t wait to go out.) The answer to “shall we do x tonight/this weekend?” is hardly ever a “nah, I’d rather stay in.”
 
@@ -63,7 +63,7 @@ A lot of time is lost to commute, and some to saying hello and goodbye at the of
 
 It’s not that I don’t like saying hi and chatting for a couple of minutes, I love it! But it translates to the first twenty minutes or so at the office absolutely unproductive from a work point of view.
 
-#### Reality: I hugely underestimated the difference lack of commute makes.
+#### Reality: 😊 I hugely underestimated the difference lack of commute makes.
 
 Now I feel like days aren’t long enough, I have much more mental energy left by the end of the day than I can execute on. I’ve started new pet projects I will never finish, picked up forgotten books, improved my self-care routine (from basically zero), started looking for new hobbies to pick up. I never go to bed exhausted (except for full-day hiking or biking, of course.)
 
@@ -71,7 +71,7 @@ Now I feel like days aren’t long enough, I have much more mental energy left b
 
 I have no good ideas right now on what to do with lunch and lunch time. Cooking a proper meal every lunch seems daunting. Doing my cooking for the week beforehand and eating the same stuff every day seems boring. Going out a lot for lunch seems expensive. Quick-fixing lunch seems bland. I know I will need a system, and I’d also like to minimise decision-making on this one, but not eat anything mediocre at the same time (life is too short for that).
 
-#### Reality: Lunch is not so important.
+#### Reality: 🤷‍♀️ Lunch is not so important.
 
 I never really made a big deal of lunch at the office, and I don’t do now. Sometimes we cook something. Sometimes we go for a walk and pick up a sandwich from a bakery in town. Sometimes I just have a nibble. What we *do* do is try to meet for lunch most days.
 
@@ -81,7 +81,7 @@ Dinner is the more important one, and because I never have a big lunch, I’m us
 
 I think it will! Like brushing my teeth and putting on clothes I would actually wear in civilisation, and taking breaks at regular intervals.
 
-#### Reality: It does!
+#### Reality: 😊 It does!
 
 [I wrote about the importance of routine here](/wfh-tips/).
 
