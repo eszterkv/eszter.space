@@ -1,5 +1,6 @@
 ---
 title: "The great expectations of working remotely: 3-month check-in"
+custom_slug: remote
 date: 2020-05-09T13:12:54.411Z
 description: I’ve been looking forward to this. Not having to commute, living in
   a small town close to nature, still being able to contribute in an exciting
