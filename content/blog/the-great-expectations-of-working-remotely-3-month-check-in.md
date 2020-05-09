@@ -60,7 +60,7 @@ Absolutely yes, and I’m always looking for our “Pub Wednesdays” (which som
 
 A lot of time is lost to commute, and some to saying hello and goodbye at the office and generally being interrupted by people who arrive later and leave earlier. You are trying to concentrate, but you also want to say hi, so you step out of your focus zone and chat for a minute or two. Then back to work, but someone else arrives five minutes later, and the same thing happens again.
 
-It’s not that I don’t like saying hi and chatting for a couple of minutes, I love it! But it translates to the first twenty minutes or so at the office absolutely unproductive. From a work point of view, that is.
+It’s not that I don’t like saying hi and chatting for a couple of minutes, I love it! But it translates to the first twenty minutes or so at the office absolutely unproductive from a work point of view.
 
 #### Reality: I hugely underestimated the difference commute (well, lack thereof) makes.
 
