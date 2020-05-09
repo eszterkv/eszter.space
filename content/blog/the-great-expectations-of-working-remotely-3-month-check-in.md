@@ -40,7 +40,7 @@ As in, I will move a lot more. A couple push-ups before work, the occasional swi
 
 #### Reality: a bit better physical, and much better mental health.
 
-Absolutely yes. Sometimes, I go for a long walk on my lunch break, or hop on my bicycle right after work. Or I can go for a jog in the morning. Or a walk. Air quality is much better here too, and being a quiet small town, there’s less noise and light pollution, so I sleep much better.
+Sometimes, I go for a long walk on my lunch break, or hop on my bicycle right after work. Or I can go for a jog in the morning. Or a walk. Air quality is much better here too, and being a quiet small town, there’s less noise and light pollution, so I sleep much better.
 
 And something I’ve not expected or thought of: I have the time and energy to take care of myself. I sleep much better and I’m not nearly as stressed as I used to be in London.
 
