@@ -56,7 +56,7 @@ That, I hope, will change.
 
 Absolutely yes, and I’m always looking for our “Pub Wednesdays” (which sometimes fall on Tuesdays because I just can’t wait to go out.) The answer to “shall we do x tonight/this weekend?” is hardly ever a “nah, I’d rather stay in.”
 
-### Expectation: I will have two extra hours a day to do something more useful.
+### Expectation: I will have two extra hours a day to do something useful.
 
 A lot of time is lost to commute, and some to saying hello and goodbye at the office and generally being interrupted by people who arrive later and leave earlier. You are trying to concentrate, but you also want to say hi, so you step out of your focus zone and chat for a minute or two. Then back to work, but someone else arrives five minutes later, and the same thing happens again.
 
