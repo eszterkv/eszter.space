@@ -11,11 +11,12 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{custom_slug}}"
     editor:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "custom_slug", widget: "string" }
       - { label: "Publish date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
