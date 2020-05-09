@@ -82,7 +82,7 @@ I think it will! Like brushing my teeth and putting on clothes I would actually 
 
 #### Reality: It does!
 
-[I wrote about the importance of routine here](https://eszter.space/wfh-tips/).
+[I wrote about the importance of routine here](/wfh-tips/).
 
 ## Conclusion?
 
