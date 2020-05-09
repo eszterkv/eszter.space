@@ -62,7 +62,7 @@ A lot of time is lost to commute, and some to saying hello and goodbye at the of
 
 It’s not that I don’t like saying hi and chatting for a couple of minutes, I love it! But it translates to the first twenty minutes or so at the office absolutely unproductive from a work point of view.
 
-#### Reality: I hugely underestimated the difference commute (well, lack thereof) makes.
+#### Reality: I hugely underestimated the difference lack of commute makes.
 
 Now I feel like days aren’t long enough, I have much more mental energy left by the end of the day than I can execute on. I’ve started new pet projects I will never finish, picked up forgotten books, improved my self-care routine (from basically zero), started looking for new hobbies to pick up. I never go to bed exhausted (except for full-day hiking or biking, of course.)
 
