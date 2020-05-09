@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "Friendly UIs: Let users copy with a click"
-date:   2019-07-28 17:50:00 +0200
+title: "Friendly UIs: Let users copy with a click"
+date: 2019-07-28 17:50:00 +0200
 ---
-
 There’s lots of subtle but very convenient features on GitHub’s UI, one of them is being able to copy stuff from an action menu. Let’s see how we can replicate that behaviour.
 
 ## When is this useful?
@@ -16,7 +15,7 @@ It’s also a nice touch when you have something long to copy, and it’s not re
 
 `document` has much more to offer than `appendChild` and `getElementById`, just look at this looooong list, fresh from the console:
 
-![ ](./document-api.gif)
+![ ](/img/document-api.gif)
 
 Some of them are familiar, but this time we’ll use one that’s a bit more obscure: [`document.execCommand`](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand). It can manipulate editable elements (such as `input` and anything with the attribute `contentEditable`). `execCommand` takes at least one argument: the name of the command we’d like the browser to execute.
 
@@ -35,6 +34,7 @@ As mentioned, `execCommand` needs an editable element. This is because only edit
 ```
 
 To copy this text, an editable element must be selected. This can be done by:
+
 1. finding the element: `const element = document.getElementById('my-copiable-element')`
 2. selecting it: `element.select()`
 
@@ -51,8 +51,9 @@ There, it should work already!
 ## But this is not really nice yet.
 
 To use this in production, this little snippet should meet a few more requirements:
-- scalable (maybe we have a thousand elements, all copiable)
-- pretty.
+
+* scalable (maybe we have a thousand elements, all copiable)
+* pretty.
 
 ### Scalability
 
@@ -70,7 +71,7 @@ function copyToClipboard(id) {
 
 ### Looks
 
-We _could_ style the `<input>`, but that’s not what we’ll do. There’s a much more elegant solution, using any HTML element of choice plus a hidden `<input>`[^1]. Because `id`s should be unique, we’ll make use of [data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
+We *could* style the `<input>`, but that’s not what we’ll do. There’s a much more elegant solution, using any HTML element of choice plus a hidden `<input>`[^1]. Because `id`s should be unique, we’ll make use of [data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
 
 This would almost work, but hidden elements are not selectable. So we will use a `.hidden` class instead, only to visually hide the element.
 
@@ -115,7 +116,8 @@ function copyToClipboard(e) {
 
 That’s it! If you want to be extra fancy, you can now show a message that it’s been copied. Questions? Just copy my email address from the sidebar and ask! :)
 
----
+- - -
+
 #### Notes
 
 [^1]: `<input type="hidden" ...>` can be used to pass values in a form that we don’t want to display. However, they are by no means a secret!

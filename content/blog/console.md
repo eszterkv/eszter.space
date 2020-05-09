@@ -26,7 +26,7 @@ Which results in something like this:
 
 ![](/img/console1.png)
 
-Of course, we can specity some more styles, but the text will always behave like an `inline` element (so it canʼt have height etc.)
+Of course, we can specify some more styles, but the text will always behave like an `inline` element (so it canʼt have height etc.)
 
 ```js
 console.log(
