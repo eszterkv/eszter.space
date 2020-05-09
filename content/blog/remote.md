@@ -11,7 +11,7 @@ I’ve been looking forward to this. Not having to commute, living in a small to
 
 Here’s a list of all my assumptions (and, in some cases, doubts). I noted down all the expectations a couple days before I started working remotely, and after roughly 3 months, it’s time to check in.
 
-### Expectation: I will have lots of uninterrupted time to focus.
+### 😕 Expectation: I will have lots of uninterrupted time to focus.
 
 I will use [pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) and expect to be done with my 2x4 sets of pomodoros way before 5pm, as opposed to 5.30 or 6pm these days.
 
@@ -21,7 +21,7 @@ The majority interruptions don’t come in the form of someone walking up to my 
 
 Also, I’m not finishing work earlier. But not later either, so it’s ok.
 
-### Expectation: I will miss the watercooler talk (and social interaction in general).
+### 🤔 Expectation: I will miss the watercooler talk (and social interaction in general).
 
 To fight this, I will make an effort to get out — sometimes go to a café for my morning espresso, join a country walking club, go to the library, go to the same baker…
 
@@ -35,7 +35,7 @@ The plan was to visit the office every couple months. Next week would be the sec
 
 Yet… I’ll have to report back on this later.
 
-### Expectation: I will be healthier.
+### 😀 Expectation: I will be healthier.
 
 As in, I will move a lot more. A couple push-ups before work, the occasional swim, the frequent jog, and much more walking, as I will live in a much quieter place.
 
@@ -45,7 +45,7 @@ Sometimes, I go for a long walk on my lunch break, or hop on my bicycle right af
 
 And something I’ve not expected or thought of: I have the time and energy to take care of myself, and I’m not nearly as stressed as I used to be in London.
 
-### Expectation: I will have the willpower to go out and have quality social interactions.
+### 😊 Expectation: I will have the willpower to go out and have quality social interactions.
 
 As an introvert, whatever social interaction I get from my commute and at the office is enough to put me in a state when I just want to be left alone and not talk to anyone.
 
@@ -57,7 +57,7 @@ That, I hope, will change.
 
 Absolutely yes, and I’m always looking for our “Pub Wednesdays” (which sometimes fall on Tuesdays because I just can’t wait to go out.) The answer to “shall we do x tonight/this weekend?” is hardly ever a “nah, I’d rather stay in.”
 
-### Expectation: I will have two extra hours a day to do something useful.
+### 😊 Expectation: I will have two extra hours a day to do something useful.
 
 A lot of time is lost to commute, and some to saying hello and goodbye at the office and generally being interrupted by people who arrive later and leave earlier. You are trying to concentrate, but you also want to say hi, so you step out of your focus zone and chat for a minute or two. Then back to work, but someone else arrives five minutes later, and the same thing happens again.
 
@@ -67,7 +67,7 @@ It’s not that I don’t like saying hi and chatting for a couple of minutes, I
 
 Now I feel like days aren’t long enough, I have much more mental energy left by the end of the day than I can execute on. I’ve started new pet projects I will never finish, picked up forgotten books, improved my self-care routine (from basically zero), started looking for new hobbies to pick up. I never go to bed exhausted (except for full-day hiking or biking, of course.)
 
-### Expectation: Finding a good system for the home office work lunch will be challenging.
+### 🤷‍♀️ Expectation: Finding a good system for the home office work lunch will be challenging.
 
 I have no good ideas right now on what to do with lunch and lunch time. Cooking a proper meal every lunch seems daunting. Doing my cooking for the week beforehand and eating the same stuff every day seems boring. Going out a lot for lunch seems expensive. Quick-fixing lunch seems bland. I know I will need a system, and I’d also like to minimise decision-making on this one, but not eat anything mediocre at the same time (life is too short for that).
 
@@ -77,7 +77,7 @@ I never really made a big deal of lunch at the office, and I don’t do now. Som
 
 Dinner is the more important one, and because I never have a big lunch, I’m usually hungry by the time I finish work, which means an early lunch, which means better sleep.
 
-### Expectation: Keeping a daily routine will work.
+### 😊 Expectation: Keeping a daily routine will work.
 
 I think it will! Like brushing my teeth and putting on clothes I would actually wear in civilisation, and taking breaks at regular intervals.
 
