@@ -16,9 +16,9 @@ export default function Layout({children, title, description, breadcrumbs}) {
     if (typeof localStorage !== 'undefined' && localStorage.hasOwnProperty('espc_lights_off'))
       return localStorage.getItem('espc_lights_off') === 'true';
     else
-      return typeof window !== 'undefined' &&
+      return (typeof window !== 'undefined' &&
         window &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches;
+        window.matchMedia('(prefers-color-scheme: dark)').matches) || false;
   }
 
   useEffect(insertScripts, []);
