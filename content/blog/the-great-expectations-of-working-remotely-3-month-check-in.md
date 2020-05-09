@@ -46,7 +46,7 @@ And something I’ve not expected or thought of: I have the time and energy to t
 
 ### Expectation: I will have the willpower to go out and have quality social interactions.
 
-As an introvert and wallflower, whatever social interaction I get from my commute and at the office is enough to put me in a state when I just want to be left alone and not talk to anyone.
+As an introvert, whatever social interaction I get from my commute and at the office is enough to put me in a state when I just want to be left alone and not talk to anyone.
 
 The problem with big city life for me is that there is a limit to what I can comfortably have in a day before I want to turn the world off. And the quality of the interaction doesn’t matter — it’s building up whether it’s a lovely after-work drink with friends or rushing past hundreds of pedestrians and dodging cyclists in central London. So by the time it’s time for quality social interactions, I can’t take any more of them.
 
