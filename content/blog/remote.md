@@ -75,7 +75,7 @@ I have no good ideas right now on what to do with lunch and lunch time. Cooking 
 
 I never really made a big deal of lunch at the office, and I don’t do now. Sometimes we cook something. Sometimes we go for a walk and pick up a sandwich from a bakery in town. Sometimes I just have a nibble. What we *do* do is try to meet for lunch most days.
 
-Dinner is the more important one, and because I never have a big lunch, I’m usually hungry by the time I finish work, which means an early lunch, which means better sleep.
+Dinner is the more important one, and because I never have a big lunch, I’m usually hungry by the time I finish work, which means an early dinner, which means better sleep.
 
 ### Expectation: Keeping a daily routine will work.
 
