@@ -12,7 +12,7 @@ export default function About() {
     <Layout title="About me">
       <h1>Hi,</h1>
       <p>
-        I’m Eszter, a frontend developer based in Scotland.
+        I’m Eszter, a frontend developer based in Scotland. I believe that form follows function, fast is accessible, and simple is beautiful. Sometimes I yap about something called *usability*.
       </p>
       <p>
         Say hi at <code>ekov@pm.me</code>.
@@ -28,7 +28,7 @@ const Pic = styled(Img)`
 
 const imgQuery = graphql`
   query {
-    profilePic: file(relativePath: { eq: "e.jpg" }) {
+    profilePic: file(relativePath: { eq: "e2.jpg" }) {
       childImageSharp {
         fixed(
           width: 198,
