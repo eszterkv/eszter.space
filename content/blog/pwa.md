@@ -63,6 +63,25 @@ It will, however, complain that your app “does not register a service worker�
 
 ### 2. Register the service worker[^2]
 
+This can be done [manually](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), but today we’ll use [workbox-build](https://developers.google.com/web/tools/workbox/modules/workbox-build).
+
+```sh
+$ yarn add --dev workbox-build
+```
+
+In your build script, after building the app:
+
+```js
+const { generateSW } = require('workbox-build')
+
+generateSW({
+  globDirectory: 'dist', // or your build directory
+  swDest: 'dist/sw.js', // or wherever you want to put your service worker
+})
+```
+
+The last step is to register the service worker, and we’re good to go, with a green Lighthouse report.
+
 ```html
 <script type="text/javascript">
   if('serviceWorker' in navigator) {
@@ -71,9 +90,17 @@ It will, however, complain that your app “does not register a service worker�
 </script>
 ```
 
+### A few notes
+
+If you have a very large number of pages linked from your front page (e.g. a blog), it may be a good idea to limit the number of pre-fetched pages or use pagination to avoid downloading old entries unnecessarily.
+
+There are several service worker plugins for common build tools (e.g. Webpack, Rollup and Parcel) on [npm](https://www.npmjs.com) — usually, it’s a good idea to use one of those for seamless integration.
+
+Finally, if I’ve made a mistake, please [let me know](mailto:ekov@pm.me)!
+
 - - -
 
-#### Notes
+#### Footnotes
 
 [^1]: See [Advantages of web applications](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction#Advantages_of_web_applications) and [Progressive Enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement), both on MDN.
 [^2]: By the way, [service workers can do much more](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) than make an app available offline.
