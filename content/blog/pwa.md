@@ -59,7 +59,7 @@ __your.webmanifest__ (you can call this anything, with a `.webmanifest` extensio
 
 If you run a Lighthouse audit now, the PWA section will already show some passed checks, e.g. web app manifest meets requirements, sets a theme colour, provides a valid `apple-touch-icon`. 
 
-It will, however, complain that your app “does not register a service worker”. Let’s get to that!
+It will, however, complain that your app “does not register a service worker.” Let’s get to that!
 
 ### 2. Register the service worker[^2]
 
