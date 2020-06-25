@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Turning any website into a PWA with vanilla JS
+title: Turning any website into a PWA with (mostly) vanilla JS
 date: 2020-06-25T15:00:00.000Z
 ---
 
