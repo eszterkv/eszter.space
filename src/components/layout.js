@@ -11,6 +11,7 @@ import '../style/highlight.scss';
 
 export default function Layout({children, title, description, breadcrumbs}) {
   const [lightsOff, setLightsOff] = useState(areLightsOff());
+  console.log(lightsOff)
 
   function areLightsOff() {
     if (typeof localStorage !== 'undefined' && localStorage.hasOwnProperty('espc_lights_off'))
@@ -18,8 +19,6 @@ export default function Layout({children, title, description, breadcrumbs}) {
 
     return false;
   }
-
-  useEffect(insertScripts, []);
 
   useEffect(() => {
     if (lightsOff)
