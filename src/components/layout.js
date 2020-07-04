@@ -28,18 +28,6 @@ export default function Layout({children, title, description, breadcrumbs}) {
       localStorage.setItem('espc_lights_off', false);
   }, [lightsOff]);
 
-  function insertScripts() {
-    const scripts = [
-      '/scripts/blotter.min.js',
-    ];
-
-    scripts.forEach(scriptSrc => {
-      const script = document.createElement('script');
-      script.src = scriptSrc;
-      document.body.appendChild(script);
-    });
-  }
-
   return (
     <ThemeProvider theme={lightsOff ? darkTheme : lightTheme}>
       <SiteWrapper>
