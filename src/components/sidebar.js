@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { SiteTitle } from './styled';
-import { colors, sidebarSizes } from './styled/variables';
+import { sidebarSizes } from './styled/variables';
 
-export default function Sidebar({lightsOff, setLightsOff}) {
-  const [showTooltip, setShowTooltip] = useState(false);
-  const [copied, setCopied] = useState(false);
-
+export default function Sidebar() {
   const links = [
     { href: '/', label: 'Articles' },
     { href: '/projects', label: 'Projects' },
@@ -17,13 +12,6 @@ export default function Sidebar({lightsOff, setLightsOff}) {
     { href: '/hi', label: 'About' },
     { href: '/now', label: 'Now' },
   ];
-
-  function copyToClipboard() {
-    const email = document.getElementById('email');
-    email.select();
-    document.execCommand('copy');
-    setCopied(true);
-  }
 
   return (
     <Sb>
@@ -33,23 +21,12 @@ export default function Sidebar({lightsOff, setLightsOff}) {
         </Link>
       </SiteTitle>
       <NavList>
-        {links.map(({href, label}) => (
+        {links.map(({ href, label }) => (
           <li key={href}>
             <Link key={href} to={href}>{label}</Link>
           </li>
         ))}
       </NavList>
-      <TG>
-        {showTooltip && (
-          <CSSTransition key="tooltip" classNames="transition" timeout={300}>
-            <Tooltip>{copied ? 'Copied 🚀' : 'Click to copy'}</Tooltip>
-          </CSSTransition>
-        )}
-      </TG>
-      <ThemeToggle onClick={() => setLightsOff(!lightsOff)}>
-        <span>Turn lights {lightsOff ? 'on ' : 'off '}</span>
-        <span id="bulb">💡</span>
-      </ThemeToggle>
     </Sb>
   );
 }
@@ -76,10 +53,6 @@ const Sb = styled.div`
       display: block;
     }
   }
-`;
-
-const TG = styled(TransitionGroup)`
-  height: 0;
 `;
 
 const NavList = styled.ul`
@@ -140,12 +113,3 @@ const ThemeToggle = styled.button`
     }
   }
 `;
-
-Sidebar.defaultProps = {
-  lightsOff: false,
-};
-
-Sidebar.propTypes = {
-  setLightsOff: PropTypes.func.isRequired,
-  lightsOff: PropTypes.bool,
-};

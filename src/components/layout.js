@@ -5,36 +5,16 @@ import { Link } from 'gatsby';
 
 import Sidebar from './sidebar';
 import SEO from './seo';
-import { SiteWrapper, Main, lightTheme, darkTheme } from './styled';
+import { SiteWrapper, Main, lightTheme } from './styled';
 import '../style/globals.scss';
 import '../style/highlight.scss';
 
 export default function Layout({ children, title, description, breadcrumbs }) {
-  const [lightsOff, setLightsOff] = useState(areLightsOff());
-
-  useEffect(() => {
-    setLightsOff(areLightsOff());
-  }, [])
-
-  function areLightsOff() {
-    if (typeof localStorage !== 'undefined' && localStorage.hasOwnProperty('espc_lights_off'))
-      return localStorage.getItem('espc_lights_off') === 'true';
-
-    return false;
-  }
-
-  useEffect(() => {
-    if (lightsOff)
-      localStorage.setItem('espc_lights_off', true);
-    else
-      localStorage.setItem('espc_lights_off', false);
-  }, [lightsOff]);
-
   return (
-    <ThemeProvider theme={lightsOff ? darkTheme : lightTheme}>
+    <ThemeProvider theme={lightTheme}>
       <SiteWrapper>
         <SEO title={title} description={description} />
-        <Sidebar setLightsOff={setLightsOff} lightsOff={lightsOff} />
+        <Sidebar />
         <Main>
           {breadcrumbs && <LinkToParent {...breadcrumbs} />}
           {children}
