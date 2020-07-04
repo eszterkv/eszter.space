@@ -67,7 +67,7 @@ It will still be super fast, because whatever is inside `<noscript>` won’t loa
 
 Alternatively, you can load an external stylesheet too.
 
-That’s it for inclusive lazy-loading — [let me know](/hi) if I’ve missed something!
+That’s it for inclusive lazy-loading — [let me know](https://github.com/c0derabbit/eszter.space/issues/new) if I’ve missed something!
 
 ----
 
