@@ -5,10 +5,10 @@ export const colors = {
   accent: 'darkorange',
   lightAccent: 'beige',
   grey: '#eee',
-  invertedGrey: '#445',
-  invertedBg: '#202426',
+  invertedGrey: '#556',
+  invertedBg: '#303436',
   invertedPrimary: '#f0f0f0',
-  invertedLightAccent: '#30343a',
+  invertedLightAccent: '#40444a',
 };
 
 export const fonts = {

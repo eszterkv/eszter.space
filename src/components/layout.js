@@ -9,9 +9,12 @@ import { SiteWrapper, Main, lightTheme, darkTheme } from './styled';
 import '../style/globals.scss';
 import '../style/highlight.scss';
 
-export default function Layout({children, title, description, breadcrumbs}) {
+export default function Layout({ children, title, description, breadcrumbs }) {
   const [lightsOff, setLightsOff] = useState(areLightsOff());
-  console.log(lightsOff)
+
+  useEffect(() => {
+    setLightsOff(areLightsOff());
+  }, [])
 
   function areLightsOff() {
     if (typeof localStorage !== 'undefined' && localStorage.hasOwnProperty('espc_lights_off'))

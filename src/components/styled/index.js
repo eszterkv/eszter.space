@@ -34,7 +34,7 @@ const darkTheme = {
   background: colors.invertedBg,
   lightAccent: colors.invertedLightAccent,
   grey: colors.invertedGrey,
-  codeBg: '#303033',
+  codeBg: colors.invertedLightAccent,
   codeString: '#ff9',
   codeImportant: 'pink',
   codeVar: 'salmon',
