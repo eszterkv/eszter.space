@@ -20,6 +20,14 @@ How much space does directory some-dir/ occupy?
 Create an SSH key for GitHub  
 `ssh-keygen -t rsa -C "your.email.used.on.github@example.com"`
 
+## File operations
+Change all extensions within a folder (in this example, from `.tsx` to `.ts`)
+```sh
+for file in *.tsx; do
+  mv "$file" "${file%tsx}ts"
+done
+```
+
 ## SSH
 Log into a a remote machine using a key  
 `ssh user@ip -i path/to/key`
