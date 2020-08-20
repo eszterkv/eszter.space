@@ -80,4 +80,7 @@ In the top right corner, click ‘Add another site’. Fathom will spit out a tr
 
 #### Notes
 
-[^1]: If you’d like to dig deeper in this topic, [ICO’s guide on individual rights](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/) is exhaustive and human-readable. [^2]: See GDPR [data minimisation principle](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/principles/data-minimisation/) [^3]: I spent five minutes searching for the perfect *The Office* gif to illustrate this, to no avail. Please email me if you find it. [^4]: GitHub repos: [matomo-org/matomo](https://github.com/matomo-org/matomo) and [usefathom/fathom](https://github.com/usefathom/fathom)
+[^1]: If you’d like to dig deeper in this topic, [ICO’s guide on individual rights](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/) is exhaustive and human-readable.  
+[^2]: See GDPR [data minimisation principle](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/principles/data-minimisation/)  
+[^3]: I spent five minutes searching for the perfect *The Office* gif to illustrate this, to no avail. Please email me if you find it.  
+[^4]: GitHub repos: [matomo-org/matomo](https://github.com/matomo-org/matomo) and [usefathom/fathom](https://github.com/usefathom/fathom)
