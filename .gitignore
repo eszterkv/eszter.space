@@ -70,3 +70,6 @@ yarn-error.log
 
 tags
 tags.*
+
+# 11ty
+_site
