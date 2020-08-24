@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy loading images</title>
+    <meta name="description" content="">
+    <link rel="alternate" href="." type="application/atom+xml" title="">
+    <link rel="alternate" href="." type="application/json" title="">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"></a></h1>
+    </header>
+
+    <main>
+      <h1>Lazy loading images</h1>
+
+<p>In my post about loading speed, I promised to write about how I lazy load images. It is a useful technique for when you have large photos above the fold, that would take noticeable time to load. The solution is quite simple: we can make use of CSS’s <code>blur</code> filter, with the help of <code>opacity</code>. The basic sequence is:</p>
+<ol>
+<li>load page with a tiny, blurred version of the image, and on top of it, a transparent, empty placeholder for the full size image</li>
+<li>create an <code>Image</code> element with the full size <code>src</code> using JavaScript</li>
+<li>when the full size asset is loaded, set it as the <code>src</code> of the full size placeholder</li>
+<li>set the opacity of the full size image to 1.</li>
+</ol>
+<p>This will look as if the same image becomes sharper, like this:</p>
+<p><img src="/img/goat.gif" alt="photo of a goat lazy-loaded, with blur-up effect"></p>
+<p>Using a preload image means that in this specific case, my initial image size is just 7kB instead of around 500kB. The downside is that you have to know the exact width and height of the image you want to load.</p>
+<h2>Let’s get to the code!</h2>
+<p>I will use React for this example. It’s very much simplified, I’m not passing classes, alt, support for any image extension etc., but you should do that in production.</p>
+<p>Our element will accept a <code>src</code> and a <code>preloadSrc</code> for now. Please note that it should have a fixed width and height to work.</p>
+<pre><code class="language-jsx">&lt;LazyImage src=&quot;goat.jpg&quot; preloadSrc=&quot;goat_tiny.jpg&quot; /&gt;
+</code></pre>
+<p>This is the component itself:</p>
+<pre><code class="language-jsx">export class LazyImage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {loaded: false};
+    this.fullSizeImage = null;
+  }
+
+  componentDidMount() {
+    const loaderImage = new Image();
+    loaderImage.src = this.props.src;
+    loaderImage.onload = () =&gt; {
+      this.fullSizeImage.src = src;
+      this.fullSizeImage.classList.add('loaded');
+      this.setState({loaded: true});
+    }
+  }
+
+  render() {
+    return (
+      &lt;div className=&quot;lazy-image&quot; style={this.props.style}&gt;
+        &lt;img className=&quot;image-full&quot; ref={id =&gt; this.fullSizeImage = id} /&gt;
+        &lt;img className=&quot;image-preload&quot; src={this.props.preloadSrc} /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre>
+<p>Finally, the CSS needed to make it work:</p>
+<pre><code class="language-scss">.lazy-image {
+  position: relative;
+  overflow: hidden;
+
+  .image-full,
+  .image-preload {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .image-preload {
+    filter: blur(4px);
+  }
+
+  .image-full {
+    z-index: 2;
+    opacity: 0;
+    transiton: opacity .6s ease;
+
+    &amp;.loaded {
+      opacity: 1;
+    }
+  }
+}
+</code></pre>
+<p>That’s it, you’re as good at image loading as Medium now.</p>
+
+
+<hr>
+<ul><li>Next: <a href="/learning/">You can be a developer, too</a></li><li>Previous: <a href="/loading-speed/">Ways to improve loading speed</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /lazy-loading/ -->
+  </body>
+</html>

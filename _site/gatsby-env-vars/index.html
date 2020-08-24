@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment variables with Gatsby and Netlify</title>
+    <meta name="description" content="">
+    <link rel="alternate" href="." type="application/atom+xml" title="">
+    <link rel="alternate" href="." type="application/json" title="">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"></a></h1>
+    </header>
+
+    <main>
+      <h1>Environment variables with Gatsby and Netlify</h1>
+
+<p>So you have a secret key. I have a public one, but there’s a limit to requests per day in free tier, so it’s better not to commit to source code. Plus, with any kind of key, it’s better not to commit it to source code.</p>
+<p>Before we go forward, <a href="https://www.gatsbyjs.org/">Gatsby.js</a> is a superfast frontend framework/static site generator written in React. <a href="https://www.netlify.com/">Netlify</a> offers a way to deploy it, and they play pretty well together.</p>
+<p>Back to our problem: I don’t want any keys, secret or public, in my source code. But I’d still like to use it as follows:</p>
+<pre><code class="language-js">const apiKey = process.env.MY_API_KEY;
+// do something with key
+</code></pre>
+<p>To achieve this, we just need a couple of things:</p>
+<ol>
+<li>configure environment variables locally and on Netlify[^1]</li>
+<li>make those variables available to Gatsby’s client side.</li>
+</ol>
+<h2>Configuring environment variables</h2>
+<h3>Locally</h3>
+<p>Create a file called <code>.env.development</code> with content <code>MY_API_KEY=monkey</code>. Add <code>.env.*</code> to <code>.gitignore</code>.</p>
+<h3>On Netlify</h3>
+<p>Go to <code>https://app.netlify.com/sites/{your_site}/deploys#environment</code>, click ‘Edit variables’, then ‘New variable’, add your key and value, and save.</p>
+<h2>Done!</h2>
+<p>That’s it, Gatsby will pick these up from Netlify’s build environment, so now we can access the variable in client-side code as <code>process.env.MY_API_KEY</code>.</p>
+<hr>
+<h4>Notes</h4>
+<p>[^1]: Btw, this works very similarly on other hosts, such as Heroku.
+[^2]: Read more on Gatsby and environment variables <a href="https://www.gatsbyjs.org/docs/environment-variables/">here</a>.</p>
+
+
+<hr>
+<ul><li>Next: <a href="/copy-tooltip/">Friendly UIs: Let users copy with a click</a></li><li>Previous: <a href="/mock/">Mocking React components with props</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /gatsby-env-vars/ -->
+  </body>
+</html>

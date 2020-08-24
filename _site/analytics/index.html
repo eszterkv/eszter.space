@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathom: a better alternative to Google Analytics</title>
+    <meta name="description" content="">
+    <link rel="alternate" href="." type="application/atom+xml" title="">
+    <link rel="alternate" href="." type="application/json" title="">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"></a></h1>
+    </header>
+
+    <main>
+      <h1>Fathom: a better alternative to Google Analytics</h1>
+
+<p>Almost everyone says they take privacy seriously, but almost everyone has an annoying cookie notice because they collect a bit more information than they are allowed to without explicit consent.[^1]</p>
+<p>Fathom co-founder <a href="https://twitter.com/pjrvs/">Paul Jarvis</a> <a href="https://usefathom.com/blog/blackhole">explains  the problem</a> way better than I could:</p>
+<blockquote>
+<p>“I’m not sure when it happened, but tracking users and people across the internet has become almost the default thing to do.”</p>
+</blockquote>
+<p>But this post is not (entirely) about tracking and GDPR. I’d just like to argue why Fathom is enough and, more importantly, how to implement it.</p>
+<h2>Part one: finding a better way</h2>
+<h3>What’s wrong with Google Analytics?</h3>
+<p>When using Google Analytics, we share a lot of information with Google about how my visitors use my website. We have no reason to do so, because we should collect (and share) as little information as possible[^2] to fulfil our needs.</p>
+<p>If we need to know how many visitors we have over a given period, how long they stay, what pages they view, and what their bounce rate is, that’s all we need to know. Sharing this with anyone will not add any value. It’s a bit like knowing a personal fact about a co-worker and telling someone we trust, but can we <em>really</em> trust them?[^3]</p>
+<h3>The good news: analytics can respect privacy</h3>
+<p>There exist solid self-hosted alternatives that provide full ownership and control of the information we collect:</p>
+<ul>
+<li><strong><a href="https://matomo.org/why-matomo/">Matomo</a></strong> for when you do this for the marketing department, and</li>
+<li><strong><a href="https://usefathom.com">Fathom</a></strong> for the minimalist.</li>
+</ul>
+<p>As a bonus, both are open-source.[^4]</p>
+<p>I have not tried Matomo, but it looks like an enterprise-ready tool featuring A/B testing, heat maps, user paths, geography, device and browser information etc. The full package.</p>
+<p>On the other side of the spectrum, Fathom is really bare-bones, it only gives you the key numbers, and it does that on a single screen.</p>
+<p><img src="/img/fathom.png" alt="" title="Screenshot of my own Fathom dashboard, right after setting it up"></p>
+<h3>Where Fathom lacks and why that’s OK</h3>
+<p>Where I would find it lacking in an enterprise setting is probably geography and user agent information. But how important are these?</p>
+<h4>Geography</h4>
+<p>What do we use location analytics for? Localisation/i18n could be one thing, but that should be done proactively (e.g. if we want to sell in Germany, we should show prices in € and translate).</p>
+<h4>User agent (browser, device, screen size etc.)</h4>
+<p>Looking at user agent stats can only underline the importance of cross-browser testing, responsiveness and accessibility. Even if 99.99% of visitors visit from desktop, we should still make sure the website or web app is at least usable on mobile and screen readers. There is some added value in this information though: showing some charts to stakeholders who don’t believe that the web should be universally accessible.</p>
+<p>All in all, the important numbers are there. It would probably be challenging to convince a marketing department to switch to Fathom (although I may give Matomo a try). But in may well be possible — after all, privacy concerns are gaining momentum. How many companies can truthfully say that privacy is more important for them than knowing who is visiting?</p>
+<hr>
+<h2>Part two: self-hosting Fathom</h2>
+<p><strong>💡 Note: this costs money</strong>, $5/month on DigitalOcean’s smallest droplet.</p>
+<p>I’m not a routine self-hoster, but setting up Fathom was pretty straightforward (except for the https part — I had to figure out the correct order of steps to be taken).</p>
+<p>DigitalOcean conveniently has a <a href="https://cloud.digitalocean.com/marketplace/5c520a5b3201e30d52590370?i=7012c3">Fathom Analytics image</a>. Just click create, choose the cheapest plan available, setup SSH keys, and create droplet.</p>
+<p><img src="/img/droplets.gif" alt="" title="Clicking the left arrow reveals cheaper droplets."></p>
+<h3>Configuration</h3>
+<p>Follow the getting started guide: <code>ssh root@your_droplet_ip</code>, and follow prompts.</p>
+<h3>Setting up HTTPS</h3>
+<p>This is an absolute must to make the tracker script work on HTTPS websites.</p>
+<ol>
+<li>Create an A record for the domain you want to point at your Fathom instance. With <a href="https://zeit.co/domains/">Zeit</a> domains, this is done by <code>now dns add your-domain.com A xxx.xxx.xxx.xxx</code>, where the last parameter is the IP address of your droplet.</li>
+<li><code>ssh</code> into the Fathom instance, and run <code>certbot --nginx -d your-domain.com</code>, which will ask you a couple of questions and issue an SSL cert using Let’s Encrypt.</li>
+<li>Now is a good time to add a firewall on DigitalOcean. Navigate to <a href="https://cloud.digitalocean.com/networking/firewalls">Networking → Firewalls</a>, click ‘Create Firewall’, and add a new inbound rule for HTTPS. Apply to your Fathom droplet and you’re done!</li>
+</ol>
+<h3>Adding analytics to a website</h3>
+<p>In the top right corner, click ‘Add another site’. Fathom will spit out a tracking code that you can add to your site’s HTML. Alternatively, if using Gatsby, <a href="https://www.gatsbyjs.org/packages/gatsby-plugin-fathom/">there’s a plugin for that</a>.</p>
+<hr>
+<h4>Notes</h4>
+<p>[^1]: If you’d like to dig deeper in this topic, <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/">ICO’s guide on individual rights</a> is exhaustive and human-readable.<br>
+[^2]: See GDPR <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/principles/data-minimisation/">data minimisation principle</a><br>
+[^3]: I spent five minutes searching for the perfect <em>The Office</em> gif to illustrate this, to no avail. Please email me if you find it.<br>
+[^4]: GitHub repos: <a href="https://github.com/matomo-org/matomo">matomo-org/matomo</a> and <a href="https://github.com/usefathom/fathom">usefathom/fathom</a></p>
+
+
+<hr>
+<ul><li>Next: <a href="/wfh/">Working from home should not involve doing the dishes</a></li><li>Previous: <a href="/games/">Curious games</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /analytics/ -->
+  </body>
+</html>

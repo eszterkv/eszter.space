@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a mechanical keyboard</title>
+    <meta name="description" content="">
+    <link rel="alternate" href="." type="application/atom+xml" title="">
+    <link rel="alternate" href="." type="application/json" title="">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"></a></h1>
+    </header>
+
+    <main>
+      <h1>Building a mechanical keyboard</h1>
+
+<p>A while ago, the household got a mechanical keyboard. I tried it out, and immediately knew I needed a proper keeb. Fast forward a few months, and I’m building my own, actually soldering parts together.</p>
+<h2>How it all started</h2>
+<p>After I tried the mech board at home, I fell in love with the feeling and got myself a lovely Vortex Race 3 for the office. It looks, um, like a mechanical keyboard, so it gets comments ranging from “OMG your keyboard is so cool”, to “oh I used to have an old keyboard like that at home”, so yes, it gets noticed.</p>
+<p>It’s also lovely to type on, super quiet compared to what I had expected (Cherry MX brown switches are absolutely office-compatible). It has built-in mac &amp; linux support, colemak and dvorak layouts, plus three fully programmable layers, too, so I can map my own key combinations (arrows on the home row etc.)</p>
+<p>Fast forward a few more months, having spent a week working from bed on a macbook due to a bad cold, I got repetitive strain injury (mostly due to bad posture and hand positioning). So partly due to that, partly because why stop at one keyboard, I started looking into split keyboards.</p>
+<h2>Why a split keyboard?</h2>
+<p>Well, if you put down your hands in front of you, you will notice they sit in an angle rather than parallel to each other. Also, if you lay your hands flat on a keyboard, you will notice that your fingers don’t all rest in the exact same vertical position. This brings us to my chosen keyboard, the <a href="http://keeb.io">keeb.io</a> Iris, which looks something like this:</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*BS_98xX0tVQa8fuo.png" alt="Layout of an Iris split keyboard, consisting of two halves"></p>
+<h2>Keyboard anatomy 101</h2>
+<p>Most mechanical keyboards consist of a PCB (or two, if it’s a split like the Iris — PCB stands for printed circuit board), a case to protect it, key switches, most of the times a plate to hold the switches in place, and keycaps to cover the switches and make typing comfortable.</p>
+<p>They also feature a microcontroller, such as an Arduino-compatible Pro Micro, which make it possible for the board to register key presses and send them to the computer, and enables full custom programmability (not just Vortex Race-like, but really, really full.) There’s a lot more bits and bobs that are needed for the build; we’ll get to that.</p>
+<p>Split boards have a master and a slave side; the master is connected to the computer, and the two boards are connected with a TRRS jack cable. However, a pro micro is needed on the slave side as well, to enable the two sides to communicate.</p>
+<h2>Preparations</h2>
+<h3>Getting parts</h3>
+<p>I stupidly waited until my go-to EU supplier CandyKeys ran out of Iris kits, so I had to order directly from <a href="http://Keeb.io">Keeb.io</a> in the US. Dealing with customs clearance, shipping costs, documentation and paying a high VAT[^1] is not much fun, but whatever. Order from within your customs borders, whenever you can.</p>
+<p>My kit includes 2 PCBs (for the two sides), with diodes for each switch, TRRS jack sockets, a reset button, a couple of resistors, and two pro micros (the master side with USB-C, which is considered to be more reliable on the long run, meaning it doesn’t break off).</p>
+<p>I also got 56 Cherry MX Brown switches (AliExpress is a great source for getting these), clear acrylic plates, the necessary cables (a TRRS jack, NOT the same as the ones used for audio!)[^2], and some fancy keycaps (that haven’t shipped yet).</p>
+<h3>Software</h3>
+<p>Most custom and DIY boards use the <a href="https://qmk.fm/">QMK Firmware</a>. It already has layouts for most available boards, including the Iris. Before I start soldering, I wanted to have a look at the software side of things to see what I’m up against. Following QMK’s <a href="https://docs.qmk.fm/#/newbs">Complete Newbs Guide</a>, I installed the QMK toolbox, played around with it for a while, it seems very straightforward.</p>
+<h3>Tools</h3>
+<p>Building a keyboard usually means a lot of soldering[^3]. For those unfamiliar with soldering: the goal is to connect two pieces of metal so they conduct electricity (so that, for instance, a pressed key switch can send a signal all the way to the microcontroller, through the PCB’s circuits). This is done by melting another metal to connect the two. Melting is done by a soldering iron, and the connecting metal is tin and lead solder with a low melting point (around 200℃, but the iron melts it to a higher temperature, to be sure).</p>
+<p>A minimal soldering setup has to include:</p>
+<ul>
+<li>Soldering iron (I’m using a Weller)</li>
+<li>Rosin-core solder (around 0.8mm diameter is best for this purpose; mine was 1mm. It usually comes as a reeled wire, and is much heavier than I thought. A 40% lead, 60% tin content is ideal for this purpose.)</li>
+<li>Flush cutter (for cutting diode legs etc.)</li>
+</ul>
+<p>In addition, it’s good to have:</p>
+<ul>
+<li>Multimeter (to measure conductivity)</li>
+<li>Tweezers or long nose pliers (to hold small things in place)</li>
+<li>Flux (to make solder stick better)</li>
+<li>Solder sucker or wick (for corrections — actual desoldering is best done with a proper desoldering iron)</li>
+</ul>
+<h2>The build</h2>
+<p>It would be exaggerating to say this was the first time I held a soldering iron, but I was definitely not confident. I got a crash course from someone more experienced[^4], desoldered and soldered 4-5 diodes on an old circuit board that had no use, and was good to go. I mosty followed the excellent and detailed <a href="https://docs.keeb.io/iris-build-guide/">build guide on keeb.io</a>. This is how it’s done, and my experience with it.</p>
+<p>One really important thing to note is that the two halves have to be symmetrical, so I had to solder on the other side of the other half. Otherwise, I’d end up with two left or two right halves.</p>
+<h3>1. Soldering the diodes</h3>
+<p>First, the diodes had to be separated from the paper strip holding them neatly together, then bending the legs with a plier. I also tested each of them with a multimeter before soldering anything. If one of them is faulty, better not to solder it in and realise afterwards.</p>
+<p>The only tricky thing with diodes is to insert them in the correct orientation[^5]. After every four or five, I tested them with a multimeter, to see if they were soldered in correctly. I had 56 diodes to solder, that meant 112 soldering points. I think I got quite good at soldering by the end.</p>
+<h3>2. Soldering the resistors</h3>
+<p>Resistors are not orientation-sensitive, and only two of them are needed. So this was an easy step.</p>
+<h3>3. Soldering the TRRS jacks and the reset switches, one on each side.</h3>
+<p>Nothing special.</p>
+<p>After this step, there’s a bunch of optional steps that I skipped, as LED backlighting does nothing for me (for now).</p>
+<h3>4. Soldering the Pro Micro header pins</h3>
+<p>Only the header pins for now. We have to make sure they are vertical, as in as close to 90° as possible, and the two rows of pins are parallell to each other. I start by soldering a few pins on each side first, and try on the pro micro to see if it fits. If not, adjust; then solder the rest. The pro micros themselves should NOT be soldered yet.</p>
+<h3>5. Soldering the switches</h3>
+<p><img src="/img/iris_in_progress.jpg" alt="" title="Left half with a few switches soldered on"></p>
+<p>This is a very fun part, finally our keyboard will start to look like one! To avoid soldering a faulty switch, I test each of them with a multimeter[^6]. Now, the switches have to be popped into the top plate (easy to identify — this is the one with square holes in it), pushed together with the PCB (facing the non-soldered side) and soldered into place. Following common recommendation, I first soldered in the switches in the corners to make sure everything is tight and well aligned, and added the rest of them after.</p>
+<p>It’s important here to make sure that the switches sit tightly in the plate, and fit the PCB as snug as possible. When this is done, there should be no vertical space for the switches to move within the plate[^7].</p>
+<h3>6. Flashing the pro micros</h3>
+<p>This step should be done before soldering them, because desoldering is a pain if it turns out that the pro micro is faulty.</p>
+<p>As a reminder, we need two of them; one for each side. Only one of them will be connected to the computer though, and I chose a USB-C version for that, the Elite-C, because they are less prone to breaking off. The standard, cheaper version is fine for the slave side.</p>
+<p>Pro micros are sensitive pieces of equipment, so I made sure  I was not charged before handling them. I did this by simply touching the bare metal parts of a radiator.</p>
+<p>To flash the pro micro (meaning, format it and install a keyboard controller), first I open the QMK toolbox on my computer, then connect the pro micro, and put it in reset mode. This is achieved by shorting <code>GND</code> and <code>RST</code> with a pair of tweezers or a piece of wire (while the pro micro is connected). Now, QMK toolbox should recognise the pro micro.[^8] Flashing itself is best done from the command line — I tried using the QMK toolbox GUI, but that didn’t work properly for me. The magic command is:</p>
+<p><code>make iris/rev2:default:dfu</code> for the Elite-C, and <code>make iris/rev2:default:avrdude</code> for the standard pro micro.</p>
+<p>After this step, when the pro micro is unplugged and connected again, it should show up as a keyboard — even though it’s not built into one yet!</p>
+<h3>7. Soldering the pro micros</h3>
+<p>One thing to keep in mind is that the pro micro on the master side is facing down (the side with the components to the PCB), and the one on the slave side facing up. And, practically, the USB connector towards the edge of the keyboard.</p>
+<p>I was very careful at this step, because the header pins are very close to each other, so there’s not much space, and the pro micro is a sensitive piece. I didn’t want to accidentally fry any of its tiny components with the soldering iron.</p>
+<h3>8. Putting it all together: bottom plate and keycaps</h3>
+<p><img src="/img/iris_back.jpg" alt="" title="Left half with clear acrylic bottom plate, showcasing the Elite-C and the soldering job"></p>
+<p>Now the easy and fun part, I put on the bottom plate using the standoffs and screws that came with the plates. They came with 10mm standoffs, which I found a bit too short, so I ordered some tiny nylon washers from RS Online, until the 12mm standoffs get here from AliExpress.</p>
+<p>The initial keycaps were cheap TaiHao caps, because they shipped fast (and because I had a hard time choosing the final ones). Now the keeb is sporting EnjoyPBT Black on Whites from Kbdfans.</p>
+<p><img src="/img/iris_finished.jpg" alt="" title="The Iris finished, with its final keycaps (for now)."></p>
+<p>Building a keyboard was a real fun day and a half, and I’m already looking forward to my next build, probably a second Iris, for the home office.</p>
+<hr>
+<h4>Notes</h4>
+<p>[^1]: Second poor decision: I ordered the board to Hungary, where VAT is 27%, as opposed to 20% in the UK.</p>
+<p>[^2]: The only f*$%up in my build was getting the absolutely wrong cable to connect the two halves. Luckily, even in my small hometown, a computer accessories store had the right thing in stock.</p>
+<p>[^3]: Unless it’s hotswappable, meaning you can put tiny metal tubes (hotswap sockets) into the holes in the PCB where you would solder the switches etc. otherwise, so you just pop in the sockets and the switches and you’re ready to go. This only works on PCBs that already have diodes soldered on.</p>
+<p>[^4]: Thanks, dad. If your dad is not the kickass solderer mine is, you can get the same results by searching “how to solder” on YouTube.</p>
+<p>[^5]: On the Iris PCB, it’s easy: black end to the square hole, other end to the round hole.</p>
+<p>[^6]: Like many things in the build, this would be much easier done with three hands instead of two: two to hold each leg and each multimeter probe end together, and a third to press the switch to test.</p>
+<p>[^7]: I learned this the hard way and had to adjust a few switches after the whole thing was soldered. At least I learned some fixing, too! I didn’t have to fully desolder these switches, just heat the tin around the switch legs enough to melt it and be able to push the switch a bit further in. Btw, I totally forgot to solder one switch properly back in, so I have one switch that is connected by mere coincidence, which I should fix ASAP.</p>
+<p>[^8]: See more on flashing the Iris here: <a href="https://docs.keeb.io/flashing-firmware/">Flashing Firmware - Keebio Documentation</a></p>
+
+
+<hr>
+<ul><li>Next: <a href="/npm/">Publishing an npm package</a></li><li>Previous: <a href="/serverless-pt2/">Building an API proxy with Serverless — Part 2</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /keeb/ -->
+  </body>
+</html>

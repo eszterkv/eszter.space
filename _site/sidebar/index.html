@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox with fixed sidebar</title>
+    <meta name="description" content="">
+    <link rel="alternate" href="." type="application/atom+xml" title="">
+    <link rel="alternate" href="." type="application/json" title="">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"></a></h1>
+    </header>
+
+    <main>
+      <h1>Flexbox with fixed sidebar</h1>
+
+<p>I love <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a>. It’s… flexible. Today, developers have to think about almost as many resolutions as devices. Things have to shrink (and grow!), fit, and not cover anything else. In some cases, they have to reorder themselves (more on that in a future blog post). Flexbox can do all this. One caveat though — it does not work well with absolute or fixed positioning.</p>
+<p><strong>So how do we keep a sidebar in place?</strong></p>
+<h2>HTML structure</h2>
+<p>Our very simple website will contain a sidebar and a <code>&lt;main&gt;</code> part. These will be wrapped in a common parent, which has <code>display: flex</code> property. Something like this (fill <code>main</code> with lots of paragraphs —  try <a href="http://spaceipsum.com">Space Ipsum</a> or <a href="http://fillerama.io">Fillerama</a>).</p>
+<h4>HTML</h4>
+<pre><code class="language-html">&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;nav class=&quot;sidebar&quot;&gt;Links...&lt;/nav&gt;
+  &lt;main&gt;Fill with lots of text&lt;/main&gt;
+&lt;/div&gt;
+</code></pre>
+<h4>CSS</h4>
+<pre><code class="language-css">.wrapper {
+  display: flex;
+}
+</code></pre>
+<p>Blocks have an <code>overflow</code> property. They also have <code>width</code> and <code>height</code>, and with these properties, we can easily tame that sidebar.</p>
+<h2>Fixing the sidebar</h2>
+<p>First, our sidebar should not be taller than the screen. But how tall is the screen? It’s exactly <code>100vh</code>. Now that we are at it, let’s fix <code>box-sizing</code> for <em>every element</em> too, in case there are any paddings or borders[^1].</p>
+<pre><code class="language-css">* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  height: 100vh;
+}
+</code></pre>
+<h2>Scrolling the content</h2>
+<p>At this point, our sidebar will be as tall as the screen — but our page height is defined by the length of its content. In other words, <code>.wrapper</code> will be as tall as <code>main</code>, and if we have lots of paragraphs, we will scroll past the sidebar quickly.
+Overflow to the rescue! Let’s make this <code>main</code> no taller than the screen, and scroll if it has more content:</p>
+<pre><code class="language-css">main {
+  height: 100vh;
+  overflow: scroll;
+}
+</code></pre>
+<p>That’s it! <a href="https://jsfiddle.net/rgvpn1zr/1/">Here’s a working example.</a></p>
+<hr>
+<h4>References</h4>
+<p>[^1]: see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">box-sizing on MDN web docs</a></p>
+
+
+<hr>
+<ul><li>Next: <a href="/svg-animations/">SVG animations with CSS</a></li><li>Previous: <a href="/acceptance-testing/">Acceptance testing with Cucumber and Capybara</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /sidebar/ -->
+  </body>
+</html>

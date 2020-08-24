@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting up Zeit.co domains with GitHub Pages</title>
+    <meta name="description" content="">
+    <link rel="alternate" href="." type="application/atom+xml" title="">
+    <link rel="alternate" href="." type="application/json" title="">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"></a></h1>
+    </header>
+
+    <main>
+      <h1>Setting up Zeit.co domains with GitHub Pages</h1>
+
+<p>A few days ago I decided I deserved a treat, and bought myself a domain on <a href="https://zeit.co/domains">Zeit.co</a>[^1]. My <a href="https://eszter.space">website</a> and blog (this very same) live there for now, and I will probably add some more projects later, the ones that need a server to run (like my <a href="https://swtr.herokuapp.com">weather app</a> that runs on a free Heroku instance at the moment).</p>
+<p>Looking back, the process is fairly easy — Zeit even takes care of SSL with <a href="https://letsencrypt.org">Let’s Encrypt</a>. I did need some help setting it up though, huge thanks to <a href="https://samu.space">Sam</a> for helping out!</p>
+<h2>Hereʼs how itʼs done:</h2>
+<ol>
+<li>register with <a href="http://zeit.co">zeit.co</a> and add a payment method</li>
+<li>install <a href="http://now.sh">now.sh</a> by <code>npm i -g now</code></li>
+<li><code>now login</code> with your email and a fun authentication[^2]</li>
+<li>head over to <a href="https://zeit.co/domains">zeit.co/domains</a> and choose something nice</li>
+<li>in the command line, type <code>now dns add your.domain @ ALIAS you.github.io</code></li>
+<li>go to your <code>username.github.io</code> repo’s settings and add custom domain</li>
+<li>wait about half an hour</li>
+<li>donʼt forget to enforce HTTPS (you can do this on your github repo settings page).</li>
+</ol>
+<p>That should be it!</p>
+<hr>
+<h4>References</h4>
+<p>[^1]: The people behind the lovely <a href="https://github.com/zeit/next.js">next.js</a>, which will deserve a post on its own.
+[^2]: This is actually a very cool part, you donʼt need to type passwords in the command line. Instead, you are shown a combination of words, which should match the combination sent to your email. After this is confirmed, youʼre all set!</p>
+
+
+<hr>
+<ul><li>Next: <a href="/progress-bar/">Building a reading progress bar</a></li><li>Previous: <a href="/animated-underlines/">Animated link underlines</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /zeit-domains/ -->
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building an API proxy with Serverless — Part 2</title>
+    <meta name="description" content="">
+    <link rel="alternate" href="." type="application/atom+xml" title="">
+    <link rel="alternate" href="." type="application/json" title="">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"></a></h1>
+    </header>
+
+    <main>
+      <h1>Building an API proxy with Serverless — Part 2</h1>
+
+<p>In the second part, I will turn a simple Lamda function into an API endpoint. If you havenʼt, now is a good time to <a href="/serverless">read Part 1</a> first :)</p>
+<h2>From function to API</h2>
+<p>First, let’s prepare our serverless config so that it can handle HTTP requests, and will only allow those from my website.</p>
+<pre><code class="language-yaml">functions:
+  getWeather:
+    ...
+    events:
+      - http:
+          path: weather
+          method: get
+          cors:
+            origins:
+              - 'https://myweathersite.example.com'
+</code></pre>
+<h2>A side note about AWS credentials</h2>
+<p>I use AWS for work, so I already had some credentials configured — but I canʼt just deploy my lambda to the company AWS account, can I? So letʼs set up a new profile. This we can do by running<br>
+<code>aws configure --profile notMyCompanyProfile</code>, and entering security credentials as usual. Then, we can set a default <code>profile</code> for serverless to use, in <code>serverless.yml</code>:</p>
+<pre><code class="language-yaml">provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: prod
+  profile: notMyCompanyProfile
+</code></pre>
+<h2>Deploying the lambda</h2>
+<p>Now we can run <code>sls deploy --aws-profile notMyCompanyProfile</code>. Yay! If we run <code>sls invoke -f getWeather</code> (notice the absence of <code>local</code>), it will actually run on AWS this time. We can even <code>curl</code> the url <code>sls deploy</code> created for us. But when I do that now, I get <code>403 Forbidden</code>: I have to configure my DarkSky API key on AWS. Thatʼs simply done on the AWS Consoleʼs Lambda section, under my functionʼs <em>Environment variables</em>.</p>
+<p>If I do a <code>curl</code> now, it will get the weather for me.</p>
+<h2>Making the server a bit more flexible</h2>
+<p>Now a weather forecast is more useful if it can tell the weather for any location in the world, not just one it is hard coded to. In practice, this will mean for now that the client can pass coordinates for which it wants to get a weather forecast. Something like this:</p>
+<pre><code class="language-js">module.exports.getWeather = (event, context, callback) =&gt; {
+  const { lat, lon, units } = event.queryStringParameters;
+  const headers = { 'Access-Control-Allow-Origin': '*' };
+  const baseUrl = 'https://api.darksky.net/forecast/';
+  const queryParams = !!units ? `?units=${units}` : '';
+
+  request.get(
+    { url: `${apiUrl}${process.env.DARKSKY_API_KEY}/${lat},${lon}${queryParams}` },
+    (err, res, body) =&gt; {
+      if (err) {
+        const response = { statusCode: 404, headers, body: err };
+        callback(null, response);
+      } else {
+        const response = { statusCode: res.statusCode, headers, body };
+        callback(null, response);
+      }
+    }
+  );
+};
+</code></pre>
+<p>Thatʼs it! Now, by sending a <code>GET</code> request to <code>https://my-api.url/weather/?lat=10&amp;lon=20</code>, we have weather data for these coordinates.</p>
+<hr>
+<h4>References</h4>
+<p>[^1]: Read more about configuring AWS profiles for Serverless <a href="https://serverless.com/framework/docs/providers/aws/guide/credentials/">here</a>.</p>
+
+
+<hr>
+<ul><li>Next: <a href="/keeb/">Building a mechanical keyboard</a></li><li>Previous: <a href="/serverless/">Building an API proxy with Serverless — Part 1</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /serverless-pt2/ -->
+  </body>
+</html>

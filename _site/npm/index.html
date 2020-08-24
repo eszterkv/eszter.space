@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publishing an npm package</title>
+    <meta name="description" content="">
+    <link rel="alternate" href="." type="application/atom+xml" title="">
+    <link rel="alternate" href="." type="application/json" title="">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"></a></h1>
+    </header>
+
+    <main>
+      <h1>Publishing an npm package</h1>
+
+<p>There comes a time when you need an npm package that doesnʼt exist — or just want to share something with the world. In my case, itʼs a <a href="https://kyleamathews.github.io/typography.js/">Typography.js</a> theme. Iʼll use <code>yarn</code> as this is my favourite package manager, but <code>npm</code> can be used in a similar fashion.</p>
+<h2>Creating a module</h2>
+<p>This part is quite simple. <code>yarn init</code> and answer all the questions.</p>
+<h2>Using npm packages locally</h2>
+<p>We should also test the package locally while developing and before publishing it to npm. This can be done by locally linking it — basically, we are letting our local yarn or npm know that this package exists, and where it lives. We also need a test project where we import it from — Iʼm using a <a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/">Gatsby blog starter</a>, because it already uses Typography.js by default.</p>
+<p>To link the package:</p>
+<pre><code class="language-sh">cd path/to/package-name
+yarn link
+cd path/to/test-project
+yarn link package-name
+</code></pre>
+<p>Thatʼs it, now we can develop away.</p>
+<h2>Production build (spoiler: using Babel)</h2>
+<p>For the sake of performance and compatibility, we should minify and compile our code to be ES5-compatible. The easiest way to do it is using <a href="https://babeljs.io/">Babel</a>.</p>
+<pre><code class="language-sh">yarn add --dev @babel/cli @babel/core @babel/preset-env babel-preset-minify
+</code></pre>
+<p>Now, we can add a <code>build</code> script to <code>package.json</code>:<br>
+<code>&quot;build&quot;: &quot;babel src -d dist&quot;</code></p>
+<p>Letʼs not forget to point our package entry to this <code>dist</code> folder (it can be called something else of course):<br>
+<code>&quot;main&quot;: &quot;./dist/index.js&quot;</code></p>
+<h2>Ready to publish?</h2>
+<p>First, we have to register on npm. At least I have to, because this is my first package published there. This is conveniently done from the command line with <code>npm adduser</code>, which asks for a username, password and public email. Then a simple email verification, and the magic command:</p>
+<pre><code class="language-sh">npm publish
+</code></pre>
+<p>Thatʼs it!</p>
+<hr>
+<p>By the way, check out my <a href="https://www.npmjs.com/package/typography-theme-north">Typography.js theme</a> on npm.js, and feel free to use it in your projects.</p>
+
+
+<hr>
+<ul><li>Next: <a href="/mock/">Mocking React components with props</a></li><li>Previous: <a href="/keeb/">Building a mechanical keyboard</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /npm/ -->
+  </body>
+</html>
