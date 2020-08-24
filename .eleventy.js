@@ -1,5 +1,6 @@
 module.exports = function(config) {
   config.addPassthroughCopy({ public: './' })
+  config.addPassthroughCopy('./css/styles.css')
 
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],
