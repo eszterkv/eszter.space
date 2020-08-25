@@ -1,15 +1,28 @@
 ---
 layout: layouts/base.njk
 ---
+{% macro prevNextLink(post) %}
+  <a href={{ post.url | url }}>
+    {{ post.data.title }}
+  </a>
+{% endmacro %}
 
-<h1>{{ title }}</h1>
+{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 
-{{ content | safe }}
+<article>
+  <h1 class="text-2xl mb-6 lg:text-4xl">{{ title }}</h1>
+  {{ content | safe }}
 
-<hr>
-<ul>
-  {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-  {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-</ul>
+  <footer>
+    <hr class="my-6" />
+    <ul>
+      {%- if previousPost %}
+        <li>Previous: {{ prevNextLink(previousPost) }}</li>
+      {% endif %}
+      {%- if nextPost %}
+        <li>Next: {{ prevNextLink(nextPost) }}</li>
+      {% endif %}
+    </ul>
+  </footer>
+</article>

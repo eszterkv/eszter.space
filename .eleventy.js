@@ -2,10 +2,6 @@ module.exports = function(config) {
   config.addPassthroughCopy({ public: './' })
   config.addPassthroughCopy('./css/styles.css')
 
-  config.setBrowserSyncConfig({
-    files: ['dist/**/*'],
-  })
-
   const markdownIt = require('markdown-it')
   const options = {
     html: true,
@@ -13,6 +9,7 @@ module.exports = function(config) {
     typographer: true,
   }
   const markdownLib = markdownIt(options)
+    .use(require('markdown-it-footnote'))
   config.setLibrary('md', markdownLib)
 
   return {
