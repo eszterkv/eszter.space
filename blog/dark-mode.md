@@ -37,9 +37,5 @@ So, we can set our styled-components theme based on whether there’s a match.
 
 If I did that right (and you have a modern-enough browser), my website should be matching your system preferences![^2]
 
----
-#### Notes
-
 [^1]: I used to have one too, but one has to keep up with the changing times!
-
 [^2]: Ps. you can still switch between light & dark manually, and that will be remembered in `localStorage`.

@@ -25,7 +25,5 @@ Go to `https://app.netlify.com/sites/{your_site}/deploys#environment`, click 'Ed
 ## Done!
 That’s it, Gatsby will pick these up from Netlify’s build environment, so now we can access the variable in client-side code as `process.env.MY_API_KEY`.
 
----
-#### Notes
 [^1]: Btw, this works very similarly on other hosts, such as Heroku.
 [^2]: Read more on Gatsby and environment variables [here](https://www.gatsbyjs.org/docs/environment-variables/).

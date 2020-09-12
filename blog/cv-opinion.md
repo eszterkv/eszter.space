@@ -34,7 +34,4 @@ One more thing: thereʼs no such thing as _5+ years experience_. A company can l
 
 Make a nice one-pager PDF including your name and contact, link to GitHub or portfolio site, relevant positions with responsibilities and/or key results in bullet points, and a mention of education, and you’ll be fine. Remember: you have five seconds of the reader’s attention.
 
----
-#### Notes
-
 [^1]: The longest Iʼve received for a mid-level frontend position was 11 pages. ELEVEN. PAGES. What on Earth can span 11 pages in a non-academic CV?

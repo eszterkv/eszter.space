@@ -48,7 +48,4 @@ h2::before {
 
 [Here’s the demo for this version.](https://jsfiddle.net/sgwomzv8/5/)
 
----
-#### Notes:
-
 [^1]: To understand how this works, I recommend reading about the [box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model).

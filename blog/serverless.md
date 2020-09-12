@@ -83,9 +83,5 @@ Now, `sls invoke` will return the current weather for those coordinates. You can
 In my next post, I will show how to deploy the function to AWS Lambda, how to handle requests, and how to create API endpoints.
 Until then, and [happy holidays](https://adventofcode.com/)!
 
----
-
-#### References
 [^1]: [Dark Sky API:  Frequently Asked Questions](https://darksky.net/dev/docs/faq#cross-origin): “If you were to make API calls from client-facing code, anyone could extract and use your API key, which would result in a bill that you'd have to pay. We disable CORS to help keep your API secret key a secret.” Fair enough.
-
 [^2]: Plus, AWS Free Tier includes 1 million monthly invokes.

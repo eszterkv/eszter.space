@@ -93,8 +93,6 @@ The result:
 
 Thatʼs it, the animated link! The possibilities are endless, it can have a nice highlight effect, or can be a gradient, change stroke width or colour etc. — just keep it low-key and donʼt do these all at once :) Have fun!
 
----
-#### References
 
 [^1]: [::after on MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
 

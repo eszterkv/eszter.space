@@ -68,10 +68,6 @@ Alternatively, you can load an external stylesheet too.
 
 That’s it for inclusive lazy-loading — [let me know](https://github.com/c0derabbit/eszter.space/issues/new) if I’ve missed something!
 
-----
-
-#### Notes
-
 [^1]: See [react-redux-ts/index.html at master · c0derabbit/react-redux-ts · GitHub](https://github.com/c0derabbit/react-redux-ts/blob/master/public/index.html#L16)
 [^2]: Let’s not forget that as developers and/or designers, both our devices and network are likely to be superior to that of the average user.
 [^3]: I’ve written about a [React solution for the blur-up lazy loading here](/lazy-loading).

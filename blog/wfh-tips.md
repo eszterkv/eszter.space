@@ -45,7 +45,4 @@ And, of course, make sure you __get home__ from work. What do you usually do? Ha
 
 Use the time gained by not having to commute. Maybe you can go for a walk before work. Read a little, catch up on your painting, writing or soap making. Keep safe 😷, and keep in touch.
 
----
-#### Notes
-
 [^1]: [RSI](https://medict.netlify.com/?q=repetitive%20strain%20injury) manifests as a pain in the wrist, forearms, neck or shoulders due to damaged tendons. Although it lead me to the very enjoyable hobby of [building a keyboard](/keeb), I would recommend trying to avoid it.

@@ -89,7 +89,4 @@ Thatʼs it! If you only need this function once, you can even wrap it in a [self
 })()
 ```
 
----
-#### Notes
-
 [^1]: “The **Promise** object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.” — [Promise on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

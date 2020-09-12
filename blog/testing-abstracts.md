@@ -97,10 +97,5 @@ it('adds correctly', () => {
 
 Thatʼs all — to be honest, the solution was simpler and more straightforward than I had imagined. In essence, an abstract class is just a class that can be reused easily, so it behaves just like a class in TypeScript. In our oversimplified example, that is. :)
 
----
-
-#### References
-
 [^1]: See the [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/classes.html) for more explanation of abstract classes (youʼll have to scroll down a little.)
-
 [^2]: Note that creating an instance with `new` from an abstract class should not be done anywhere else, as abstract classes are there for other classes to implement.

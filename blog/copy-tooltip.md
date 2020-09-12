@@ -115,8 +115,4 @@ function copyToClipboard(e) {
 
 That’s it! If you want to be extra fancy, you can now show a message that it’s been copied. Questions? Just copy my email address from the sidebar and ask! :)
 
-- - -
-
-#### Notes
-
 [^1]: `<input type="hidden" ...>` can be used to pass values in a form that we don’t want to display. However, they are by no means a secret!

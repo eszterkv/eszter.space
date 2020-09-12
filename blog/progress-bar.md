@@ -77,7 +77,4 @@ This is the actual code I am using for this page. Feel free to replicate and mod
   }
 </style>
 
----
-#### References
-
 [^1]: Careful though, this is calculated relative to the _closest relatively positioned parent element_ — see [HTMLElement.offsetTop on MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop)

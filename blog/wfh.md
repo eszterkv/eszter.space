@@ -31,9 +31,6 @@ For me, these are the true benefits of working remotely.
 
 When someone tries to popularise working from home by posting cozy pictures or talking about how much non-work they get done during the work day, they hurt the credibility of the setup by suggesting that work becomes secondary even during work hours. Please stop doing this and don’t ruin it for the rest of us.
 
----
-#### Notes
-
 [^1]: I wish I could give an actual number, say, how many [pomodoros](https://en.wikipedia.org/wiki/Pomodoro_Technique) per day I finish on average, but to be completely honest, any typical day at the office I could hardly even finish one 25-minute session without being interrupted.
 [^2]: Although I doubt that any good work can be done sharing half a desk with a stranger and people coming and going with their artisan coffees all day.
 [^3]: By regular work hours, I don’t mean 9 to 5 — I mean whatever works for employee and company, is mutually agreed on, and fits a routine.

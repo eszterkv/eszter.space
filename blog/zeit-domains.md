@@ -21,9 +21,6 @@ Looking back, the process is fairly easy — Zeit even takes care of SSL with [L
 
 That should be it!
 
----
-#### References
-
 [^1]: The people behind the lovely [next.js](https://github.com/zeit/next.js), which will deserve a post on its own.
 [^2]: This is actually a very cool part, you donʼt need to type passwords in the command line. Instead, you are shown a combination of words, which should match the combination sent to your email. After this is confirmed, youʼre all set!
 

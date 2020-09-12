@@ -52,7 +52,5 @@ main {
 
 That’s it! [Here’s a working example.](https://jsfiddle.net/rgvpn1zr/1/)
 
----
-#### References
 [^1]: see [box-sizing on MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
 

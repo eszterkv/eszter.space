@@ -69,7 +69,4 @@ module.exports.getWeather = (event, context, callback) => {
 
 Thatʼs it! Now, by sending a `GET` request to `https://my-api.url/weather/?lat=10&lon=20`, we have weather data for these coordinates. 
 
----
-
-#### References
 [^1]: Read more about configuring AWS profiles for Serverless [here](https://serverless.com/framework/docs/providers/aws/guide/credentials/).

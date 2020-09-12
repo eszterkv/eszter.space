@@ -119,9 +119,5 @@ GitHub CLI is a simple, easy-to-use tool that’s also easy to love.
 
 [Be sure to check out the docs](https://cli.github.com/manual/), as there are a lot of useful options. Happy coding! 🎉
 
----
-
-#### Notes
-
 [^1]: I admit this may be a very personal choice, and I have an opinionated… opinion. That is, to understand git properly, and solve more complex issues, it’s better to use the command line. As the [desktop repo states](https://github.com/desktop/desktop/blob/development/docs/process/what-is-desktop.md#1-github-desktop-reduces-frustration-and-makes-git-and-github-workflows-more-approachable), _“GitHub Desktop is not a replacement for the functionality of Git, but a tool to enable you and your team to be more productive.”_
 [^2]: You can set this in `~/.bashrc` or `~/.bash_profile` or `~/.zshrc`, whichever you use, by adding `export EDITOR=vim` (or any other editor you like.)

@@ -110,8 +110,5 @@ You might say lazy loading images belongs here too, but that's more of a visual 
 
 If you only do one thing to improve site performance, decrease the number of requests, that’s a real bottleneck. Asset size in 2018 is not the biggest issue.
 
-- - -
-
-### References
-
-[^1]: [HTTP/2 support on caniuse.com](https://caniuse.com/#feat=http2) [^2]: [Usage Statistics of HTTP/2 for Websites, August 2018](https://w3techs.com/technologies/details/ce-http2/all/all)
+[^1]: [HTTP/2 support on caniuse.com](https://caniuse.com/#feat=http2)
+[^2]: [Usage Statistics of HTTP/2 for Websites, August 2018](https://w3techs.com/technologies/details/ce-http2/all/all)

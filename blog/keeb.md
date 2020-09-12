@@ -123,22 +123,11 @@ The initial keycaps were cheap TaiHao caps, because they shipped fast (and becau
 
 Building a keyboard was a real fun day and a half, and I’m already looking forward to my next build, probably a second Iris, for the home office.
 
-- - -
-
-#### Notes
-
 [^1]: Second poor decision: I ordered the board to Hungary, where VAT is 27%, as opposed to 20% in the UK.
-
 [^2]: The only f*$%up in my build was getting the absolutely wrong cable to connect the two halves. Luckily, even in my small hometown, a computer accessories store had the right thing in stock.
-
 [^3]: Unless it’s hotswappable, meaning you can put tiny metal tubes (hotswap sockets) into the holes in the PCB where you would solder the switches etc. otherwise, so you just pop in the sockets and the switches and you’re ready to go. This only works on PCBs that already have diodes soldered on.
-
 [^4]: Thanks, dad. If your dad is not the kickass solderer mine is, you can get the same results by searching “how to solder” on YouTube.
-
 [^5]: On the Iris PCB, it’s easy: black end to the square hole, other end to the round hole.
-
 [^6]: Like many things in the build, this would be much easier done with three hands instead of two: two to hold each leg and each multimeter probe end together, and a third to press the switch to test.
-
 [^7]: I learned this the hard way and had to adjust a few switches after the whole thing was soldered. At least I learned some fixing, too! I didn’t have to fully desolder these switches, just heat the tin around the switch legs enough to melt it and be able to push the switch a bit further in. Btw, I totally forgot to solder one switch properly back in, so I have one switch that is connected by mere coincidence, which I should fix ASAP.
-
 [^8]: See more on flashing the Iris here: [Flashing Firmware - Keebio Documentation](https://docs.keeb.io/flashing-firmware/)

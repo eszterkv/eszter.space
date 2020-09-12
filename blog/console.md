@@ -78,8 +78,4 @@ Open the console to see if it works with gifs.[^3]
 
 Thatʼs all for today, remember to check your console for error messages[^4] (most importantly in production), and say hi to fellow developers.
 
-- - -
-
-#### References
-
 [^1]: By the way, google "text adventure" and check the console for a full-blown easter egg game, complete with console styling. [^2]: [Formatting specifiers — Console standard on WHATWG](https://console.spec.whatwg.org/#formatting-specifiers) [^3]: Not in Firefox. [^4]: Ah, another hack: `console.error = function() {};` suppresses all error messages.

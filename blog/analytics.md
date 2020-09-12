@@ -75,10 +75,6 @@ This is an absolute must to make the tracker script work on HTTPS websites.
 
 In the top right corner, click ‘Add another site’. Fathom will spit out a tracking code that you can add to your site’s HTML. Alternatively, if using Gatsby, [there’s a plugin for that](https://www.gatsbyjs.org/packages/gatsby-plugin-fathom/).
 
-- - -
-
-#### Notes
-
 [^1]: If you’d like to dig deeper in this topic, [ICO’s guide on individual rights](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/) is exhaustive and human-readable.  
 [^2]: See GDPR [data minimisation principle](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/principles/data-minimisation/)  
 [^3]: I spent five minutes searching for the perfect *The Office* gif to illustrate this, to no avail. Please email me if you find it.  
