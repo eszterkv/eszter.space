@@ -74,3 +74,5 @@ tags.*
 # 11ty
 _site
 css/styles.css
+
+.vercel

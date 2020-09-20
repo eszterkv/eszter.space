@@ -19,7 +19,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src",
-    "build": "yarn tailwind && postcss src/css/styles.css --replace && eleventy --quiet",
+    "build": "yarn tailwind && postcss css/styles.css --replace && eleventy --quiet",
     "tailwind": "tailwindcss build css/tailwind.css -o css/styles.css -c tailwind.config.js",
     "dev": "yarn tailwind && eleventy --quiet --serve"
   }

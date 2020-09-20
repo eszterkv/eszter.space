@@ -1,4 +1,5 @@
 @import './highlight.css';
+@import './littlefoot.css';
 
 @tailwind base;
 @tailwind components;
@@ -32,13 +33,13 @@ p {
 }
 
 article a {
-  @apply text-indigo-600;
+  @apply text-blue-700;
 }
 
 article a:hover {
-  @apply text-indigo-800;
+  @apply text-blue-800;
 }
 
-.footnotes {
-  @apply text-sm;
+.footnotes-sep {
+  display: none;
 }

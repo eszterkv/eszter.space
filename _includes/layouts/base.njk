@@ -12,7 +12,7 @@
   <body>
     <div class="max-w-3xl mx-auto p-6 lg:p-12">
       <header>
-        <h1 class="font-medium text-indigo-300 hover:text-indigo-500 mb-8">
+        <h1 class="font-medium text-blue-400 hover:text-blue-800 mb-8">
           <a href="{{ '/' | url }}">home</a>
         </h1>
       </header>
@@ -25,5 +25,24 @@
 
       <!-- Current page: {{ page.url | url }} -->
     </div>
+    <script
+      src="https://unpkg.com/littlefoot/dist/littlefoot.js"
+      type="application/javascript"
+    ></script>
+    <script type="application/javascript">
+      littlefoot.littlefoot({
+        buttonTemplate: `
+          <button
+            aria-expanded="false"
+            aria-label="Footnote <% number %>"
+            class="littlefoot-footnote__button"
+            id="<% reference %>"
+            title="See Footnote <% number %>"
+          />
+            <% number %>
+          </button>
+        `
+      })
+    </script>
   </body>
 </html>
