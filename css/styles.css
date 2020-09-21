@@ -22040,6 +22040,10 @@ body {
   letter-spacing: .2px;
 }
 
+h1 {
+  font-weight: 600;
+}
+
 h2,
 h3,
 h4,
@@ -22049,15 +22053,15 @@ h5 {
   margin-bottom: 0.75rem;
 }
 
-article h2 {
+h2 {
   font-size: 1.5rem;
 }
 
-article h3 {
+h3 {
   font-size: 1.25rem;
 }
 
-article h4 {
+h4 {
   font-size: 1.125rem;
 }
 
@@ -22066,16 +22070,34 @@ p {
   margin-bottom: 0.75rem;
 }
 
-article a {
-  --text-opacity: 1;
-  color: #2b6cb0;
-  color: rgba(43, 108, 176, var(--text-opacity));
+article a,
+main a {
+  border-bottom-width: 1px;
+  border-style: dotted;
+  border-color: currentColor;
 }
 
-article a:hover {
-  --text-opacity: 1;
-  color: #02f;
-  color: rgba(0, 34, 255, var(--text-opacity));
+article a:hover,
+main a:hover {
+  --bg-opacity: 1;
+  background-color: #fefcbf;
+  background-color: rgba(254, 252, 191, var(--bg-opacity));
+}
+
+pre,
+code {
+  --bg-opacity: 1;
+  background-color: #f7fafc;
+  background-color: rgba(247, 250, 252, var(--bg-opacity));
+  font-size: 0.875rem;
+}
+
+pre {
+  padding: 0.5rem;
+}
+
+*:not(pre) code {
+  padding: 0.25rem;
 }
 
 .footnotes-sep {

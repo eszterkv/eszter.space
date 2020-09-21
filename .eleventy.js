@@ -3,6 +3,7 @@ var hljs = require('highlight.js')
 module.exports = function(config) {
   config.addPassthroughCopy({ public: './' })
   config.addPassthroughCopy('./css/')
+  config.addNunjucksFilter('date', require('./nunjucks-dayjs-filter'))
 
   const highlight = (str, lang) => {
     if (lang && hljs.getLanguage(lang)) {

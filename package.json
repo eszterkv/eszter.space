@@ -9,6 +9,7 @@
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
+    "dayjs": "^1.8.36",
     "highlight.js": "^10.2.0",
     "markdown-it": "^11.0.0",
     "markdown-it-footnote": "^3.0.2",
