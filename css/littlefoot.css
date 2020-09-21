@@ -1,3 +1,7 @@
+:root {
+  --gray-100: #f7fafc;
+}
+
 .littlefoot-footnote__button {
   -webkit-font-smoothing: antialiased;
   backface-visibility: hidden;
@@ -93,7 +97,7 @@
 }
 
 .littlefoot-footnote {
-  background: #fafafa;
+  background: var(--gray-100);
   border-radius: .5em;
   border: 1px solid #c3c3c3;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
@@ -151,14 +155,14 @@
 }
 
 .littlefoot-footnote.is-scrollable .littlefoot-footnote__wrapper::before {
-  background-image: linear-gradient(to bottom, #fafafa 50%, rgba(250,250,250,0) 100%);
+  background-image: linear-gradient(to bottom, var(--gray-100) 50%, rgba(250,250,250,0) 100%);
   border-radius: .5em .5em 0 0;
   height: .6em;
   top: -1px;
 }
 
 .littlefoot-footnote.is-scrollable .littlefoot-footnote__wrapper::after {
-  background-image: linear-gradient(to top, #fafafa 50%, rgba(250,250,250,0) 100%);
+  background-image: linear-gradient(to top, var(--gray-100) 50%, rgba(250,250,250,0) 100%);
   border-radius: 0 0 .5em .5em;
   bottom: -1px;
   height: .6em;
@@ -213,7 +217,7 @@
 }
 
 .littlefoot-footnote__wrapper {
-  background-color:#fafafa;
+  background-color:var(--gray-100);
   border-radius: .5em;
   box-sizing: inherit;
   display: inline-block;
@@ -228,7 +232,7 @@
 .littlefoot-footnote__content {
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-overflow-scrolling: touch;
-  background: #fafafa;
+  background: var(--gray-100);
   border-radius: .5em;
   box-sizing: inherit;
   display: inline-block;
@@ -264,7 +268,7 @@
 }
 
 .littlefoot-footnote__tooltip {
-  background: #fafafa;
+  background: var(--gray-100);
   border-top-left-radius: 0;
   border: 1px solid #c3c3c3;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
