@@ -44,16 +44,15 @@ Open up `package.json` to add the script to run a dev server:
 }
 ```
 
-- this guide assumes an 11ty site using nunjucks templates (link to both)
-- instructions to set up a minimal 11ty+njk project
+Run `yarn dev` – there’s a simple website!
+
+### Adding a template to show the date and title
+
+< template >
 
 ```
 yarn add --dev dayjs
 ```
-
-Run `yarn dev` – there’s a simple website!
-
-### Adding a template to show the date and title
 
 ### the code
 
