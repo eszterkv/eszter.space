@@ -13,7 +13,7 @@ Enter another favourite tool of mine, [Day.js](https://day.js.org/) – a lightw
 
 Filters in Nunjucks are essentially functions. The syntax `{{ "3.14" | int }}` will output `3`, because [there is a method called `int`](https://github.com/mozilla/nunjucks/blob/master/nunjucks/src/filters.js#L635) in Nunjucks’ [built-in filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters). These filters are extensible, meaning that you can write your own!
 
-This is powerful. You can write _any_ filter now! Let’s make one that formats dates using Day.js.
+This is powerful. You can write _any_ filter now. Let’s make one that formats dates using Day.js.
 
 ## A minimal 11ty project to get started with
 
@@ -38,40 +38,87 @@ Anyone out there?
 ```
 
 Open up `package.json` to add the script to run a dev server:
+#### `package.json`
 ```json
 "scripts": {
   "dev": "eleventy --serve --quiet"
 }
 ```
 
-Run `yarn dev` – there’s a simple website!
+Run `yarn dev` – there’s a simple website! For now, it will only show the blog post text, no title or date. Let’s do something about that.
 
-### Adding a template to show the date and title
+### Adding a layout to show the date and title
 
-< template >
+We can turn this into a more sophisticated blog using layouts. First, let’s create a blog post layout:
 
+#### `_includes/layouts/blog-post.njk`
+```njk
+<article>
+  <h1>{{ title }}</h1>
+  <time>{{ date }}</time>
+  {{ content | safe }}
+</article>
 ```
+
+If we check the site now, it will show the title and the date too! Quite an ugly date, but we’ll get to that later. But now, let’s create a **base layout** that can contain navigation, site title, footer etc. and can be used by every page on our website.
+
+#### `_includes/layouts/base.njk`
+```njk
+<!doctype html>
+<html>
+  <head>
+    <!-- normally, we’d insert meta tags etc. here -->
+    <title>My site</title>
+  </head>
+  <body>
+    <header>
+      <h1>My site</h1>
+      <nav>
+        <a href="/">Home</a>
+        <!-- some other links… -->
+      </nav>
+     </header>
+     <main>
+       {{ content | safe }}
+     </main>
+  </body>
+</html>
+```
+
+Any template that uses the base layout, will insert its full content in the base layout’s `{{ content }}` slot. This comes very handy, as we can make the blog post layout use the base layout:
+
+#### `_includes/layouts/blog-post.njk`
+```njk
+---
+layout: layouts/base.njk
+---
+<article>
+  <h1>{{ title }}</h1>
+  <time>{{ date }}</time>
+  {{ content | safe }}
+</article>
+```
+
+Now, you should see the title “My site”, and a link to “Home”.
+
+### Prettier dates with a Day.js filter
+
+We still have one problem: the blog post date looks something like `Thu Oct 15 2020 01:00:00 GMT+0100 (British Summer Time)` (this could differ based on your locale settings.) Nunjucks doesn’t have a built-in date formatter, but it supports adding one, so let’s do that!
+
+First, we need the `dayjs` package.
+```sh
 yarn add --dev dayjs
 ```
 
-### the code
+Then, let’s create the filter:
 
-#### .eleventy.js
-```js
-module.exports = function(eleventyConfig) {
-  // you may already have some other configs here
-  eleventyConfig.addNunjucksFilter('date', require('./nunjucks-dayjs-filter'))
-}
-```
-
-#### nunjucks-dayjs-filter.js
+#### `filters/nunjucks-dayjs-filter.js`
 ```js
 const dayjs = require('dayjs')
 
 /* defaultFormat could be any other valid dayjs format,
  * or null, in which case we’d get dayjs().format() */
 const defaultFormat = 'DD MMM YYYY'
-
 
 function dayjsFilter(date, format = defaultFormat) {
   return dayjs(date).format(format)
@@ -80,16 +127,38 @@ function dayjsFilter(date, format = defaultFormat) {
 module.exports = dayjsFilter
 ```
 
-### usage
-!! todo add outputs with the above config
-```njk
-{{ post.data.date.toUTCString() | date }}
+Finally, we should register this filter so our layouts know about it. We can do this in the eleventy config file, `.eleventy.js`:
+
+#### `.eleventy.js`
+```js
+module.exports = function(eleventyConfig) {
+  // you may already have some other configs here
+  eleventyConfig.addNunjucksFilter('date', require('./filters/nunjucks-dayjs-filter'))
+}
 ```
 
-or 
-```njk
-{{ post.data.date.toUTCString() | date('MMM D, YYYY') }}
+Now we can use the date filter:
+
+#### `_includes/layouts/blog-post.njk`
+```diff
+---
+layout: layouts/base.njk
+---
+ <article>
+   <h1>{{ title }}</h1>
+-  <time>{{ date }}</time>
++  <time>{{ date | date('MMM D, YYYY') }}</time>
+   {{ content | safe }}
+ </article>
 ```
+
+Alternatively, we can just rely on the default format defined in the filter and omit the formatter argument:
+
+```njk
+{{ date | date }}
+```
+
+You can read more about custom Nunjucks filters [here](https://mozilla.github.io/nunjucks/api#custom-filters). If you come up with a cool filter, [I’d love to hear about it!](https://twitter.com/c0derabbit)
 
 [^1]: Ok, I know that most of the time it’s third-party tracking vs performance. Easy to have 100% without analytics.  
 [^2]: I stole both of these descriptions from the respective websites – I couldn’t have said it better myself.  
