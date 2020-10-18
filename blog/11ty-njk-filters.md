@@ -1,34 +1,39 @@
 ---
-title: Custom filters for Nunjucks templates in 11ty
+title: Custom filters for Nunjucks templates in Eleventy
 date: 2020-10-14
 ---
 
-11ty with Nunjucks is one of my favourite combinations recently. Frontend fashions come and go, but 11ty’s [performance leaderboard](https://www.11ty.dev/speedlify/) and ease of use makes it intriguing enough to give it a try.[^1] If you haven’t heard about these, [11ty](https://www.11ty.dev/) is a simple static site generator (think Jekyll, but you can choose from a wide variety of templating languages.) [Nunjucks](https://mozilla.github.io/nunjucks/) is a powerful templating language for JavaScript, not unlike Handlebars.[^2]
+Eleventy (or 11ty) with Nunjucks is one of my favourite combinations recently. Frontend fashions come and go, but 11ty’s [performance leaderboard](https://www.11ty.dev/speedlify/) and ease of use makes it intriguing enough to give it a try.[^1]
+
+If you haven’t heard about these, [11ty](https://www.11ty.dev/) is a simple static site generator (think Jekyll, but you can choose from a wide variety of templating languages.) [Nunjucks](https://mozilla.github.io/nunjucks/) is a powerful templating language for JavaScript, not unlike Handlebars.[^2]
 
 ## Blogs, dates, and filters
 
-11ty is an excellent choice for blogs – and in blogs, you’ll most likely display dates. If you show dates unfiltered, they will look something like `Thu Oct 15 2020 20:12:43 GMT+0100` – this is not bad, but you may want something simpler or more custom, like `15 October, 2020`.
+11ty is an excellent choice for blogs – and in blogs, you’ll most likely display dates. If you show dates unfiltered, they will look something like `Thu Oct 15 2020 20:12:43 GMT+0100 (British Summer Time)` – this is not bad, but you may want something simpler or more custom, like `15 October, 2020`.
 
 Enter another favourite tool of mine, [Day.js](https://day.js.org/) – a lightweight alternative to [Moment.js](https://momentjs.com/). They do pretty much the same and have a very similar API, but Day.js comes at the fraction of the footprint.[^3]
 
-Filters in Nunjucks are essentially functions. The syntax `{{ "3.14" | int }}` will output `3`, because [there is a method called `int`](https://github.com/mozilla/nunjucks/blob/master/nunjucks/src/filters.js#L635) in Nunjucks’ [built-in filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters). These filters are extensible, meaning that you can write your own!
+Filters in Nunjucks are essentially functions. The syntax {% raw %}`{{ "3.14" | int }}`{% endraw %} will output `3`, because [there is a method called `int`](https://github.com/mozilla/nunjucks/blob/master/nunjucks/src/filters.js#L635) in Nunjucks’ [built-in filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters). These filters are extensible, meaning that you can write your own!
 
-This is powerful. You can write _any_ filter now. Let’s make one that formats dates using Day.js.
+This is powerful. You can write _any_ filter now.
+
+Let’s make one that formats dates using Day.js.
 
 ## A minimal 11ty project to get started with
 
 Let’s set up a very simple 11ty blog, so we can add a filter later. You can use any of the [community starters](https://www.11ty.dev/docs/starter/), or do it manually:
 
 ```sh
-mkdir foo
-cd foo
+mkdir mysite
+cd mysite
 yarn init -y
 yarn add --dev @11ty/eleventy
-touch index.md
 ```
 
-Now, open `index.md` in your preferred editor and paste this content:
-```njk
+Now, let’s create some files:
+
+#### `index.md`
+```html
 ---
 title: Hello, world!
 date: 2020-10-15
@@ -37,7 +42,6 @@ date: 2020-10-15
 Anyone out there?
 ```
 
-Open up `package.json` to add the script to run a dev server:
 #### `package.json`
 ```json
 "scripts": {
@@ -45,26 +49,28 @@ Open up `package.json` to add the script to run a dev server:
 }
 ```
 
-Run `yarn dev` – there’s a simple website! For now, it will only show the blog post text, no title or date. Let’s do something about that.
+Run `yarn dev` – there’s a simple website!
+
+For now, it will only show the blog post text, no title or date. Let’s do something about that.
 
 ### Adding a layout to show the date and title
 
 We can turn this into a more sophisticated blog using layouts. First, let’s create a blog post layout:
 
 #### `_includes/layouts/blog-post.njk`
-```njk
-<article>
+```html
+{% raw %}<article>
   <h1>{{ title }}</h1>
   <time>{{ date }}</time>
   {{ content | safe }}
-</article>
+</article>{% endraw %}
 ```
 
 If we check the site now, it will show the title and the date too! Quite an ugly date, but we’ll get to that later. But now, let’s create a **base layout** that can contain navigation, site title, footer etc. and can be used by every page on our website.
 
 #### `_includes/layouts/base.njk`
-```njk
-<!doctype html>
+```html
+{% raw %}<!doctype html>
 <html>
   <head>
     <!-- normally, we’d insert meta tags etc. here -->
@@ -82,21 +88,21 @@ If we check the site now, it will show the title and the date too! Quite an ugly
        {{ content | safe }}
      </main>
   </body>
-</html>
+</html>{% endraw %}
 ```
 
-Any template that uses the base layout, will insert its full content in the base layout’s `{{ content }}` slot. This comes very handy, as we can make the blog post layout use the base layout:
+Any template that uses the base layout, will insert its full content in the base layout’s `{% raw %}{{ content }}{% endraw %}` slot. This comes very handy, as we can make the blog post layout use the base layout:
 
 #### `_includes/layouts/blog-post.njk`
-```njk
----
+```html
+{% raw %}---
 layout: layouts/base.njk
 ---
 <article>
   <h1>{{ title }}</h1>
   <time>{{ date }}</time>
   {{ content | safe }}
-</article>
+</article>{% endraw %}
 ```
 
 Now, you should see the title “My site”, and a link to “Home”.
@@ -144,21 +150,21 @@ Now we can use the date filter:
 ---
 layout: layouts/base.njk
 ---
- <article>
+ <article>{% raw %}
    <h1>{{ title }}</h1>
 -  <time>{{ date }}</time>
 +  <time>{{ date | date('MMM D, YYYY') }}</time>
    {{ content | safe }}
- </article>
+ </article>{% endraw %}
 ```
 
 Alternatively, we can just rely on the default format defined in the filter and omit the formatter argument:
 
 ```njk
-{{ date | date }}
+{% raw %}{{ date | date }}{% endraw %}
 ```
 
-You can read more about custom Nunjucks filters [here](https://mozilla.github.io/nunjucks/api#custom-filters). If you come up with a cool filter, [I’d love to hear about it!](https://twitter.com/c0derabbit)
+You can read more about custom Nunjucks filters [here](https://mozilla.github.io/nunjucks/api#custom-filters). Have fun with them!
 
 [^1]: Ok, I know that most of the time it’s third-party tracking vs performance. Easy to have 100% without analytics.  
 [^2]: I stole both of these descriptions from the respective websites – I couldn’t have said it better myself.  
