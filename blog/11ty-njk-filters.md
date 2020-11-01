@@ -1,5 +1,5 @@
 ---
-title: Custom filters for Nunjucks templates in 11ty
+title: Custom filters for Nunjucks templates in Eleventy
 date: 2020-10-14
 ---
 
