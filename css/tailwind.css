@@ -49,6 +49,7 @@ main a:hover {
 pre,
 code {
   @apply bg-gray-100 text-sm;
+  overflow: auto;
 }
 
 pre {

@@ -1,9 +1,11 @@
-var hljs = require('highlight.js')
+const hljs = require('highlight.js')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
 
 module.exports = function(config) {
   config.addPassthroughCopy({ public: './' })
   config.addPassthroughCopy('./css/')
   config.addNunjucksFilter('date', require('./nunjucks-dayjs-filter'))
+  config.addPlugin(pluginRss)
 
   const highlight = (str, lang) => {
     if (lang && hljs.getLanguage(lang)) {
