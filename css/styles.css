@@ -22090,6 +22090,7 @@ code {
   background-color: #f7fafc;
   background-color: rgba(247, 250, 252, var(--bg-opacity));
   font-size: 0.875rem;
+  overflow: auto;
 }
 
 pre {

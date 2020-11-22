@@ -1,5 +1,6 @@
 const hljs = require('highlight.js')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
+const uslug = require('uslug')
 
 module.exports = function(config) {
   config.addPassthroughCopy({ public: './' })
@@ -23,7 +24,18 @@ module.exports = function(config) {
     typographer: true,
     highlight,
   }
-  const markdownLib = markdownIt(options).use(require('markdown-it-footnote'))
+  const markdownLib = markdownIt(options)
+    .use(require('markdown-it-footnote'))
+    .use(
+      require('markdown-it-anchor'),
+      {
+        level: [1, 2, 3],
+        permalink: true,
+        permalinkClass: 'opacity-50 text-lg hover:opacity-75 transition-color duration-500',
+        permalinkSymbol: '🔗',
+        slugify: s => uslug(s),
+      },
+    )
 
   config.setLibrary('md', markdownLib)
 
