@@ -1,15 +1,16 @@
-{% macro navlink(link, title) %}
+{% macro navlink(link, title, class) %}
   <a
     href="{{ link | url }}"
     class="
-      mr-4 lowercase tracking-wide text-sm text-gray-500
+      tracking-wide text-sm text-gray-500
       hover:text-black transition-colors duration-500
       {% if page.url === link %}
         font-semibold
       {% endif %}
+      {{ class }}
     "
   >
-    {{ title }}/
+    {{ title }}
   </a>
 {% endmacro %}
 
@@ -33,10 +34,10 @@
         ">
           <a href="{{ '/' | url }}">Down the rabbithole</a>
         </h1>
-        <nav class="mb-6 pb-2 border-b">
-          {{ navlink('/', 'Articles') }}
-          {{ navlink('/about/', 'About') }}
-          {{ navlink('/feed.xml', 'RSS feed') }}
+        <nav class="flex mb-6 pb-2 border-b">
+          {{ navlink('/', 'Articles', 'mr-4') }}
+          {{ navlink('/about/', 'About', 'mr-4') }}
+          {{ navlink('/feed.xml', 'RSS feed', 'ml-auto' ) }}
         </nav>
       </header>
 
