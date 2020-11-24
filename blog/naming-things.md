@@ -26,7 +26,7 @@ Assuming the following function body:
 ```js
 function getDisabledHours() {
   const hours = []
-  for (let hour = 0; hour < moment().hour(); i++) {
+  for (let hour = 0; hour < moment().hour(); hour++) {
     hours.push(hour)
   }
   return hours
@@ -43,7 +43,7 @@ Even our function makes more sense:
 ```js
 function hoursInThePast() {
   const hours = []
-  for (let hour = 0; hour < moment().hour(); i++) {
+  for (let hour = 0; hour < moment().hour(); hour++) {
     hours.push(hour)
   }
   return hours
