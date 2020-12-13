@@ -6,4 +6,4 @@ I’m Eszter, a frontend developer based in Scotland. I believe that form follow
 
 When I’m not coding, I’m probably drinking coffee, watering plants, or learning how to longboard.
 
-Say hi at `ekov at pm dot me`.
+Say hi at `ekov at pm.me`.

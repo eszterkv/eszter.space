@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+---
+{% for page in collections.cheatsheets %}
+<div class="mb-2">
+  <a
+    href="{{ page.url }}"
+    class="
+      block my-4 text-gray-700 border-none
+      hover:text-black hover:bg-transparent transition-colors duration-500
+    "
+  >
+    <span class="font-medium">
+      {{ page.data.title }}
+    </span>
+  </a>
+</div>
+{% endfor %}

@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/cheatsheet.njk",
+  "permalink": "/cheatsheets/{{ page.fileSlug }}/index.html",
+  "tags": ["cheatsheets"]
+}
