@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 body {
-  letter-spacing: .2px;
+  letter-spacing: .1px;
 }
 
 h1 {
@@ -21,11 +21,11 @@ h5 {
 }
 
 h2 {
-  @apply text-2xl;
+  @apply text-xl;
 }
 
 h3 {
-  @apply text-xl;
+  @apply text-lg;
 }
 
 h4 {
@@ -46,6 +46,14 @@ main a:hover {
   @apply bg-yellow-200;
 }
 
+article ul {
+  @apply list-disc pl-6;
+}
+
+article ol {
+  @apply list-decimal pl-6;
+}
+
 pre,
 code {
   @apply bg-gray-100 text-sm;
@@ -62,4 +70,19 @@ pre {
 
 .footnotes-sep {
   display: none;
+}
+
+figcaption {
+  @apply text-xs text-gray-500 text-center mb-6;
+}
+
+.essay p,
+.essay ol,
+.essay ul,
+.essay blockquote {
+  @apply font-serif;
+}
+
+.essay .littlefoot-footnote__host * {
+  @apply font-sans;
 }
