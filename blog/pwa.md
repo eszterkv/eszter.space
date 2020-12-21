@@ -97,9 +97,5 @@ There are several service worker plugins for common build tools (e.g. Webpack, R
 
 Finally, if I’ve made a mistake, please [let me know](mailto:ekov@pm.me)!
 
-- - -
-
-#### Footnotes
-
 [^1]: See [Advantages of web applications](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction#Advantages_of_web_applications) and [Progressive Enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement), both on MDN.
 [^2]: By the way, [service workers can do much more](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) than make an app available offline.
