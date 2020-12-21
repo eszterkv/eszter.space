@@ -1,8 +1,12 @@
 ---
 layout: layouts/base.njk
 ---
-{% macro prevNextLink(post) %}
-  <a href={{ post.url | url }}>
+{% macro prevNextLink(post, type) %}
+  <a
+    href="{{ post.url | url }}"
+    rel="{{ type }}"
+    class="block relative h-full py-8 {% if type === 'next' %}pr-6{% else %}pl-6{% endif %}"
+  >
     {{ post.data.title }}
   </a>
 {% endmacro %}
@@ -11,18 +15,21 @@ layout: layouts/base.njk
 {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 
 <article>
-  <h1 class="text-2xl mb-6">{{ title }}</h1>
+  <h1 class="text-3xl mb-6">{{ title }}</h1>
   {{ content | safe }}
-
-  <footer>
-    <hr class="my-6" />
-    <ul>
-      {%- if previousPost %}
-        <li>Previous: {{ prevNextLink(previousPost) }}</li>
-      {% endif %}
-      {%- if nextPost %}
-        <li>Next: {{ prevNextLink(nextPost) }}</li>
-      {% endif %}
-    </ul>
-  </footer>
 </article>
+
+<footer class="mt-12 border-t border-black border-dotted">
+  <ul class="list-none p-0 flex justify-between font-medium">
+    {%- if previousPost %}
+      <li class="w-1/2">
+        {{ prevNextLink(previousPost, 'previous') }}
+      </li>
+    {% endif %}
+    {%- if nextPost %}
+      <li class="w-1/2">
+        {{ prevNextLink(nextPost, 'next') }}
+      </li>
+    {% endif %}
+  </ul>
+</footer>

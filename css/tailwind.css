@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  @apply font-semibold;
+  @apply font-display font-medium;
 }
 
 h2,
@@ -39,11 +39,12 @@ p {
 article a,
 main a {
   @apply border-b border-dotted border-current;
+  padding: 0 1px;
 }
 
 article a:hover,
 main a:hover {
-  @apply bg-yellow-200;
+  @apply bg-red-50;
 }
 
 article ul {
@@ -52,6 +53,24 @@ article ul {
 
 article ol {
   @apply list-decimal pl-6;
+}
+
+footer a::before {
+  @apply block absolute;
+}
+
+footer a[rel="next"] {
+  @apply text-right;
+}
+
+footer a[rel="previous"]::before {
+  content: '←';
+  left: 3px;
+}
+
+footer a[rel="next"]::before {
+  content: '→';
+  right: 3px;
 }
 
 pre,
@@ -76,10 +95,13 @@ figcaption {
   @apply text-xs text-gray-500 text-center mb-6;
 }
 
+blockquote {
+  @apply font-serif text-lg text-gray-900 bg-red-50 pl-6 py-4 pr-2 border-l-4 border-red-500;
+}
+
 .essay p,
 .essay ol,
-.essay ul,
-.essay blockquote {
+.essay ul {
   @apply font-serif;
 }
 

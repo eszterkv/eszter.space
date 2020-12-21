@@ -9,9 +9,11 @@ module.exports = {
           '800': '#02f',
         },
       },
+      fontFamily: {
+        display: ['PT Serif', 'Oswald'],
+      },
     },
   },
-  variants: {},
   plugins: [],
   future: {
     removeDeprecatedGapUtilities: true,

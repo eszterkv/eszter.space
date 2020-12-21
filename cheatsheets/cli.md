@@ -11,6 +11,9 @@ What’s eating my memory?
 Create an SSH key for GitHub  
 `ssh-keygen -t rsa -C "your.email.used.on.github@example.com"`
 
+Set default nvm version  
+`nvm alias default X.Y.Z` (or just `nvm alias default X`
+
 ## Image manipulation
 
 Tools: [imagemagick](https://imagemagick.org/script/download.php) and ffmpeg (`brew install ffmpeg`).

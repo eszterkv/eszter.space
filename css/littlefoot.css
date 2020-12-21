@@ -121,7 +121,7 @@
 }
 
 .littlefoot-footnote.is-active {
-  opacity:.97;
+  opacity: 1;
   transform: scale(1) translateZ(0);
 }
 
