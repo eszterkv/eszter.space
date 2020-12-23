@@ -8,4 +8,4 @@ When I’m not coding, I’m probably drinking coffee, watering plants, or learn
 
 Say hi at `ekov at pm.me`.
 
-<img src="/img/rabbit.jpg" class="mx-auto mt-10 md:mt-16 max-w-xs rounded-full" />
+<img src="/img/rabbit.jpg" class="mx-auto mt-10 md:mt-16 max-w-full sm:max-w-xs rounded-full" />
