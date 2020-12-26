@@ -1,6 +1,6 @@
 ---
 title:  Using environment variables with Gatsby and Netlify
-date:   2020-12-26
+date:   2020-12-25
 ---
 
 Environment variables are a good way to use API keys in web apps without committing them to source code management. They have more use on the backend or at build time where we have to protect secret keys from being exposed to the client side, but are needed for data-fetching or API calls. Having said that, it’s a good practice to make use of them on the client side as well, when using public keys.

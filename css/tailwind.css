@@ -99,6 +99,15 @@ blockquote {
   @apply font-serif text-lg text-gray-900 bg-red-50 pl-6 py-4 pr-2 border-l-4 border-red-500;
 }
 
+cite {
+  @apply opacity-50;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
 .essay p,
 .essay ol,
 .essay ul {

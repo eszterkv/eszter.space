@@ -31305,6 +31305,10 @@ blockquote {
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
+cite {
+  opacity: 0.5;
+}
+
 .essay p, .essay ol, .essay ul{
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
