@@ -3,7 +3,7 @@ title: The importance of clean code
 date: 2020-12-26
 ---
 
-At the very beginning of my developer career, I had a conversation with a good friend and mentor, who (somewhat indirectly) recommended for me to read [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code) by Robert C. Martin. He told me about how, as a junior developer at a prominent startup[^1], he was given the book, and was told to read it (before writing any code, if my memory is not mistaken).
+At the very beginning of my developer career, I had a conversation with a good friend and mentor, who (somewhat indirectly) recommended for me to read [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code). He told me about how, as a junior developer at a prominent startup[^1], he was given the book, and was told to read it (before writing any code, if my memory is not mistaken).
 
 I thought, all right, it must be important then!
 
