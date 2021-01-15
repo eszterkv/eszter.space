@@ -26,7 +26,7 @@ const catImg = document.getElementById(‘cat’)
 const fullsizeSrc = catImg.dataset.src // from the data-src attribute
 const loader = new Image()
 loader.onload = () => {
-	catImg.src = fullsizeSrc
+  catImg.src = fullsizeSrc
   catImg.classList.add(‘loaded’)
 }
 // VERY important: .onload() has to come before .src assignment
@@ -41,7 +41,7 @@ loader.src = fullsizeSrc
 }
 
 .lazy.loaded {
-	opacity: 1;
+  opacity: 1;
 }
 ```
 
