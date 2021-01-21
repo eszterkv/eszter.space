@@ -31309,6 +31309,11 @@ cite {
   opacity: 0.5;
 }
 
+strong,
+b {
+  font-weight: 600;
+}
+
 .essay p, .essay ol, .essay ul{
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
