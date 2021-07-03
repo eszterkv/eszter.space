@@ -13,7 +13,7 @@ Mainly for managing pull requests and issues directly from the command line.
 
 ### How to get it
 
-`brew install github/gh/gh`
+`brew install gh`
 
 ## Chechking PRs for code reviews: `gh pr view` and `gh pr checkout`
 
