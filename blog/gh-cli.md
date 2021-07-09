@@ -57,7 +57,7 @@ Your branch is up-to-date with origin/feat/cool-feature.
 
 I can also open the PR on github.com right from the terminal (it opens the browser automatically):
 ```sh
-$ gh pr view 123
+$ gh pr view 123 --web
 
 Opening https://github.com/some-org/some-repo/pull/123 in your browser.
 ```
