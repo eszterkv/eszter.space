@@ -40,6 +40,6 @@ module.exports = function(config) {
   config.setLibrary('md', markdownLib)
 
   return {
-    templateFormats: ['md', 'njk', 'jpg', 'jpeg', 'png', 'gif', 'svg'],
+    templateFormats: ['md', 'njk', 'jpg', 'jpeg', 'png', 'gif', 'svg', 'pdf'],
   }
 }
