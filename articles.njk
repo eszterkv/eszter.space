@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+---
+{% for post in collections.posts | reverse %}
+<div style="margin-bottom: 24px;">
+  <a
+    href="{{ post.url }}"
+    style="text-decoration: none;"
+  >
+    <time>
+      <em style="font-size: 1rem;">
+        {{ post.data.date.toUTCString() | date('MMM D, YYYY') }}
+      </em>
+    </time>
+    <br />
+    <span style="font-size: 1.28rem;">
+      {{ post.data.title }}
+    </span>
+  </a>
+</div>
+{% endfor %}

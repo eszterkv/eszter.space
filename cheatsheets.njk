@@ -1,33 +1,28 @@
 ---
 layout: layouts/base.njk
 ---
+
+<h1>Cheat sheets</h1>
+<br />
+
 {% for page in collections.cheatsheets %}
-<div class="mb-2">
-  <a
-    href="{{ page.url }}"
-    class="
-      block my-4 border-none
-      hover:text-red-600 hover:bg-transparent transition-colors duration-500
-    "
-  >
-    <span class="font-medium">
-      {{ page.data.title }}
-    </span>
+<p style="margin: 9px 0 0">
+  <a href="{{ page.url }}">
+    {{ page.data.title }}
   </a>
-</div>
+</p>
 {% endfor %}
 
-<div class="mb-2">
+<p style="margin: 9px 0 0">
   <a
     href="https://flex.eszter.space"
     target="_blank"
     rel="noopener noreferrer"
-    class="
-      block my-4 border-none
-      hover:text-red-600 hover:bg-transparent transition-colors duration-500
-    "
   >
-    <span class="font-medium">
-      📦 Flexbox
-    </span>
+    Flexbox 📦
   </a>
+</p>
+
+<br />
+<br />
+<br />

@@ -31,8 +31,7 @@ module.exports = function(config) {
       {
         level: [1, 2, 3],
         permalink: true,
-        permalinkClass: 'opacity-50 text-lg hover:opacity-75 transition-color duration-500',
-        permalinkSymbol: '🔗',
+        permalinkSymbol: '*',
         slugify: s => uslug(s),
       },
     )
