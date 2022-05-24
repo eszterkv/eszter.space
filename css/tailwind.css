@@ -9,15 +9,12 @@ body {
   letter-spacing: .1px;
 }
 
-h1 {
-  @apply font-display font-medium;
-}
-
+h1,
 h2,
 h3,
 h4,
 h5 {
-  @apply font-semibold mt-6 mb-3;
+  @apply font-semibold mt-6 mb-2;
 }
 
 h2 {
@@ -44,7 +41,7 @@ main a {
 
 article a:hover,
 main a:hover {
-  @apply bg-red-50;
+  @apply bg-purple-50;
 }
 
 article ul {
@@ -96,7 +93,7 @@ figcaption {
 }
 
 blockquote {
-  @apply font-serif text-lg text-gray-900 bg-red-50 pl-6 py-4 pr-2 border-l-4 border-red-500;
+  @apply font-serif text-lg text-gray-900 bg-purple-50 pl-6 py-4 pr-2 border-l-4 border-purple-500;
 }
 
 cite {
