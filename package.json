@@ -15,16 +15,12 @@
     "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^6.0.1",
     "markdown-it-footnote": "^3.0.2",
-    "postcss": "^8.2.13",
-    "postcss-cli": "^8.3.1",
-    "postcss-import": "^14.0.0",
     "uslug": "^1.0.4"
   },
   "license": "MIT",
   "scripts": {
     "lint": "eslint src",
-    "build": "yarn tailwind && postcss css/styles.css --replace && eleventy --quiet",
-    "tailwind": "tailwindcss build css/tailwind.css -o css/styles.css -c tailwind.config.js",
-    "dev": "yarn tailwind && eleventy --quiet --serve"
+    "build": "eleventy --quiet",
+    "dev": "eleventy --quiet --serve"
   }
 }
