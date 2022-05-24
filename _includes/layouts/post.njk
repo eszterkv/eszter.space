@@ -2,34 +2,35 @@
 layout: layouts/base.njk
 ---
 {% macro prevNextLink(post, type) %}
+<em>
   <a
     href="{{ post.url | url }}"
     rel="{{ type }}"
-    class="block relative h-full py-8 {% if type === 'next' %}pr-6{% else %}pl-6{% endif %}"
   >
     {{ post.data.title }}
   </a>
+</em>
 {% endmacro %}
 
 {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 
+<head>
+  <link rel="stylesheet" href="/css/highlight.css">
+  <link rel="stylesheet" href="/css/littlefoot.css">
+</head>
+
 <article>
-  <h1 class="text-3xl mb-6">{{ title }}</h1>
+  <h1>{{ title }}</h1>
   {{ content | safe }}
 </article>
 
-<footer class="mt-12 border-t border-black border-dotted">
-  <ul class="list-none p-0 flex justify-between font-medium">
-    {%- if previousPost %}
-      <li class="w-1/2">
-        {{ prevNextLink(previousPost, 'previous') }}
-      </li>
-    {% endif %}
-    {%- if nextPost %}
-      <li class="w-1/2">
-        {{ prevNextLink(nextPost, 'next') }}
-      </li>
-    {% endif %}
-  </ul>
-</footer>
+<div>
+  {%- if previousPost %}
+    Previous: {{ prevNextLink(previousPost, 'previous') }}
+  {% endif %}
+  <br />
+  {%- if nextPost %}
+    Next: {{ prevNextLink(nextPost, 'next') }}
+  {% endif %}
+</div>

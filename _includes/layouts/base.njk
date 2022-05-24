@@ -1,13 +1,11 @@
-{% macro navlink(link, title, class) %}
+{% macro navlink(link, title) %}
   <a
     href="{{ link | url }}"
-    class="
-      tracking-wide text-sm
-      hover:text-purple-600 transition-colors duration-500
+    style="
+      text-decoration: none;
       {% if page.url === link %}
-        font-semibold
+        font-weight: bold
       {% endif %}
-      {{ class }}
     "
   >
     {{ title }}
@@ -23,37 +21,39 @@
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-    <div class="max-w-3xl mx-auto pt-6 px-6 lg:pt-12 lg:px-12">
-      <header>
-        <p class="
-          uppercase font-semibold text-base tracking-wider
-          hover:text-black mb-3 transition-colors duration-500
-        ">
-          <a href="{{ '/' | url }}">Down the rabbithole</a>
-        </p>
-        <nav class="flex mb-6 pb-2 border-b">
-          {{ navlink('/', 'Hi 👋', 'mr-4') }}
-          {{ navlink('/articles/', 'Articles', 'mr-4') }}
-          {{ navlink('/cheatsheets/', 'Cheatsheets', 'mr-4') }}
-          {{ navlink('/feed.xml', 'RSS', 'ml-auto' ) }}
-        </nav>
-      </header>
+    <header>
+      <p>
+        <a href="{{ '/' | url }}" style="text-decoration: none; font-variant: small-caps;">
+          Down the rabbithole
+        </a>
+      </p>
+      <nav>
+        {{ navlink('/', 'Hi 👋') }}
+        {{ navlink('/articles/', 'Articles') }}
+        {{ navlink('/cheatsheets/', 'Cheat sheets') }}
+        {{ navlink('/feed.xml', 'RSS') }}
+      </nav>
+    </header>
 
-      <main>
-        {{ content | safe }}
-      </main>
+    <main>
+      {{ content | safe }}
+    </main>
 
-      <footer class="py-6 border-gray-300 text-gray-500 text-center">
-        <a href="https://buymeacoffee.com/eszter" class="hover:text-purple-500">Buy me a pizza 🍕</a>
-      </footer>
+    <footer>
+      <small>
+        ~
+        <br />
+        <a href="https://buymeacoffee.com/eszter" style="text-decoration: none; margin-left: 8px;">
+          Buy me (half) a pizza 🍕
+        </a>
+      </small>
+    </footer>
 
-      <!-- Current page: {{ page.url | url }} -->
-    </div>
+    <!-- Current page: {{ page.url | url }} -->
+
     <script
       src="https://unpkg.com/littlefoot/dist/littlefoot.js"
       type="application/javascript"

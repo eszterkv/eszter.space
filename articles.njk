@@ -2,19 +2,18 @@
 layout: layouts/base.njk
 ---
 {% for post in collections.posts | reverse %}
-<div class="mb-2">
+<div style="margin-bottom: 24px;">
   <a
     href="{{ post.url }}"
-    class="
-      block my-4 border-none
-      hover:text-purple-600 hover:bg-transparent transition-colors duration-500
-    "
+    style="text-decoration: none;"
   >
-    <time class="text-sm text-gray-400">
-      {{ post.data.date.toUTCString() | date('MMM D, YYYY') }}
+    <time>
+      <em style="font-size: 1rem;">
+        {{ post.data.date.toUTCString() | date('MMM D, YYYY') }}
+      </em>
     </time>
     <br />
-    <span class="font-medium text-lg">
+    <span style="font-size: 1.28rem;">
       {{ post.data.title }}
     </span>
   </a>
