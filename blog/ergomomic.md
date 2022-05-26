@@ -5,6 +5,8 @@ date:   2022-05-25
 
 In small steps, with budget recommendations.
 
+[Assessment here](TODO)
+
 ## The basics
 
 ### 1. Sit (or stand) at a desk
