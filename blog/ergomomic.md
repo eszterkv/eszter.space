@@ -5,7 +5,7 @@ date:   2022-05-25
 
 In small steps, with budget recommendations.
 
-[Assessment here](TODO)
+[Assessment here](https://ehs.tamu.edu/media/1600945/officeselfassessment.pdf)
 
 ## The basics
 
