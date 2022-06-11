@@ -278,3 +278,7 @@
 .is-positioned-top .littlefoot-footnote__tooltip {
   bottom: -0.65em;
 }
+
+.footnotes-sep {
+  display: none;
+}

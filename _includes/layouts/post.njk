@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 {% macro prevNextLink(post, type) %}
-<em>
+<em style="font-variant: initial;">
   <a
     href="{{ post.url | url }}"
     rel="{{ type }}"
@@ -25,7 +25,7 @@ layout: layouts/base.njk
   {{ content | safe }}
 </article>
 
-<div>
+<div style="padding-top: 10px; border-top: 1px dashed; font-variant: all-petite-caps;">
   {%- if previousPost %}
     Previous: {{ prevNextLink(previousPost, 'previous') }}
   {% endif %}
