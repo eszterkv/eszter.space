@@ -65,8 +65,8 @@ const ProductList = () => {
 
   return (
     <ul>
-      {products.map((product, idx) => (
-        <li key={idx}>
+      {products.map((product) => (
+        <li key={product.link}>
           {product.name}
         </li>
       )}
@@ -89,8 +89,8 @@ const ProductList = () => {
 
   return (
     <ul>
-      {products.map((product, idx) => (
-        <li key={idx}>
+      {products.map((product) => (
+        <li key={product.link}>
 +         <a href={product.link}>
             {product.name}
 +         </a>
@@ -109,8 +109,8 @@ In the React docs, you'll see a bit of a different approach, where JSX-rendered 
 const ProductList = () => {
   const products = [/* same as before */]
 
-  const Products = products.map((product, idx) => (
-    <li key={idx}>
+  const Products = products.map((product) => (
+    <li key={product.link}>
       <a href={product.link}>
         {product.name}
       </a>
