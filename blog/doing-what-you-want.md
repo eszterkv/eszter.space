@@ -3,7 +3,7 @@ title: On doing what you want (and getting there)
 date: 2022-11-14
 ---
 
-I first started programming a bit more than six years ago. I have worked in good teams, bad teams, good money, very little money… It’s been said enough times that between good coworkers, good product and good money (maybe add exciting tech stack), you can choose two (or three if you are lucky), but not all of them.
+I first started programming a bit more than six years ago. I have worked in good teams, bad teams, for good money, for very little money… It’s been said enough times that between nice coworkers, cool product and money (maybe add exciting tech stack), you can choose two (or three if you are lucky), but not all of them.
 
 However, you don’t have to settle on the same aspects forever.
 
