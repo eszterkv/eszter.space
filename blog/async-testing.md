@@ -1,6 +1,7 @@
 ---
 title: Async testing and TDD in Jest
 date: 2021-01-21
+tags:   testing
 ---
 
 In any real-life code base, 100% unit test coverage is next to impossible. Some argue it’s not even important — testing the **critical parts** is more important than checking if certain paragraph has the content we expect it to have.

@@ -1,6 +1,7 @@
 ---
 title:  Customising Ant Design theme in a create-react-app project
 date:   2019-12-08
+tags:   styling
 ---
 
 There comes a time in some developers’ life when they have to customize an [antd](https://ant.design) theme. It’s [kind of documented](https://ant.design/docs/react/customize-theme), but tricky. Here’s a tl;dr.

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
 header,
 main,
 footer {
@@ -6,8 +8,9 @@ footer {
 }
 
 body {
-  font-size: 19px;
-  line-height: 1.4;
+  font: 17px / 1.72 'Lora';
+  color: #13291e;
+  background: #e3f2fa;
 }
 
 blockquote {
@@ -81,7 +84,7 @@ a {
 
 a:hover,
 a:focus {
-  color: blue;
+  color: #017839;
 }
 
 img {

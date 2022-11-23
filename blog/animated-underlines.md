@@ -1,6 +1,7 @@
 ---
 title:  "Animated link underlines"
 date:   2018-09-16
+tags:   styling
 ---
 
 Animated link underlines are fairly easy to do, and make any website more alive. Well, they are not really underlines, rather a separate `div` that grows on hover. <a style="white-space: nowrap" class="example animated-link">But how to achieve this?</a>

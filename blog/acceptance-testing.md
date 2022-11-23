@@ -2,6 +2,7 @@
 title:  "Acceptance testing with Cucumber and Capybara"
 date:   2018-04-30
 excerpt_separator: <!-- more -->
+tags:   testing
 ---
 
 One of my first tasks as a developer was to migrate endless tests from Twist to [Cucumber](https://docs.cucumber.io). Since then, I have written and refactored countless more, but I never had to set up Cucumber testing from zero. Until now.<!-- more --> It was really not complicated, but it took me a while to get everything going. This is what I’ve come up with.

@@ -2,6 +2,7 @@
 title: console.log('colours!')
 date: 2018-10-09
 script: console.js
+tags:   js
 ---
 Ever seen those styled `console.log`s when opening the dev console on some random website? Cool, right? Calls to `console.log` (and `.warn`, `.info` etc.) can be styled with inline CSS, but itʼs not really well documented, so letʼs experiment with it a little.
 

@@ -1,5 +1,5 @@
 ---
-layout: layouts/page.njk
+date:   2020-10-10
 title: Lily58, my second split ergo mech keyboard
 ---
 

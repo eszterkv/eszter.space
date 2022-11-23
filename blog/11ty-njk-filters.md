@@ -1,6 +1,7 @@
 ---
 title: Custom filters for Nunjucks templates in Eleventy
 date: 2020-10-14
+tags: 11ty,ssg
 ---
 
 Eleventy (or 11ty) with Nunjucks is one of my favourite combinations recently. Frontend fashions come and go, but 11ty’s [performance leaderboard](https://www.11ty.dev/speedlify/) and ease of use makes it intriguing enough to give it a try.[^1]

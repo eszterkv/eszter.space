@@ -1,6 +1,7 @@
 ---
 title:  "Async Array.map(): how to await an array with API calls for each item?"
 date:   2019-08-04
+tags:   js
 ---
 
 Today we'll explore how to use Promises[^1] within Array methods. For our example, we will look up coordinates for places on [Here API](https://developer.here.com/documentation/geocoder/topics/quick-start-geocode.html).

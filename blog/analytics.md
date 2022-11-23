@@ -1,6 +1,7 @@
 ---
 title: "Fathom: a better alternative to Google Analytics"
 date: 2020-02-02T09:00:00.000Z
+tags:   analytics
 ---
 Almost everyone says they take privacy seriously, but almost everyone has an annoying cookie notice because they collect a bit more information than they are allowed to without explicit consent.[^1]
 
