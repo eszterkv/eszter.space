@@ -119,3 +119,8 @@ h4 {
 li {
   margin-bottom: 6px;
 }
+
+del {
+  opacity: .8;
+  color: #c00;
+}
