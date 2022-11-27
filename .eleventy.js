@@ -29,7 +29,7 @@ module.exports = function(config) {
     .use(
       require('markdown-it-anchor'),
       {
-        level: [1, 2, 3],
+        level: [2, 3],
         permalink: true,
         permalinkSymbol: '*',
         slugify: s => uslug(s),
