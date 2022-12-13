@@ -1,6 +1,6 @@
 ---
 title: Building a single-speed bicycle
-date: 2022-12-12
+date: 2022-12-13
 ---
 
 ![A yellow road bike-type single speed bicycle with drop bars and white bar tape](/img/bb_front.jpg)  
