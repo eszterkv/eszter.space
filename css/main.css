@@ -83,7 +83,9 @@ a {
 }
 
 a:hover,
-a:focus {
+a:focus,
+summary:hover,
+summary:focus {
   color: #017839;
 }
 
@@ -123,4 +125,20 @@ li {
 del {
   opacity: .8;
   color: #c00;
+}
+
+summary {
+  cursor: pointer;
+}
+
+details li {
+  margin-bottom: 0;
+}
+
+img + small,
+img + br + small {
+  display: block;
+  text-align: center;
+  margin-top: -4px;
+  opacity: .8;
 }
