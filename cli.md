@@ -1,6 +1,9 @@
 ---
-title: Command line
+title: CLI cheat sheet
+layout: layouts/base.njk
 ---
+
+# CLI cheat sheet
 
 What’s running on port 3000?  
 `lsof -i :3000`

@@ -1,6 +1,9 @@
 ---
 title: Typography
+layout: layouts/base.njk
 ---
+
+# Typography cheat sheet
 
 Using the standard characters our keyboard types is sometimes not good enough.  
 Here are some better alternatives.

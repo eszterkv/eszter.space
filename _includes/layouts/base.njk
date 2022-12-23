@@ -17,7 +17,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metadata.title or "Down the rabbithole – a frontend blog" }}</title>
+    <title>
+      {{ title or metadata.title }}
+      {% if title or metadata.title %}
+      — 
+      {% endif %}
+      Eszter’s (mostly) frontend blog
+    </title>
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
@@ -25,20 +31,18 @@
   </head>
   <body>
     <header>
-      <p>
-        <a href="{{ '/' | url }}" style="text-decoration: none; font-variant: small-caps;">
-          Down the rabbithole
+      <h1>
+        <a href="{{ '/' | url }}">
+          Hey, I’m Eszter.
         </a>
-      </p>
+      </h1>
       <nav style="margin-bottom: 14px;">
         {{ navlink('/', 'Hi 👋') }}
         {{ navlink('/now/', 'Now') }}
         {{ navlink('/articles/', 'Articles') }}
-        {{ navlink('/cheatsheets/', 'Cheat sheets') }}
         {{ navlink('/books/', 'Reading list') }}
-        {{ navlink('/feed.xml', 'RSS') }}
+        {{ navlink('/etc/', 'etc') }}
       </nav>
-      <small style="opacity: .6"><em>ekov @ pm.me</em></small>
     </header>
 
     <main>
@@ -49,9 +53,9 @@
       <small>
         ~
         <br />
-        <a href="https://buymeacoffee.com/eszter" style="text-decoration: none; margin-left: 8px;">
-          Buy me (half) a pizza 🍕
-        </a>
+        <a href="https://buymeacoffee.com/eszter">Buy me (half) a pizza</a> 🍕
+        / <a href="/feed.xml">Subscribe via RSS</a>
+        / get in touch: ekov at pm dot me 
       </small>
     </footer>
 

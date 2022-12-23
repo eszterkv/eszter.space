@@ -2,14 +2,12 @@
 layout: layouts/base.njk
 ---
 {% macro prevNextLink(post, type) %}
-<em style="font-variant: initial;">
-  <a
-    href="{{ post.url | url }}"
-    rel="{{ type }}"
-  >
-    {{ post.data.title }}
-  </a>
-</em>
+<a
+  href="{{ post.url | url }}"
+  rel="{{ type }}"
+>
+  {{ post.data.title }}
+</a>
 {% endmacro %}
 
 {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
@@ -25,7 +23,7 @@ layout: layouts/base.njk
   {{ content | safe }}
 </article>
 
-<div style="padding-top: 10px; border-top: 1px dashed; font-variant: all-petite-caps;">
+<div style="padding-top: 10px; border-top: 1px dashed;">
   {%- if previousPost %}
     Previous: {{ prevNextLink(previousPost, 'previous') }}
   {% endif %}

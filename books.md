@@ -108,6 +108,6 @@ items: [
 ]
 ---
 
-Currently reading:
+### Currently reading:
 - **Behave** by _Robert Sapolsky_
 - **The Rise and Fall of Modern Medicine** by _James Le Fanu_

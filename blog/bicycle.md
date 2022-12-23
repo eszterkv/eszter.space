@@ -3,9 +3,9 @@ title: Building a single-speed bicycle
 date: 2022-12-13
 ---
 
-![A yellow road bike-type single speed bicycle with drop bars and white bar tape](/img/bb_front.jpg)  
-
 Deep down I’ve wanted to build my own bicycle for a long while. I’ve only done very minor maintenance so far, so it’s definitely a step out of my comfort zone. I can feel this when I ask about components, but as one repair shop attendant, when I admitted not knowing all the jargon yet, told me: “the key here is *yet.”*
+
+![A yellow road bike-type single speed bicycle with drop bars and white bar tape](/img/bb_front.jpg)  
 
 ## The idea
 
