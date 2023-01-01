@@ -7,6 +7,7 @@ items: [
     title: 'Never Let Me Go',
     author: 'Kazuo Ishiguro',
     year: 2005,
+    quote: 'It was like when you make a move in chess and just as you take your finger off the piece, you see the mistake you’ve made, and there’s this panic because you don’t know yet the scale of disaster you’ve left yourself open to.',
   },
   {
     title: 'Gweilo',
@@ -68,6 +69,7 @@ items: [
   {
     title: 'The Bell Jar',
     author: 'Sylvia Plath',
+    quote: 'If you expect nothing from somebody you are never disappointed.',
   },
   {
     title: 'Oryx and Crake',
