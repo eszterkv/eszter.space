@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { 
+      "source": "/wishlist",
+      "destination": "https://wishlist.eszter.space", 
+      "permanent": true
+    }
+  ]
+}
