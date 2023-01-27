@@ -33,10 +33,11 @@ Here’s an absolutely subjective selection for killing (not too much) time.
 ### Google console text adventure game
 
 **What:** a text adventure game. I didn’t find it too interesting, but it’s an honorable mention.\
-**How to play:** Google 'Text adventure' (really *Google*, don’t DuckDuckGo) and open the console. **Why:** there’s lots of creative stuff people do in the console. This is one of them.
+**How to play:** Google 'Text adventure' (really *Google*, don’t DuckDuckGo) and open the console.\  
+**Why:** there’s lots of creative stuff people do in the console. This is one of them.
 
 ### Bonus: Chess
 
-**What:** Good old chess, human versus machine.\
-**How to play:** If you have a mac, you have chess.\
-**Why:** Being beaten by the computer [feels a bit like being part of history](https://en.wikipedia.org/wiki/Deep_Blue_versus_Kasparov,_1996,_Game_1).
+**What:** good old chess, human versus machine.\
+**How to play:** if you have a mac, you have chess.\
+**Why:** being beaten by the computer [feels a bit like being part of history](https://en.wikipedia.org/wiki/Deep_Blue_versus_Kasparov,_1996,_Game_1).
