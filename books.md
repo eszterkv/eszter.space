@@ -26,7 +26,7 @@ items: [
   {
     title: 'Drinking — A Love Story',
     author: 'Caroline Knapp',
-    quote: 'For a long time, when it's working, the drink feels like a path to a kind of self-enlightenment, something that turns us into the person we wish to be, or the person we think we are. In some ways the dynamic is simple: alcohol makes everything better, until it makes everything worse.',
+    quote: 'For a long time, when it’s working, the drink feels like a path to a kind of self-enlightenment, something that turns us into the person we wish to be, or the person we think we are. In some ways the dynamic is simple: alcohol makes everything better, until it makes everything worse.',
   },
   {
     title: 'Infidel',
@@ -36,7 +36,7 @@ items: [
   {
     title: 'To Kill a Mockingbird',
     author: 'Harper Lee',
-    quote: 'I wanted you to see what real courage is, instead of getting the idea that courage is a man with a gun in his hand. It's when you know you're licked before you begin, but you begin anyway and see it through no matter what.',
+    quote: 'I wanted you to see what real courage is, instead of getting the idea that courage is a man with a gun in his hand. It’s when you know you’re licked before you begin, but you begin anyway and see it through no matter what.',
   },
   {
     title: 'The Great Gatsby',
