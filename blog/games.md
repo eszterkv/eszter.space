@@ -39,5 +39,5 @@ Here’s an absolutely subjective selection for killing (not too much) time.
 ### Bonus: Chess
 
 **What:** good old chess, human versus machine.\
-**How to play:** if you have a mac, you have chess.\
+**How to play:** if you have a mac, you have chess.  
 **Why:** being beaten by the computer [feels a bit like being part of history](https://en.wikipedia.org/wiki/Deep_Blue_versus_Kasparov,_1996,_Game_1).
