@@ -7,12 +7,9 @@ Last updated: 1 Jan, 2023.
 
 ## vinyl
 
-- Lady Gaga - Joanne
-- Khruangbin - Mordechai
 - No Doubt - Return of Saturn
 - Bob Dylan - Highway 61 Revisited
 - Pink Floyd - Dark Side of the Moon
-- Wilco - Yankee Hotel Foxtrot
 
 ## plants
 
