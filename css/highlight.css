@@ -2,8 +2,14 @@
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 */
 
+:root {
+  --comment: lightslategray;
+  --keyword: blue;
+  --string: deepskyblue;
+}
+
 pre {
-  border: 1px solid #b9d3c6;
+  border: 1px solid var(--secondary);
   border-radius: 3px;
   overflow-x: auto;
 }
@@ -22,14 +28,14 @@ code {
 
 .hljs-comment,
 .hljs-quote {
-  color: #998;
+  color: var(--comment);
   font-style: italic;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
+  color: var(--keyword);
   font-weight: bold;
 }
 
@@ -38,18 +44,18 @@ code {
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #008080;
+  color: var(--primary);
 }
 
 .hljs-string,
 .hljs-doctag {
-  color: #d14;
+  color: var(--string);
 }
 
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
-  color: #900;
+  color: var(--tertiary);
   font-weight: bold;
 }
 
