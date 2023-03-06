@@ -130,5 +130,5 @@ items: [
 ---
 
 ### Currently reading:
-- **The Satanic Verser** by _Salman Rushdie_
+- **The Satanic Verses** by _Salman Rushdie_
 - **The Rise and Fall of Modern Medicine** by _James Le Fanu_
