@@ -4,6 +4,16 @@ title: Reading list
 mediaType: books
 items: [
   {
+    title: 'The Edible Woman',
+    author: 'Margaret Atwood',
+    year: 1969,
+  },
+  {
+    title: 'Behave',
+    author: 'Robert Sapolsky',
+    year: 2017,
+  },
+  {
     title: 'Never Let Me Go',
     author: 'Kazuo Ishiguro',
     year: 2005,
@@ -120,5 +130,5 @@ items: [
 ---
 
 ### Currently reading:
-- **Behave** by _Robert Sapolsky_
+- **The Satanic Verser** by _Salman Rushdie_
 - **The Rise and Fall of Modern Medicine** by _James Le Fanu_
