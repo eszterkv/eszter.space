@@ -3,12 +3,13 @@
 :root {
   --bg: white;
   --bg-secondary: beige;
-  --primary: royalblue;
-  --secondary: lime;
-  --tertiary: fuchsia;
+  --primary: #222;
+  --secondary: fuchsia;
+  --tertiary: lime;
   --dots: lime;
   --bodyfont: sans-serif;
   --titlefont: sans-serif;
+  --serif: 'Georgia';
   --imgspace: 80px;
 }
 
@@ -27,7 +28,6 @@ body {
 
 blockquote {
   font-size: 1.44rem;
-  color: var(--tertiary);
 }
 
 blockquote cite {
@@ -156,7 +156,8 @@ img + br + small {
 
   header h1 {
     font-size: 4.07rem;
-    opacity: .3;
+    color: var(--tertiary);
+    opacity: .7;
   }
 
   main {
