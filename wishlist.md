@@ -33,3 +33,4 @@ Last updated: 28 Apr, 2023.
 
 ## misc
 - [sézane mug in letter E](https://www.sezane.com/eu/product/sezane-maison-appolline-mug/letter-e#size-tu)
+- [small whale statue](https://prezentbudapest.hu/products/balna-szobor)
