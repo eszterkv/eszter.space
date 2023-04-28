@@ -19,6 +19,7 @@ Last updated: 28 Apr, 2023.
 
 ## plants
 
+- air plant
 - nagy kaktuszok (pl. _euphorbia erytrea_)
 - anyósnyelv/sansevieria (nagy!)
 - olajfa
