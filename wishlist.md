@@ -26,9 +26,9 @@ Last updated: 28 Apr, 2023.
 ## clothes
 
 - [wolford tights](https://partner-budapest.wolfordshop.hu/) 20-40 den, colour: cosmetic or black
-- [sézane demain sweater](https://www.sezane.com/eu/product/demain-sweatshirt-solidarity-creation/white-multico#size-xs) in XS
 - [sézane gaspard cardigan](https://www.sezane.com/eu/product/gaspard-cardigan/black#size-XS) in XS, black / beige / camel
 - [sézane ruben cardigan in red](https://www.sezane.com/eu/product/ruben-cardigan/cherry-red#size-xs), size XS
+- [sézane demain sweater](https://www.sezane.com/eu/product/demain-sweatshirt-solidarity-creation/white-multico#size-xs) in XS
 
 ## misc
 - [sézane mug in letter E](https://www.sezane.com/eu/product/sezane-maison-appolline-mug/letter-e#size-tu)
