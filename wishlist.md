@@ -19,9 +19,8 @@ Last updated: 28 Apr, 2023.
 
 ## plants
 
-- fátyolaszparágusz / asparagus fern
 - nagy kaktuszok (pl. _euphorbia erytrea_)
-- anyósnyelv (nagy!)
+- anyósnyelv/sansevieria (nagy!)
 - olajfa
 
 ## clothes
