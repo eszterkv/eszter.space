@@ -26,7 +26,6 @@ Last updated: 28 Apr, 2023.
 
 ## clothes
 
-- [sézane grant t-shirt](https://www.sezane.com/eu/product/grant-t-shirt/black#size-XS) in XS, black / ecru / red
 - [sézane demain sweater](https://www.sezane.com/eu/product/demain-sweatshirt-solidarity-creation/white-multico#size-xs) in XS
 - [sézane gaspard cardigan](https://www.sezane.com/eu/product/gaspard-cardigan/black#size-XS) in XS, black / beige / camel
 - [sézane ruben cardigan in red](https://www.sezane.com/eu/product/ruben-cardigan/cherry-red#size-xs), size XS
