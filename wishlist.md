@@ -3,7 +3,7 @@ layout: layouts/standalone.njk
 title: Eszter’s wish list
 ---
 
-Last updated: 1 Jan, 2023.
+Last updated: 28 Apr, 2023.
 
 ## jewellery
 
