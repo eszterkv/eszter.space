@@ -29,3 +29,5 @@ Last updated: 2 May, 2023.
 ## misc
 - [sézane mug in letter E](https://www.sezane.com/eu/product/sezane-maison-appolline-mug/letter-e#size-tu)
 - [small whale statue](https://prezentbudapest.hu/products/balna-szobor)
+- [chloé eau de parfum](https://www.notino.hu/chloe/chloe-eau-de-parfum-nknek/)
+- [burberry for women edp](https://hu.burberry.com/burberry-for-women-eau-de-parfum-100ml-p34547001)
