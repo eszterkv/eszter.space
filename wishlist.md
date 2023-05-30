@@ -21,7 +21,7 @@ Last updated: 30 May, 2023. No preference order :)
 
 ## clothes
 
-- [sézane gaspard cardigan](https://www.sezane.com/eu/product/gaspard-cardigan/black#size-XS) in XS, black / camel
+- [sézane gaspard cardigan](https://www.sezane.com/eu/product/gaspard-cardigan/black#size-XS) in XS, in black or camel
 - [sézane ruben cardigan in red](https://www.sezane.com/eu/product/ruben-cardigan/cherry-red#size-xs), size XS
 - [wolford tights](https://partner-budapest.wolfordshop.hu/en/6-hosiery) 20 den, colour: cosmetic or black
 
