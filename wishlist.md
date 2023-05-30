@@ -3,7 +3,7 @@ layout: layouts/standalone.njk
 title: Eszter’s wish list
 ---
 
-Last updated: 2 May, 2023.
+Last updated: 30 May, 2023. No preference order :)
 
 ## jewellery
 
@@ -13,7 +13,6 @@ Last updated: 2 May, 2023.
 ## vinyl
 
 - Norah Jones
-- No Doubt - Return of Saturn
 
 ## plants
 
@@ -22,9 +21,9 @@ Last updated: 2 May, 2023.
 
 ## clothes
 
-- [sézane gaspard cardigan](https://www.sezane.com/eu/product/gaspard-cardigan/black#size-XS) in XS, black / beige / camel
+- [sézane gaspard cardigan](https://www.sezane.com/eu/product/gaspard-cardigan/black#size-XS) in XS, black / camel
 - [sézane ruben cardigan in red](https://www.sezane.com/eu/product/ruben-cardigan/cherry-red#size-xs), size XS
-- [wolford tights](https://partner-budapest.wolfordshop.hu/en/6-hosiery) 20-40 den, colour: cosmetic or black
+- [wolford tights](https://partner-budapest.wolfordshop.hu/en/6-hosiery) 20 den, colour: cosmetic or black
 
 ## misc
 - [sézane mug in letter E](https://www.sezane.com/eu/product/sezane-maison-appolline-mug/letter-e#size-tu)
