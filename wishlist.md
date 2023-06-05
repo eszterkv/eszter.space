@@ -3,7 +3,7 @@ layout: layouts/standalone.njk
 title: Eszter’s wish list
 ---
 
-Last updated: 30 May, 2023. No preference order :)
+Last updated: 5 Jun, 2023. No preference order :)
 
 ## jewellery
 
@@ -19,10 +19,9 @@ Last updated: 30 May, 2023. No preference order :)
 - nagy kaktuszok (pl. _euphorbia erytrea_)
 - olajfa
 
-## clothes
+## clothes & accessories
 
-- [sézane gaspard cardigan](https://www.sezane.com/eu/product/gaspard-cardigan/black#size-XS) in XS, in black or camel
-- [sézane ruben cardigan in red](https://www.sezane.com/eu/product/ruben-cardigan/cherry-red#size-xs), size XS
+- [sézane selena belt](https://www.sezane.com/eu/product/selena-belt/natural-raffia#size-80) natural raffia, size 80
 - [wolford tights](https://partner-budapest.wolfordshop.hu/en/6-hosiery) 20 den, colour: cosmetic or black
 
 ## misc
