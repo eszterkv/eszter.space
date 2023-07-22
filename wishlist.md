@@ -3,7 +3,7 @@ layout: layouts/standalone.njk
 title: Eszter’s wish list
 ---
 
-Last updated: 5 Jun, 2023. No preference order :)
+Last updated: 22 Jul, 2023. No preference order :)
 
 ## jewellery
 
@@ -26,6 +26,4 @@ Last updated: 5 Jun, 2023. No preference order :)
 
 ## misc
 - [sézane mug in letter E](https://www.sezane.com/eu/product/sezane-maison-appolline-mug/letter-e#size-tu)
-- [small whale statue](https://prezentbudapest.hu/products/balna-szobor)
-- [chloé eau de parfum](https://www.notino.hu/chloe/chloe-eau-de-parfum-nknek/)
 - [burberry for women edp](https://hu.burberry.com/burberry-for-women-eau-de-parfum-100ml-p34547001)
