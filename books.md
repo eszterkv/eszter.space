@@ -4,6 +4,11 @@ title: Reading list
 mediaType: books
 items: [
   {
+    title: 'Kindred',
+    author: 'Octavia E. Butler',
+    year: 1979,
+  },
+  {
     title: 'The Edible Woman',
     author: 'Margaret Atwood',
     year: 1969,
