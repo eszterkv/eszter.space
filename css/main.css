@@ -40,6 +40,11 @@ header {
   text-transform: lowercase;
 }
 
+hr {
+  border-top: 2px dotted var(--primary);
+  border-bottom: none;
+}
+
 nav a:not(:last-of-type) {
   margin-right: 12px;
 }
