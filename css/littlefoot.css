@@ -2,15 +2,15 @@
 
 .littlefoot {
   --button-background-color: transparent;
-  --button-text-color: blue;
+  --button-text-color: currentColor;
   --button-active-background-color: transparent;
-  --button-active-text-color: fuchsia;
+  --button-active-text-color: currentColor;
   --button-border-radius: 0;
   --button-height: 1rem;
   --button-margin: 0 0.1rem;
   --button-padding: 0; 
   --button-transition: background-color 0.25s ease, color 0.25s ease;
-  --popover-background-color: beige;
+  --popover-background-color: white;
   --popover-text-color: #111;
   --popover-border: 1px solid currentColor;
   --popover-border-radius: 0rem;
