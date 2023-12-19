@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap');
 
 :root {
-  --bg: white;
-  --bg-secondary: beige;
-  --primary: #222;
-  --secondary: fuchsia;
-  --tertiary: lime;
-  --dots: lime;
-  --bodyfont: sans-serif;
-  --titlefont: sans-serif;
+  --bg: lavenderblush;
+  --bg-secondary: lavenderblush;
+  --primary: crimson;
+  --secondary: blue;
+  --tertiary: plum;
+  --dots: plum;
+  --bodyfont: 'Georgia';
+  --titlefont: 'Kalnia';
   --serif: 'Georgia';
   --imgspace: 80px;
 }
