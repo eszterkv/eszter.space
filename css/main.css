@@ -95,6 +95,7 @@ header h1 a:hover {
 
 img {
   max-width: 100%;
+  filter: opacity(0.5) contrast(1.2) saturate(1.2) grayscale(0.1);
 }
 
 h1,
