@@ -4,7 +4,7 @@
   --bg: lavenderblush;
   --bg-secondary: lavenderblush;
   --primary: crimson;
-  --secondary: blue;
+  --secondary: plum;
   --tertiary: plum;
   --dots: plum;
   --bodyfont: 'Georgia';
@@ -71,6 +71,8 @@ footer {
 
 a {
   color: inherit;
+  text-decoration: underline dotted;
+  transition: color .3s ease;
 }
 
 a:hover,
