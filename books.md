@@ -4,6 +4,16 @@ title: Reading list
 mediaType: books
 items: [
   {
+    title: 'The Satanic Verses',
+    author: 'Salman Rushdie',
+    year: 1988,
+  },
+  {
+    title: 'Heart of a Dog',
+    author: 'Mikhail Bulgakov',
+    year: 1925,
+  },
+  {
     title: 'Kindred',
     author: 'Octavia E. Butler',
     year: 1979,
@@ -135,6 +145,4 @@ items: [
 ---
 
 ### Currently reading:
-- **The Satanic Verses** by _Salman Rushdie_
 - **The Rise and Fall of Modern Medicine** by _James Le Fanu_
-- **Heart of a Dog** by _Mikhail Bulgakov_
