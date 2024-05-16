@@ -4,6 +4,11 @@ title: Reading list
 mediaType: books
 items: [
   {
+    title: 'Bőgőmasina',
+    author: 'Krisztián Marton',
+    year: 2023,
+  },
+  {
     title: 'The Satanic Verses',
     author: 'Salman Rushdie',
     year: 1988,
@@ -145,4 +150,5 @@ items: [
 ---
 
 ### Currently reading:
+- **The Myth of Normal** by _Gabor Maté_
 - **The Rise and Fall of Modern Medicine** by _James Le Fanu_
